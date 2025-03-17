@@ -19,10 +19,10 @@
             @update:pagination="onPaginationChange">
             <template v-slot:body-cell-action="props">
                 <q-td>
-                    <q-btn flat round color="primary" icon="edit" size="sm" @click="editWareHouse(props.row)">
+                    <q-btn flat round color="primary" icon="edit" size="sm" @click="editWareHouse(props.row)" :disable="role !== 'admin'">
                         <q-tooltip>编辑</q-tooltip>
                     </q-btn>
-                    <q-btn flat round color="negative" icon="delete" size="sm" @click="deleteWareHouse(props.row)">
+                    <q-btn flat round color="negative" icon="delete" size="sm" @click="deleteWareHouse(props.row)" :disable="role !== 'admin'">
                         <q-tooltip>删除</q-tooltip>
                     </q-btn>
                 </q-td>
@@ -60,8 +60,11 @@
 import { ref, onMounted } from 'vue';
 import axios from '@/axios/index';
 import { useQuasar, type QTableColumn } from 'quasar';
+import { useUserStore } from '@/stores/userStore';
 
 const $q = useQuasar();
+const userStore = useUserStore();
+const role = userStore.role;
 
 const rows = ref([]);
 const columns = ref<QTableColumn[]>([

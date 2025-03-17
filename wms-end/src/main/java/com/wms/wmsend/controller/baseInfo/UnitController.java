@@ -30,7 +30,7 @@ public class UnitController {
 
     @GetMapping("/list")
     @ApiOperation(value = "单位列表")
-    private Result<IPage<UnitResultVo>> list(
+    public Result<IPage<UnitResultVo>> list(
             @ApiParam(value = "当前页码", required = true) @RequestParam(value = "current") Long current,
             @ApiParam(value = "每页数量", required = true) @RequestParam(value = "size") Long size,
             @ApiParam(value = "单位名称") String unitName ) {
@@ -41,7 +41,7 @@ public class UnitController {
 
     @PostMapping("/saveOrUpdate")
     @ApiOperation(value = "新增/修改单位")
-    private Result<String> saveOrUpdate(@ApiParam(value = "单位信息", required = true) @RequestBody SysUnit unit) {
+    public Result<String> saveOrUpdate(@ApiParam(value = "单位信息", required = true) @RequestBody SysUnit unit) {
         //新增单位不能重复
         if (unit.getId() == null) {
             LambdaQueryWrapper<SysUnit> queryWrapper = new LambdaQueryWrapper<>();
@@ -62,7 +62,7 @@ public class UnitController {
 
     @GetMapping("/delete")
     @ApiOperation(value = "删除单位")
-    private Result<String> delete(@ApiParam(value = "单位ID", required = true) @RequestParam("id") Long id) {
+    public Result<String> delete(@ApiParam(value = "单位ID", required = true) @RequestParam("id") Long id) {
         //region查询单位是否被引用
         LambdaQueryWrapper<SysDept> wrapper = new LambdaQueryWrapper<>();
         wrapper.eq(SysDept::getUnitId, id);

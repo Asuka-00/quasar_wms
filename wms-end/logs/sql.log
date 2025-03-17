@@ -1,0 +1,387 @@
+2025-03-17 15:12:01.153 [scheduling-1] DEBUG com.wms.wmsend.mapper.StockAlertMapper.listByPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM stock_alert sa
+2025-03-17 15:12:01.180 [scheduling-1] DEBUG com.wms.wmsend.mapper.StockAlertMapper.listByPage_mpCount - ==> Parameters: 
+2025-03-17 15:12:01.263 [scheduling-1] DEBUG com.wms.wmsend.mapper.StockAlertMapper.listByPage_mpCount - <==      Total: 1
+2025-03-17 15:12:01.269 [scheduling-1] DEBUG com.wms.wmsend.mapper.StockAlertMapper.listByPage - ==>  Preparing: select sa.id, sa.category_id, sa.product_id, sa.warehouse_id, sa.min_stock, sa.max_stock, sa.send_type, sa.send_to, sa.created_by, sa.created_time, sa.updated_by, sa.updated_time, p.product_name, w.warehouse_name, u.nickname as send_to_name, pc.category_name from stock_alert sa left join product p on sa.product_id = p.id left join warehouse w on sa.warehouse_id = w.id left join sys_user u on sa.send_to = u.id left join product_category pc on sa.category_id = pc.id LIMIT ?
+2025-03-17 15:12:01.278 [scheduling-1] DEBUG com.wms.wmsend.mapper.StockAlertMapper.listByPage - ==> Parameters: 10000(Long)
+2025-03-17 15:12:01.281 [scheduling-1] DEBUG com.wms.wmsend.mapper.StockAlertMapper.listByPage - <==      Total: 1
+2025-03-17 15:12:01.295 [scheduling-1] DEBUG com.wms.wmsend.mapper.StockAlertDetailMapper.selectList - ==>  Preparing: SELECT id,msg,send_to,status,created_by,created_time FROM stock_alert_detail
+2025-03-17 15:12:01.296 [scheduling-1] DEBUG com.wms.wmsend.mapper.StockAlertDetailMapper.selectList - ==> Parameters: 
+2025-03-17 15:12:01.299 [scheduling-1] DEBUG com.wms.wmsend.mapper.StockAlertDetailMapper.selectList - <==      Total: 7
+2025-03-17 15:12:01.310 [scheduling-1] DEBUG com.wms.wmsend.mapper.RealtimeStockMapper.selectList - ==>  Preparing: SELECT id,product_id,warehouse_id,quantity,created_by,updated_by,created_time,updated_time FROM realtime_stock WHERE (product_id = ? AND warehouse_id = ?)
+2025-03-17 15:12:01.311 [scheduling-1] DEBUG com.wms.wmsend.mapper.RealtimeStockMapper.selectList - ==> Parameters: 1(Long), 1(Long)
+2025-03-17 15:12:01.312 [scheduling-1] DEBUG com.wms.wmsend.mapper.RealtimeStockMapper.selectList - <==      Total: 1
+2025-03-17 15:15:49.248 [scheduling-1] DEBUG com.wms.wmsend.mapper.StockAlertMapper.listByPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM stock_alert sa
+2025-03-17 15:15:49.276 [scheduling-1] DEBUG com.wms.wmsend.mapper.StockAlertMapper.listByPage_mpCount - ==> Parameters: 
+2025-03-17 15:15:49.359 [scheduling-1] DEBUG com.wms.wmsend.mapper.StockAlertMapper.listByPage_mpCount - <==      Total: 1
+2025-03-17 15:15:49.364 [scheduling-1] DEBUG com.wms.wmsend.mapper.StockAlertMapper.listByPage - ==>  Preparing: select sa.id, sa.category_id, sa.product_id, sa.warehouse_id, sa.min_stock, sa.max_stock, sa.send_type, sa.send_to, sa.created_by, sa.created_time, sa.updated_by, sa.updated_time, p.product_name, w.warehouse_name, u.nickname as send_to_name, pc.category_name from stock_alert sa left join product p on sa.product_id = p.id left join warehouse w on sa.warehouse_id = w.id left join sys_user u on sa.send_to = u.id left join product_category pc on sa.category_id = pc.id LIMIT ?
+2025-03-17 15:15:49.365 [scheduling-1] DEBUG com.wms.wmsend.mapper.StockAlertMapper.listByPage - ==> Parameters: 10000(Long)
+2025-03-17 15:15:49.368 [scheduling-1] DEBUG com.wms.wmsend.mapper.StockAlertMapper.listByPage - <==      Total: 1
+2025-03-17 15:15:49.384 [scheduling-1] DEBUG com.wms.wmsend.mapper.StockAlertDetailMapper.selectList - ==>  Preparing: SELECT id,msg,send_to,status,created_by,created_time FROM stock_alert_detail
+2025-03-17 15:15:49.384 [scheduling-1] DEBUG com.wms.wmsend.mapper.StockAlertDetailMapper.selectList - ==> Parameters: 
+2025-03-17 15:15:49.387 [scheduling-1] DEBUG com.wms.wmsend.mapper.StockAlertDetailMapper.selectList - <==      Total: 7
+2025-03-17 15:15:49.399 [scheduling-1] DEBUG com.wms.wmsend.mapper.RealtimeStockMapper.selectList - ==>  Preparing: SELECT id,product_id,warehouse_id,quantity,created_by,updated_by,created_time,updated_time FROM realtime_stock WHERE (product_id = ? AND warehouse_id = ?)
+2025-03-17 15:15:49.399 [scheduling-1] DEBUG com.wms.wmsend.mapper.RealtimeStockMapper.selectList - ==> Parameters: 1(Long), 1(Long)
+2025-03-17 15:15:49.400 [scheduling-1] DEBUG com.wms.wmsend.mapper.RealtimeStockMapper.selectList - <==      Total: 1
+2025-03-17 15:15:56.119 [http-nio-8080-exec-4] DEBUG com.wms.wmsend.mapper.SysUnitMapper.listByPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM sys_unit
+2025-03-17 15:15:56.120 [http-nio-8080-exec-4] DEBUG com.wms.wmsend.mapper.SysUnitMapper.listByPage_mpCount - ==> Parameters: 
+2025-03-17 15:15:56.177 [http-nio-8080-exec-4] DEBUG com.wms.wmsend.mapper.SysUnitMapper.listByPage_mpCount - <==      Total: 1
+2025-03-17 15:15:56.178 [http-nio-8080-exec-4] DEBUG com.wms.wmsend.mapper.SysUnitMapper.listByPage - ==>  Preparing: select sys_unit.id, sys_unit.unit_name, sys_unit.unit_code, sys_unit.created_by, sys_unit.created_time, sys_unit.updated_by, sys_unit.updated_time from sys_unit LIMIT ?
+2025-03-17 15:15:56.178 [http-nio-8080-exec-4] DEBUG com.wms.wmsend.mapper.SysUnitMapper.listByPage - ==> Parameters: 10000(Long)
+2025-03-17 15:15:56.180 [http-nio-8080-exec-4] DEBUG com.wms.wmsend.mapper.SysUnitMapper.listByPage - <==      Total: 3
+2025-03-17 15:18:15.369 [scheduling-1] DEBUG com.wms.wmsend.mapper.StockAlertMapper.listByPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM stock_alert sa
+2025-03-17 15:18:15.397 [scheduling-1] DEBUG com.wms.wmsend.mapper.StockAlertMapper.listByPage_mpCount - ==> Parameters: 
+2025-03-17 15:18:15.476 [scheduling-1] DEBUG com.wms.wmsend.mapper.StockAlertMapper.listByPage_mpCount - <==      Total: 1
+2025-03-17 15:18:15.481 [scheduling-1] DEBUG com.wms.wmsend.mapper.StockAlertMapper.listByPage - ==>  Preparing: select sa.id, sa.category_id, sa.product_id, sa.warehouse_id, sa.min_stock, sa.max_stock, sa.send_type, sa.send_to, sa.created_by, sa.created_time, sa.updated_by, sa.updated_time, p.product_name, w.warehouse_name, u.nickname as send_to_name, pc.category_name from stock_alert sa left join product p on sa.product_id = p.id left join warehouse w on sa.warehouse_id = w.id left join sys_user u on sa.send_to = u.id left join product_category pc on sa.category_id = pc.id LIMIT ?
+2025-03-17 15:18:15.482 [scheduling-1] DEBUG com.wms.wmsend.mapper.StockAlertMapper.listByPage - ==> Parameters: 10000(Long)
+2025-03-17 15:18:15.495 [scheduling-1] DEBUG com.wms.wmsend.mapper.StockAlertMapper.listByPage - <==      Total: 1
+2025-03-17 15:18:15.509 [scheduling-1] DEBUG com.wms.wmsend.mapper.StockAlertDetailMapper.selectList - ==>  Preparing: SELECT id,msg,send_to,status,created_by,created_time FROM stock_alert_detail
+2025-03-17 15:18:15.510 [scheduling-1] DEBUG com.wms.wmsend.mapper.StockAlertDetailMapper.selectList - ==> Parameters: 
+2025-03-17 15:18:15.512 [scheduling-1] DEBUG com.wms.wmsend.mapper.StockAlertDetailMapper.selectList - <==      Total: 7
+2025-03-17 15:18:15.524 [scheduling-1] DEBUG com.wms.wmsend.mapper.RealtimeStockMapper.selectList - ==>  Preparing: SELECT id,product_id,warehouse_id,quantity,created_by,updated_by,created_time,updated_time FROM realtime_stock WHERE (product_id = ? AND warehouse_id = ?)
+2025-03-17 15:18:15.525 [scheduling-1] DEBUG com.wms.wmsend.mapper.RealtimeStockMapper.selectList - ==> Parameters: 1(Long), 1(Long)
+2025-03-17 15:18:15.526 [scheduling-1] DEBUG com.wms.wmsend.mapper.RealtimeStockMapper.selectList - <==      Total: 1
+2025-03-17 15:18:20.009 [http-nio-8080-exec-1] DEBUG com.wms.wmsend.mapper.StockAlertDetailMapper.selectList - ==>  Preparing: SELECT id,msg,send_to,status,created_by,created_time FROM stock_alert_detail WHERE (send_to = ? AND status = ?)
+2025-03-17 15:18:20.009 [http-nio-8080-exec-1] DEBUG com.wms.wmsend.mapper.StockAlertDetailMapper.selectList - ==> Parameters: 32(Long), 0(Integer)
+2025-03-17 15:18:20.011 [http-nio-8080-exec-1] DEBUG com.wms.wmsend.mapper.StockAlertDetailMapper.selectList - <==      Total: 1
+2025-03-17 15:18:20.016 [http-nio-8080-exec-3] DEBUG com.wms.wmsend.mapper.SysUnitMapper.listByPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM sys_unit
+2025-03-17 15:18:20.017 [http-nio-8080-exec-3] DEBUG com.wms.wmsend.mapper.SysUnitMapper.listByPage_mpCount - ==> Parameters: 
+2025-03-17 15:18:20.029 [http-nio-8080-exec-2] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM warehouse wh
+2025-03-17 15:18:20.029 [http-nio-8080-exec-2] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage_mpCount - ==> Parameters: 
+2025-03-17 15:18:20.136 [http-nio-8080-exec-2] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage_mpCount - <==      Total: 1
+2025-03-17 15:18:20.136 [http-nio-8080-exec-3] DEBUG com.wms.wmsend.mapper.SysUnitMapper.listByPage_mpCount - <==      Total: 1
+2025-03-17 15:18:20.138 [http-nio-8080-exec-3] DEBUG com.wms.wmsend.mapper.SysUnitMapper.listByPage - ==>  Preparing: select sys_unit.id, sys_unit.unit_name, sys_unit.unit_code, sys_unit.created_by, sys_unit.created_time, sys_unit.updated_by, sys_unit.updated_time from sys_unit LIMIT ?
+2025-03-17 15:18:20.138 [http-nio-8080-exec-2] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage - ==>  Preparing: select wh.id, wh.warehouse_name, wh.unit_id, wh.address, wh.created_by, wh.created_time, wh.updated_by, wh.updated_time, su.unit_name from warehouse wh left join sys_unit su on wh.unit_id = su.id LIMIT ?
+2025-03-17 15:18:20.138 [http-nio-8080-exec-3] DEBUG com.wms.wmsend.mapper.SysUnitMapper.listByPage - ==> Parameters: 10000(Long)
+2025-03-17 15:18:20.138 [http-nio-8080-exec-2] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage - ==> Parameters: 10(Long)
+2025-03-17 15:18:20.140 [http-nio-8080-exec-2] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage - <==      Total: 1
+2025-03-17 15:18:20.140 [http-nio-8080-exec-3] DEBUG com.wms.wmsend.mapper.SysUnitMapper.listByPage - <==      Total: 3
+2025-03-17 15:18:20.155 [http-nio-8080-exec-4] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM warehouse wh
+2025-03-17 15:18:20.155 [http-nio-8080-exec-4] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage_mpCount - ==> Parameters: 
+2025-03-17 15:18:20.201 [http-nio-8080-exec-4] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage_mpCount - <==      Total: 1
+2025-03-17 15:18:20.202 [http-nio-8080-exec-4] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage - ==>  Preparing: select wh.id, wh.warehouse_name, wh.unit_id, wh.address, wh.created_by, wh.created_time, wh.updated_by, wh.updated_time, su.unit_name from warehouse wh left join sys_unit su on wh.unit_id = su.id LIMIT ?
+2025-03-17 15:18:20.202 [http-nio-8080-exec-4] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage - ==> Parameters: 10(Long)
+2025-03-17 15:18:20.204 [http-nio-8080-exec-4] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage - <==      Total: 1
+2025-03-17 15:20:48.698 [http-nio-8080-exec-2] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM warehouse wh
+2025-03-17 15:20:48.699 [http-nio-8080-exec-2] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage_mpCount - ==> Parameters: 
+2025-03-17 15:20:48.710 [http-nio-8080-exec-4] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM product p
+2025-03-17 15:20:48.711 [http-nio-8080-exec-4] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage_mpCount - ==> Parameters: 
+2025-03-17 15:20:48.732 [http-nio-8080-exec-3] DEBUG com.wms.wmsend.mapper.SysUserMapper.listByPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM sys_user su
+2025-03-17 15:20:48.732 [http-nio-8080-exec-3] DEBUG com.wms.wmsend.mapper.SysUserMapper.listByPage_mpCount - ==> Parameters: 
+2025-03-17 15:20:48.732 [http-nio-8080-exec-8] DEBUG com.wms.wmsend.mapper.StockDocMapper.listByPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM stock_doc sd
+2025-03-17 15:20:48.733 [http-nio-8080-exec-8] DEBUG com.wms.wmsend.mapper.StockDocMapper.listByPage_mpCount - ==> Parameters: 
+2025-03-17 15:20:48.892 [http-nio-8080-exec-2] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage_mpCount - <==      Total: 1
+2025-03-17 15:20:48.894 [http-nio-8080-exec-2] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage - ==>  Preparing: select wh.id, wh.warehouse_name, wh.unit_id, wh.address, wh.created_by, wh.created_time, wh.updated_by, wh.updated_time, su.unit_name from warehouse wh left join sys_unit su on wh.unit_id = su.id LIMIT ?
+2025-03-17 15:20:48.895 [http-nio-8080-exec-2] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage - ==> Parameters: 10000(Long)
+2025-03-17 15:20:48.903 [http-nio-8080-exec-2] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage - <==      Total: 1
+2025-03-17 15:20:48.953 [http-nio-8080-exec-4] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage_mpCount - <==      Total: 1
+2025-03-17 15:20:48.955 [http-nio-8080-exec-4] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage - ==>  Preparing: select p.id, p.product_name, p.category_id, p.warehouse_id, p.created_by, p.created_time, p.updated_by, p.updated_time, pc.category_name, w.warehouse_name from product p left join product_category pc on p.category_id = pc.id left join warehouse w on p.warehouse_id = w.id LIMIT ?
+2025-03-17 15:20:48.955 [http-nio-8080-exec-4] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage - ==> Parameters: 10000(Long)
+2025-03-17 15:20:48.964 [http-nio-8080-exec-3] DEBUG com.wms.wmsend.mapper.SysUserMapper.listByPage_mpCount - <==      Total: 1
+2025-03-17 15:20:48.965 [http-nio-8080-exec-8] DEBUG com.wms.wmsend.mapper.StockDocMapper.listByPage_mpCount - <==      Total: 1
+2025-03-17 15:20:48.966 [http-nio-8080-exec-4] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage - <==      Total: 3
+2025-03-17 15:20:48.966 [http-nio-8080-exec-3] DEBUG com.wms.wmsend.mapper.SysUserMapper.listByPage - ==>  Preparing: select su.id, username, nickname, phone, email, role, su.dept_id, su.created_by, su.created_time, su.updated_by, su.updated_time, dept_name, unit_name from sys_user su left join sys_dept sd on su.dept_id = sd.id left join sys_unit su2 on sd.unit_id = su2.id LIMIT ?
+2025-03-17 15:20:48.966 [http-nio-8080-exec-3] DEBUG com.wms.wmsend.mapper.SysUserMapper.listByPage - ==> Parameters: 10000(Long)
+2025-03-17 15:20:48.967 [http-nio-8080-exec-8] DEBUG com.wms.wmsend.mapper.StockDocMapper.listByPage - ==>  Preparing: select sd.id, sd.document_no, sd.document_type, sd.warehouse_id, sd.status, sd.operator_user, sd.remark, sd.created_by, sd.created_time, sd.updated_by, sd.updated_time, w.warehouse_name, su.username as operator_username from stock_doc sd left join warehouse w on sd.warehouse_id = w.id left join sys_user su on sd.operator_user = su.id LIMIT ?
+2025-03-17 15:20:48.967 [http-nio-8080-exec-8] DEBUG com.wms.wmsend.mapper.StockDocMapper.listByPage - ==> Parameters: 10(Long)
+2025-03-17 15:20:48.969 [http-nio-8080-exec-8] DEBUG com.wms.wmsend.mapper.StockDocMapper.listByPage - <==      Total: 7
+2025-03-17 15:20:48.973 [http-nio-8080-exec-3] DEBUG com.wms.wmsend.mapper.SysUserMapper.listByPage - <==      Total: 16
+2025-03-17 15:20:52.975 [http-nio-8080-exec-5] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM product p WHERE p.warehouse_id = ?
+2025-03-17 15:20:52.975 [http-nio-8080-exec-5] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage_mpCount - ==> Parameters: 1(String)
+2025-03-17 15:20:52.976 [http-nio-8080-exec-5] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage_mpCount - <==      Total: 1
+2025-03-17 15:20:52.977 [http-nio-8080-exec-5] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage - ==>  Preparing: select p.id, p.product_name, p.category_id, p.warehouse_id, p.created_by, p.created_time, p.updated_by, p.updated_time, pc.category_name, w.warehouse_name from product p left join product_category pc on p.category_id = pc.id left join warehouse w on p.warehouse_id = w.id WHERE p.warehouse_id = ? LIMIT ?
+2025-03-17 15:20:52.977 [http-nio-8080-exec-5] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage - ==> Parameters: 1(String), 10000(Long)
+2025-03-17 15:20:52.978 [http-nio-8080-exec-5] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage - <==      Total: 3
+2025-03-17 15:25:36.587 [http-nio-8080-exec-2] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM product p WHERE p.warehouse_id = ?
+2025-03-17 15:25:36.588 [http-nio-8080-exec-2] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage_mpCount - ==> Parameters: 1(String)
+2025-03-17 15:25:36.589 [http-nio-8080-exec-2] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage_mpCount - <==      Total: 1
+2025-03-17 15:25:36.590 [http-nio-8080-exec-2] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage - ==>  Preparing: select p.id, p.product_name, p.category_id, p.warehouse_id, p.created_by, p.created_time, p.updated_by, p.updated_time, pc.category_name, w.warehouse_name from product p left join product_category pc on p.category_id = pc.id left join warehouse w on p.warehouse_id = w.id WHERE p.warehouse_id = ? LIMIT ?
+2025-03-17 15:25:36.590 [http-nio-8080-exec-2] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage - ==> Parameters: 1(String), 10000(Long)
+2025-03-17 15:25:36.591 [http-nio-8080-exec-2] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage - <==      Total: 3
+2025-03-17 15:29:42.718 [http-nio-8080-exec-7] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM warehouse wh
+2025-03-17 15:29:42.719 [http-nio-8080-exec-7] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage_mpCount - ==> Parameters: 
+2025-03-17 15:29:42.730 [http-nio-8080-exec-5] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM product p
+2025-03-17 15:29:42.730 [http-nio-8080-exec-3] DEBUG com.wms.wmsend.mapper.SysUserMapper.listByPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM sys_user su
+2025-03-17 15:29:42.730 [http-nio-8080-exec-8] DEBUG com.wms.wmsend.mapper.StockDocMapper.listByPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM stock_doc sd
+2025-03-17 15:29:42.731 [http-nio-8080-exec-5] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage_mpCount - ==> Parameters: 
+2025-03-17 15:29:42.731 [http-nio-8080-exec-3] DEBUG com.wms.wmsend.mapper.SysUserMapper.listByPage_mpCount - ==> Parameters: 
+2025-03-17 15:29:42.731 [http-nio-8080-exec-8] DEBUG com.wms.wmsend.mapper.StockDocMapper.listByPage_mpCount - ==> Parameters: 
+2025-03-17 15:29:42.936 [http-nio-8080-exec-7] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage_mpCount - <==      Total: 1
+2025-03-17 15:29:42.936 [http-nio-8080-exec-8] DEBUG com.wms.wmsend.mapper.StockDocMapper.listByPage_mpCount - <==      Total: 1
+2025-03-17 15:29:42.936 [http-nio-8080-exec-3] DEBUG com.wms.wmsend.mapper.SysUserMapper.listByPage_mpCount - <==      Total: 1
+2025-03-17 15:29:42.936 [http-nio-8080-exec-5] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage_mpCount - <==      Total: 1
+2025-03-17 15:29:42.937 [http-nio-8080-exec-5] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage - ==>  Preparing: select p.id, p.product_name, p.category_id, p.warehouse_id, p.created_by, p.created_time, p.updated_by, p.updated_time, pc.category_name, w.warehouse_name from product p left join product_category pc on p.category_id = pc.id left join warehouse w on p.warehouse_id = w.id LIMIT ?
+2025-03-17 15:29:42.937 [http-nio-8080-exec-7] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage - ==>  Preparing: select wh.id, wh.warehouse_name, wh.unit_id, wh.address, wh.created_by, wh.created_time, wh.updated_by, wh.updated_time, su.unit_name from warehouse wh left join sys_unit su on wh.unit_id = su.id LIMIT ?
+2025-03-17 15:29:42.937 [http-nio-8080-exec-3] DEBUG com.wms.wmsend.mapper.SysUserMapper.listByPage - ==>  Preparing: select su.id, username, nickname, phone, email, role, su.dept_id, su.created_by, su.created_time, su.updated_by, su.updated_time, dept_name, unit_name from sys_user su left join sys_dept sd on su.dept_id = sd.id left join sys_unit su2 on sd.unit_id = su2.id LIMIT ?
+2025-03-17 15:29:42.937 [http-nio-8080-exec-8] DEBUG com.wms.wmsend.mapper.StockDocMapper.listByPage - ==>  Preparing: select sd.id, sd.document_no, sd.document_type, sd.warehouse_id, sd.status, sd.operator_user, sd.remark, sd.created_by, sd.created_time, sd.updated_by, sd.updated_time, w.warehouse_name, su.username as operator_username from stock_doc sd left join warehouse w on sd.warehouse_id = w.id left join sys_user su on sd.operator_user = su.id LIMIT ?
+2025-03-17 15:29:42.937 [http-nio-8080-exec-5] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage - ==> Parameters: 10000(Long)
+2025-03-17 15:29:42.937 [http-nio-8080-exec-7] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage - ==> Parameters: 10000(Long)
+2025-03-17 15:29:42.937 [http-nio-8080-exec-3] DEBUG com.wms.wmsend.mapper.SysUserMapper.listByPage - ==> Parameters: 10000(Long)
+2025-03-17 15:29:42.937 [http-nio-8080-exec-8] DEBUG com.wms.wmsend.mapper.StockDocMapper.listByPage - ==> Parameters: 10(Long)
+2025-03-17 15:29:42.939 [http-nio-8080-exec-7] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage - <==      Total: 1
+2025-03-17 15:29:42.939 [http-nio-8080-exec-8] DEBUG com.wms.wmsend.mapper.StockDocMapper.listByPage - <==      Total: 7
+2025-03-17 15:29:42.940 [http-nio-8080-exec-5] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage - <==      Total: 3
+2025-03-17 15:29:42.942 [http-nio-8080-exec-3] DEBUG com.wms.wmsend.mapper.SysUserMapper.listByPage - <==      Total: 16
+2025-03-17 15:30:51.452 [http-nio-8080-exec-7] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM warehouse wh
+2025-03-17 15:30:51.452 [http-nio-8080-exec-7] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage_mpCount - ==> Parameters: 
+2025-03-17 15:30:51.463 [http-nio-8080-exec-8] DEBUG com.wms.wmsend.mapper.StockDocMapper.listByPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM stock_doc sd
+2025-03-17 15:30:51.463 [http-nio-8080-exec-4] DEBUG com.wms.wmsend.mapper.SysUserMapper.listByPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM sys_user su
+2025-03-17 15:30:51.463 [http-nio-8080-exec-5] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM product p
+2025-03-17 15:30:51.463 [http-nio-8080-exec-8] DEBUG com.wms.wmsend.mapper.StockDocMapper.listByPage_mpCount - ==> Parameters: 
+2025-03-17 15:30:51.464 [http-nio-8080-exec-5] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage_mpCount - ==> Parameters: 
+2025-03-17 15:30:51.464 [http-nio-8080-exec-4] DEBUG com.wms.wmsend.mapper.SysUserMapper.listByPage_mpCount - ==> Parameters: 
+2025-03-17 15:30:51.666 [http-nio-8080-exec-8] DEBUG com.wms.wmsend.mapper.StockDocMapper.listByPage_mpCount - <==      Total: 1
+2025-03-17 15:30:51.666 [http-nio-8080-exec-7] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage_mpCount - <==      Total: 1
+2025-03-17 15:30:51.667 [http-nio-8080-exec-7] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage - ==>  Preparing: select wh.id, wh.warehouse_name, wh.unit_id, wh.address, wh.created_by, wh.created_time, wh.updated_by, wh.updated_time, su.unit_name from warehouse wh left join sys_unit su on wh.unit_id = su.id LIMIT ?
+2025-03-17 15:30:51.668 [http-nio-8080-exec-8] DEBUG com.wms.wmsend.mapper.StockDocMapper.listByPage - ==>  Preparing: select sd.id, sd.document_no, sd.document_type, sd.warehouse_id, sd.status, sd.operator_user, sd.remark, sd.created_by, sd.created_time, sd.updated_by, sd.updated_time, w.warehouse_name, su.username as operator_username from stock_doc sd left join warehouse w on sd.warehouse_id = w.id left join sys_user su on sd.operator_user = su.id LIMIT ?
+2025-03-17 15:30:51.668 [http-nio-8080-exec-8] DEBUG com.wms.wmsend.mapper.StockDocMapper.listByPage - ==> Parameters: 10(Long)
+2025-03-17 15:30:51.668 [http-nio-8080-exec-7] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage - ==> Parameters: 10000(Long)
+2025-03-17 15:30:51.678 [http-nio-8080-exec-7] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage - <==      Total: 1
+2025-03-17 15:30:51.678 [http-nio-8080-exec-4] DEBUG com.wms.wmsend.mapper.SysUserMapper.listByPage_mpCount - <==      Total: 1
+2025-03-17 15:30:51.679 [http-nio-8080-exec-5] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage_mpCount - <==      Total: 1
+2025-03-17 15:30:51.680 [http-nio-8080-exec-5] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage - ==>  Preparing: select p.id, p.product_name, p.category_id, p.warehouse_id, p.created_by, p.created_time, p.updated_by, p.updated_time, pc.category_name, w.warehouse_name from product p left join product_category pc on p.category_id = pc.id left join warehouse w on p.warehouse_id = w.id LIMIT ?
+2025-03-17 15:30:51.680 [http-nio-8080-exec-4] DEBUG com.wms.wmsend.mapper.SysUserMapper.listByPage - ==>  Preparing: select su.id, username, nickname, phone, email, role, su.dept_id, su.created_by, su.created_time, su.updated_by, su.updated_time, dept_name, unit_name from sys_user su left join sys_dept sd on su.dept_id = sd.id left join sys_unit su2 on sd.unit_id = su2.id LIMIT ?
+2025-03-17 15:30:51.680 [http-nio-8080-exec-4] DEBUG com.wms.wmsend.mapper.SysUserMapper.listByPage - ==> Parameters: 10000(Long)
+2025-03-17 15:30:51.680 [http-nio-8080-exec-5] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage - ==> Parameters: 10000(Long)
+2025-03-17 15:30:51.680 [http-nio-8080-exec-8] DEBUG com.wms.wmsend.mapper.StockDocMapper.listByPage - <==      Total: 7
+2025-03-17 15:30:51.683 [http-nio-8080-exec-5] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage - <==      Total: 3
+2025-03-17 15:30:51.684 [http-nio-8080-exec-4] DEBUG com.wms.wmsend.mapper.SysUserMapper.listByPage - <==      Total: 16
+2025-03-17 15:31:35.002 [http-nio-8080-exec-3] DEBUG com.wms.wmsend.mapper.StockAlertDetailMapper.selectList - ==>  Preparing: SELECT id,msg,send_to,status,created_by,created_time FROM stock_alert_detail WHERE (send_to = ? AND status = ?)
+2025-03-17 15:31:35.002 [http-nio-8080-exec-3] DEBUG com.wms.wmsend.mapper.StockAlertDetailMapper.selectList - ==> Parameters: 32(Long), 0(Integer)
+2025-03-17 15:31:35.003 [http-nio-8080-exec-3] DEBUG com.wms.wmsend.mapper.StockAlertDetailMapper.selectList - <==      Total: 1
+2025-03-17 15:31:35.070 [http-nio-8080-exec-1] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM warehouse wh
+2025-03-17 15:31:35.070 [http-nio-8080-exec-1] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage_mpCount - ==> Parameters: 
+2025-03-17 15:31:35.070 [http-nio-8080-exec-6] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM product p
+2025-03-17 15:31:35.070 [http-nio-8080-exec-6] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage_mpCount - ==> Parameters: 
+2025-03-17 15:31:35.081 [http-nio-8080-exec-9] DEBUG com.wms.wmsend.mapper.StockDocMapper.listByPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM stock_doc sd
+2025-03-17 15:31:35.081 [http-nio-8080-exec-10] DEBUG com.wms.wmsend.mapper.SysUserMapper.listByPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM sys_user su
+2025-03-17 15:31:35.081 [http-nio-8080-exec-9] DEBUG com.wms.wmsend.mapper.StockDocMapper.listByPage_mpCount - ==> Parameters: 
+2025-03-17 15:31:35.081 [http-nio-8080-exec-10] DEBUG com.wms.wmsend.mapper.SysUserMapper.listByPage_mpCount - ==> Parameters: 
+2025-03-17 15:31:35.288 [http-nio-8080-exec-9] DEBUG com.wms.wmsend.mapper.StockDocMapper.listByPage_mpCount - <==      Total: 1
+2025-03-17 15:31:35.288 [http-nio-8080-exec-6] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage_mpCount - <==      Total: 1
+2025-03-17 15:31:35.288 [http-nio-8080-exec-10] DEBUG com.wms.wmsend.mapper.SysUserMapper.listByPage_mpCount - <==      Total: 1
+2025-03-17 15:31:35.288 [http-nio-8080-exec-1] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage_mpCount - <==      Total: 1
+2025-03-17 15:31:35.289 [http-nio-8080-exec-6] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage - ==>  Preparing: select p.id, p.product_name, p.category_id, p.warehouse_id, p.created_by, p.created_time, p.updated_by, p.updated_time, pc.category_name, w.warehouse_name from product p left join product_category pc on p.category_id = pc.id left join warehouse w on p.warehouse_id = w.id LIMIT ?
+2025-03-17 15:31:35.289 [http-nio-8080-exec-1] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage - ==>  Preparing: select wh.id, wh.warehouse_name, wh.unit_id, wh.address, wh.created_by, wh.created_time, wh.updated_by, wh.updated_time, su.unit_name from warehouse wh left join sys_unit su on wh.unit_id = su.id LIMIT ?
+2025-03-17 15:31:35.290 [http-nio-8080-exec-6] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage - ==> Parameters: 10000(Long)
+2025-03-17 15:31:35.290 [http-nio-8080-exec-9] DEBUG com.wms.wmsend.mapper.StockDocMapper.listByPage - ==>  Preparing: select sd.id, sd.document_no, sd.document_type, sd.warehouse_id, sd.status, sd.operator_user, sd.remark, sd.created_by, sd.created_time, sd.updated_by, sd.updated_time, w.warehouse_name, su.username as operator_username from stock_doc sd left join warehouse w on sd.warehouse_id = w.id left join sys_user su on sd.operator_user = su.id LIMIT ?
+2025-03-17 15:31:35.290 [http-nio-8080-exec-1] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage - ==> Parameters: 10000(Long)
+2025-03-17 15:31:35.291 [http-nio-8080-exec-9] DEBUG com.wms.wmsend.mapper.StockDocMapper.listByPage - ==> Parameters: 10(Long)
+2025-03-17 15:31:35.291 [http-nio-8080-exec-10] DEBUG com.wms.wmsend.mapper.SysUserMapper.listByPage - ==>  Preparing: select su.id, username, nickname, phone, email, role, su.dept_id, su.created_by, su.created_time, su.updated_by, su.updated_time, dept_name, unit_name from sys_user su left join sys_dept sd on su.dept_id = sd.id left join sys_unit su2 on sd.unit_id = su2.id LIMIT ?
+2025-03-17 15:31:35.291 [http-nio-8080-exec-10] DEBUG com.wms.wmsend.mapper.SysUserMapper.listByPage - ==> Parameters: 10000(Long)
+2025-03-17 15:31:35.292 [http-nio-8080-exec-1] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage - <==      Total: 1
+2025-03-17 15:31:35.292 [http-nio-8080-exec-9] DEBUG com.wms.wmsend.mapper.StockDocMapper.listByPage - <==      Total: 7
+2025-03-17 15:31:35.292 [http-nio-8080-exec-6] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage - <==      Total: 3
+2025-03-17 15:31:35.293 [http-nio-8080-exec-10] DEBUG com.wms.wmsend.mapper.SysUserMapper.listByPage - <==      Total: 16
+2025-03-17 15:34:33.216 [http-nio-8080-exec-4] DEBUG com.wms.wmsend.mapper.StockAlertDetailMapper.selectList - ==>  Preparing: SELECT id,msg,send_to,status,created_by,created_time FROM stock_alert_detail WHERE (send_to = ? AND status = ?)
+2025-03-17 15:34:33.217 [http-nio-8080-exec-4] DEBUG com.wms.wmsend.mapper.StockAlertDetailMapper.selectList - ==> Parameters: 32(Long), 0(Integer)
+2025-03-17 15:34:33.218 [http-nio-8080-exec-4] DEBUG com.wms.wmsend.mapper.StockAlertDetailMapper.selectList - <==      Total: 1
+2025-03-17 15:34:33.305 [http-nio-8080-exec-9] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM warehouse wh
+2025-03-17 15:34:33.305 [http-nio-8080-exec-9] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage_mpCount - ==> Parameters: 
+2025-03-17 15:34:33.307 [http-nio-8080-exec-3] DEBUG com.wms.wmsend.mapper.StockDocMapper.listByPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM stock_doc sd
+2025-03-17 15:34:33.308 [http-nio-8080-exec-3] DEBUG com.wms.wmsend.mapper.StockDocMapper.listByPage_mpCount - ==> Parameters: 
+2025-03-17 15:34:33.317 [http-nio-8080-exec-6] DEBUG com.wms.wmsend.mapper.SysUserMapper.listByPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM sys_user su
+2025-03-17 15:34:33.317 [http-nio-8080-exec-1] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM product p
+2025-03-17 15:34:33.317 [http-nio-8080-exec-1] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage_mpCount - ==> Parameters: 
+2025-03-17 15:34:33.317 [http-nio-8080-exec-6] DEBUG com.wms.wmsend.mapper.SysUserMapper.listByPage_mpCount - ==> Parameters: 
+2025-03-17 15:34:33.520 [http-nio-8080-exec-3] DEBUG com.wms.wmsend.mapper.StockDocMapper.listByPage_mpCount - <==      Total: 1
+2025-03-17 15:34:33.520 [http-nio-8080-exec-1] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage_mpCount - <==      Total: 1
+2025-03-17 15:34:33.521 [http-nio-8080-exec-9] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage_mpCount - <==      Total: 1
+2025-03-17 15:34:33.522 [http-nio-8080-exec-1] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage - ==>  Preparing: select p.id, p.product_name, p.category_id, p.warehouse_id, p.created_by, p.created_time, p.updated_by, p.updated_time, pc.category_name, w.warehouse_name from product p left join product_category pc on p.category_id = pc.id left join warehouse w on p.warehouse_id = w.id LIMIT ?
+2025-03-17 15:34:33.522 [http-nio-8080-exec-9] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage - ==>  Preparing: select wh.id, wh.warehouse_name, wh.unit_id, wh.address, wh.created_by, wh.created_time, wh.updated_by, wh.updated_time, su.unit_name from warehouse wh left join sys_unit su on wh.unit_id = su.id LIMIT ?
+2025-03-17 15:34:33.522 [http-nio-8080-exec-3] DEBUG com.wms.wmsend.mapper.StockDocMapper.listByPage - ==>  Preparing: select sd.id, sd.document_no, sd.document_type, sd.warehouse_id, sd.status, sd.operator_user, sd.remark, sd.created_by, sd.created_time, sd.updated_by, sd.updated_time, w.warehouse_name, su.username as operator_username from stock_doc sd left join warehouse w on sd.warehouse_id = w.id left join sys_user su on sd.operator_user = su.id LIMIT ?
+2025-03-17 15:34:33.522 [http-nio-8080-exec-3] DEBUG com.wms.wmsend.mapper.StockDocMapper.listByPage - ==> Parameters: 10(Long)
+2025-03-17 15:34:33.522 [http-nio-8080-exec-1] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage - ==> Parameters: 10000(Long)
+2025-03-17 15:34:33.522 [http-nio-8080-exec-9] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage - ==> Parameters: 10000(Long)
+2025-03-17 15:34:33.532 [http-nio-8080-exec-1] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage - <==      Total: 3
+2025-03-17 15:34:33.532 [http-nio-8080-exec-9] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage - <==      Total: 1
+2025-03-17 15:34:33.532 [http-nio-8080-exec-6] DEBUG com.wms.wmsend.mapper.SysUserMapper.listByPage_mpCount - <==      Total: 1
+2025-03-17 15:34:33.532 [http-nio-8080-exec-3] DEBUG com.wms.wmsend.mapper.StockDocMapper.listByPage - <==      Total: 7
+2025-03-17 15:34:33.533 [http-nio-8080-exec-6] DEBUG com.wms.wmsend.mapper.SysUserMapper.listByPage - ==>  Preparing: select su.id, username, nickname, phone, email, role, su.dept_id, su.created_by, su.created_time, su.updated_by, su.updated_time, dept_name, unit_name from sys_user su left join sys_dept sd on su.dept_id = sd.id left join sys_unit su2 on sd.unit_id = su2.id LIMIT ?
+2025-03-17 15:34:33.533 [http-nio-8080-exec-6] DEBUG com.wms.wmsend.mapper.SysUserMapper.listByPage - ==> Parameters: 10000(Long)
+2025-03-17 15:34:33.535 [http-nio-8080-exec-6] DEBUG com.wms.wmsend.mapper.SysUserMapper.listByPage - <==      Total: 16
+2025-03-17 15:34:42.968 [http-nio-8080-exec-2] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM warehouse wh
+2025-03-17 15:34:42.968 [http-nio-8080-exec-2] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage_mpCount - ==> Parameters: 
+2025-03-17 15:34:42.980 [http-nio-8080-exec-8] DEBUG com.wms.wmsend.mapper.InventoryMapper.listByPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM inventory i
+2025-03-17 15:34:42.980 [http-nio-8080-exec-5] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM product p
+2025-03-17 15:34:42.980 [http-nio-8080-exec-8] DEBUG com.wms.wmsend.mapper.InventoryMapper.listByPage_mpCount - ==> Parameters: 
+2025-03-17 15:34:42.980 [http-nio-8080-exec-5] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage_mpCount - ==> Parameters: 
+2025-03-17 15:34:43.110 [http-nio-8080-exec-2] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage_mpCount - <==      Total: 1
+2025-03-17 15:34:43.111 [http-nio-8080-exec-2] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage - ==>  Preparing: select wh.id, wh.warehouse_name, wh.unit_id, wh.address, wh.created_by, wh.created_time, wh.updated_by, wh.updated_time, su.unit_name from warehouse wh left join sys_unit su on wh.unit_id = su.id LIMIT ?
+2025-03-17 15:34:43.112 [http-nio-8080-exec-2] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage - ==> Parameters: 10000(Long)
+2025-03-17 15:34:43.120 [http-nio-8080-exec-5] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage_mpCount - <==      Total: 1
+2025-03-17 15:34:43.120 [http-nio-8080-exec-2] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage - <==      Total: 1
+2025-03-17 15:34:43.121 [http-nio-8080-exec-5] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage - ==>  Preparing: select p.id, p.product_name, p.category_id, p.warehouse_id, p.created_by, p.created_time, p.updated_by, p.updated_time, pc.category_name, w.warehouse_name from product p left join product_category pc on p.category_id = pc.id left join warehouse w on p.warehouse_id = w.id LIMIT ?
+2025-03-17 15:34:43.121 [http-nio-8080-exec-5] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage - ==> Parameters: 10000(Long)
+2025-03-17 15:34:43.138 [http-nio-8080-exec-5] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage - <==      Total: 3
+2025-03-17 15:34:43.150 [http-nio-8080-exec-8] DEBUG com.wms.wmsend.mapper.InventoryMapper.listByPage_mpCount - <==      Total: 1
+2025-03-17 15:34:43.151 [http-nio-8080-exec-8] DEBUG com.wms.wmsend.mapper.InventoryMapper.listByPage - ==>  Preparing: select i.id, i.inventory_no, i.warehouse_id, i.status, i.remark, i.created_by, i.created_time, i.updated_by, i.updated_time, w.warehouse_name from inventory i left join warehouse w on i.warehouse_id = w.id LIMIT ?
+2025-03-17 15:34:43.151 [http-nio-8080-exec-8] DEBUG com.wms.wmsend.mapper.InventoryMapper.listByPage - ==> Parameters: 10(Long)
+2025-03-17 15:34:43.153 [http-nio-8080-exec-8] DEBUG com.wms.wmsend.mapper.InventoryMapper.listByPage - <==      Total: 2
+2025-03-17 15:36:27.491 [http-nio-8080-exec-10] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM warehouse wh
+2025-03-17 15:36:27.491 [http-nio-8080-exec-10] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage_mpCount - ==> Parameters: 
+2025-03-17 15:36:27.502 [http-nio-8080-exec-6] DEBUG com.wms.wmsend.mapper.SysUserMapper.listByPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM sys_user su
+2025-03-17 15:36:27.502 [http-nio-8080-exec-2] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM product p
+2025-03-17 15:36:27.502 [http-nio-8080-exec-1] DEBUG com.wms.wmsend.mapper.StockDocMapper.listByPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM stock_doc sd
+2025-03-17 15:36:27.503 [http-nio-8080-exec-6] DEBUG com.wms.wmsend.mapper.SysUserMapper.listByPage_mpCount - ==> Parameters: 
+2025-03-17 15:36:27.503 [http-nio-8080-exec-2] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage_mpCount - ==> Parameters: 
+2025-03-17 15:36:27.503 [http-nio-8080-exec-1] DEBUG com.wms.wmsend.mapper.StockDocMapper.listByPage_mpCount - ==> Parameters: 
+2025-03-17 15:36:27.718 [http-nio-8080-exec-1] DEBUG com.wms.wmsend.mapper.StockDocMapper.listByPage_mpCount - <==      Total: 1
+2025-03-17 15:36:27.718 [http-nio-8080-exec-10] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage_mpCount - <==      Total: 1
+2025-03-17 15:36:27.718 [http-nio-8080-exec-6] DEBUG com.wms.wmsend.mapper.SysUserMapper.listByPage_mpCount - <==      Total: 1
+2025-03-17 15:36:27.718 [http-nio-8080-exec-2] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage_mpCount - <==      Total: 1
+2025-03-17 15:36:27.719 [http-nio-8080-exec-6] DEBUG com.wms.wmsend.mapper.SysUserMapper.listByPage - ==>  Preparing: select su.id, username, nickname, phone, email, role, su.dept_id, su.created_by, su.created_time, su.updated_by, su.updated_time, dept_name, unit_name from sys_user su left join sys_dept sd on su.dept_id = sd.id left join sys_unit su2 on sd.unit_id = su2.id LIMIT ?
+2025-03-17 15:36:27.719 [http-nio-8080-exec-10] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage - ==>  Preparing: select wh.id, wh.warehouse_name, wh.unit_id, wh.address, wh.created_by, wh.created_time, wh.updated_by, wh.updated_time, su.unit_name from warehouse wh left join sys_unit su on wh.unit_id = su.id LIMIT ?
+2025-03-17 15:36:27.719 [http-nio-8080-exec-1] DEBUG com.wms.wmsend.mapper.StockDocMapper.listByPage - ==>  Preparing: select sd.id, sd.document_no, sd.document_type, sd.warehouse_id, sd.status, sd.operator_user, sd.remark, sd.created_by, sd.created_time, sd.updated_by, sd.updated_time, w.warehouse_name, su.username as operator_username from stock_doc sd left join warehouse w on sd.warehouse_id = w.id left join sys_user su on sd.operator_user = su.id LIMIT ?
+2025-03-17 15:36:27.719 [http-nio-8080-exec-2] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage - ==>  Preparing: select p.id, p.product_name, p.category_id, p.warehouse_id, p.created_by, p.created_time, p.updated_by, p.updated_time, pc.category_name, w.warehouse_name from product p left join product_category pc on p.category_id = pc.id left join warehouse w on p.warehouse_id = w.id LIMIT ?
+2025-03-17 15:36:27.719 [http-nio-8080-exec-2] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage - ==> Parameters: 10000(Long)
+2025-03-17 15:36:27.719 [http-nio-8080-exec-1] DEBUG com.wms.wmsend.mapper.StockDocMapper.listByPage - ==> Parameters: 10(Long)
+2025-03-17 15:36:27.719 [http-nio-8080-exec-6] DEBUG com.wms.wmsend.mapper.SysUserMapper.listByPage - ==> Parameters: 10000(Long)
+2025-03-17 15:36:27.719 [http-nio-8080-exec-10] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage - ==> Parameters: 10000(Long)
+2025-03-17 15:36:27.721 [http-nio-8080-exec-10] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage - <==      Total: 1
+2025-03-17 15:36:27.721 [http-nio-8080-exec-1] DEBUG com.wms.wmsend.mapper.StockDocMapper.listByPage - <==      Total: 7
+2025-03-17 15:36:27.722 [http-nio-8080-exec-2] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage - <==      Total: 3
+2025-03-17 15:36:27.722 [http-nio-8080-exec-6] DEBUG com.wms.wmsend.mapper.SysUserMapper.listByPage - <==      Total: 16
+2025-03-17 15:36:34.353 [http-nio-8080-exec-5] DEBUG com.wms.wmsend.mapper.InventoryMapper.listByPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM inventory i
+2025-03-17 15:36:34.354 [http-nio-8080-exec-5] DEBUG com.wms.wmsend.mapper.InventoryMapper.listByPage_mpCount - ==> Parameters: 
+2025-03-17 15:36:34.365 [http-nio-8080-exec-7] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM product p
+2025-03-17 15:36:34.365 [http-nio-8080-exec-8] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM warehouse wh
+2025-03-17 15:36:34.365 [http-nio-8080-exec-8] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage_mpCount - ==> Parameters: 
+2025-03-17 15:36:34.365 [http-nio-8080-exec-7] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage_mpCount - ==> Parameters: 
+2025-03-17 15:36:34.528 [http-nio-8080-exec-8] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage_mpCount - <==      Total: 1
+2025-03-17 15:36:34.528 [http-nio-8080-exec-7] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage_mpCount - <==      Total: 1
+2025-03-17 15:36:34.529 [http-nio-8080-exec-5] DEBUG com.wms.wmsend.mapper.InventoryMapper.listByPage_mpCount - <==      Total: 1
+2025-03-17 15:36:34.529 [http-nio-8080-exec-7] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage - ==>  Preparing: select p.id, p.product_name, p.category_id, p.warehouse_id, p.created_by, p.created_time, p.updated_by, p.updated_time, pc.category_name, w.warehouse_name from product p left join product_category pc on p.category_id = pc.id left join warehouse w on p.warehouse_id = w.id LIMIT ?
+2025-03-17 15:36:34.529 [http-nio-8080-exec-8] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage - ==>  Preparing: select wh.id, wh.warehouse_name, wh.unit_id, wh.address, wh.created_by, wh.created_time, wh.updated_by, wh.updated_time, su.unit_name from warehouse wh left join sys_unit su on wh.unit_id = su.id LIMIT ?
+2025-03-17 15:36:34.529 [http-nio-8080-exec-5] DEBUG com.wms.wmsend.mapper.InventoryMapper.listByPage - ==>  Preparing: select i.id, i.inventory_no, i.warehouse_id, i.status, i.remark, i.created_by, i.created_time, i.updated_by, i.updated_time, w.warehouse_name from inventory i left join warehouse w on i.warehouse_id = w.id LIMIT ?
+2025-03-17 15:36:34.530 [http-nio-8080-exec-5] DEBUG com.wms.wmsend.mapper.InventoryMapper.listByPage - ==> Parameters: 10(Long)
+2025-03-17 15:36:34.530 [http-nio-8080-exec-8] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage - ==> Parameters: 10000(Long)
+2025-03-17 15:36:34.530 [http-nio-8080-exec-7] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage - ==> Parameters: 10000(Long)
+2025-03-17 15:36:34.531 [http-nio-8080-exec-8] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage - <==      Total: 1
+2025-03-17 15:36:34.531 [http-nio-8080-exec-7] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage - <==      Total: 3
+2025-03-17 15:36:34.531 [http-nio-8080-exec-5] DEBUG com.wms.wmsend.mapper.InventoryMapper.listByPage - <==      Total: 2
+2025-03-17 15:36:39.400 [http-nio-8080-exec-9] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM warehouse wh
+2025-03-17 15:36:39.400 [http-nio-8080-exec-9] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage_mpCount - ==> Parameters: 
+2025-03-17 15:36:39.412 [http-nio-8080-exec-4] DEBUG com.wms.wmsend.mapper.StockDocMapper.listByPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM stock_doc sd
+2025-03-17 15:36:39.412 [http-nio-8080-exec-3] DEBUG com.wms.wmsend.mapper.SysUserMapper.listByPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM sys_user su
+2025-03-17 15:36:39.412 [http-nio-8080-exec-10] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM product p
+2025-03-17 15:36:39.412 [http-nio-8080-exec-4] DEBUG com.wms.wmsend.mapper.StockDocMapper.listByPage_mpCount - ==> Parameters: 
+2025-03-17 15:36:39.412 [http-nio-8080-exec-3] DEBUG com.wms.wmsend.mapper.SysUserMapper.listByPage_mpCount - ==> Parameters: 
+2025-03-17 15:36:39.412 [http-nio-8080-exec-10] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage_mpCount - ==> Parameters: 
+2025-03-17 15:36:39.609 [http-nio-8080-exec-9] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage_mpCount - <==      Total: 1
+2025-03-17 15:36:39.610 [http-nio-8080-exec-3] DEBUG com.wms.wmsend.mapper.SysUserMapper.listByPage_mpCount - <==      Total: 1
+2025-03-17 15:36:39.610 [http-nio-8080-exec-4] DEBUG com.wms.wmsend.mapper.StockDocMapper.listByPage_mpCount - <==      Total: 1
+2025-03-17 15:36:39.610 [http-nio-8080-exec-10] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage_mpCount - <==      Total: 1
+2025-03-17 15:36:39.610 [http-nio-8080-exec-9] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage - ==>  Preparing: select wh.id, wh.warehouse_name, wh.unit_id, wh.address, wh.created_by, wh.created_time, wh.updated_by, wh.updated_time, su.unit_name from warehouse wh left join sys_unit su on wh.unit_id = su.id LIMIT ?
+2025-03-17 15:36:39.610 [http-nio-8080-exec-10] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage - ==>  Preparing: select p.id, p.product_name, p.category_id, p.warehouse_id, p.created_by, p.created_time, p.updated_by, p.updated_time, pc.category_name, w.warehouse_name from product p left join product_category pc on p.category_id = pc.id left join warehouse w on p.warehouse_id = w.id LIMIT ?
+2025-03-17 15:36:39.610 [http-nio-8080-exec-3] DEBUG com.wms.wmsend.mapper.SysUserMapper.listByPage - ==>  Preparing: select su.id, username, nickname, phone, email, role, su.dept_id, su.created_by, su.created_time, su.updated_by, su.updated_time, dept_name, unit_name from sys_user su left join sys_dept sd on su.dept_id = sd.id left join sys_unit su2 on sd.unit_id = su2.id LIMIT ?
+2025-03-17 15:36:39.611 [http-nio-8080-exec-4] DEBUG com.wms.wmsend.mapper.StockDocMapper.listByPage - ==>  Preparing: select sd.id, sd.document_no, sd.document_type, sd.warehouse_id, sd.status, sd.operator_user, sd.remark, sd.created_by, sd.created_time, sd.updated_by, sd.updated_time, w.warehouse_name, su.username as operator_username from stock_doc sd left join warehouse w on sd.warehouse_id = w.id left join sys_user su on sd.operator_user = su.id LIMIT ?
+2025-03-17 15:36:39.611 [http-nio-8080-exec-9] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage - ==> Parameters: 10000(Long)
+2025-03-17 15:36:39.611 [http-nio-8080-exec-10] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage - ==> Parameters: 10000(Long)
+2025-03-17 15:36:39.611 [http-nio-8080-exec-4] DEBUG com.wms.wmsend.mapper.StockDocMapper.listByPage - ==> Parameters: 10(Long)
+2025-03-17 15:36:39.611 [http-nio-8080-exec-3] DEBUG com.wms.wmsend.mapper.SysUserMapper.listByPage - ==> Parameters: 10000(Long)
+2025-03-17 15:36:39.612 [http-nio-8080-exec-9] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage - <==      Total: 1
+2025-03-17 15:36:39.613 [http-nio-8080-exec-10] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage - <==      Total: 3
+2025-03-17 15:36:39.613 [http-nio-8080-exec-3] DEBUG com.wms.wmsend.mapper.SysUserMapper.listByPage - <==      Total: 16
+2025-03-17 15:36:39.613 [http-nio-8080-exec-4] DEBUG com.wms.wmsend.mapper.StockDocMapper.listByPage - <==      Total: 7
+2025-03-17 15:37:59.989 [http-nio-8080-exec-9] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM warehouse wh
+2025-03-17 15:37:59.989 [http-nio-8080-exec-9] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage_mpCount - ==> Parameters: 
+2025-03-17 15:37:59.990 [http-nio-8080-exec-4] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM product p
+2025-03-17 15:37:59.990 [http-nio-8080-exec-4] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage_mpCount - ==> Parameters: 
+2025-03-17 15:38:00.008 [http-nio-8080-exec-5] DEBUG com.wms.wmsend.mapper.SysUserMapper.listByPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM sys_user su
+2025-03-17 15:38:00.008 [http-nio-8080-exec-7] DEBUG com.wms.wmsend.mapper.StockDocMapper.listByPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM stock_doc sd
+2025-03-17 15:38:00.008 [http-nio-8080-exec-7] DEBUG com.wms.wmsend.mapper.StockDocMapper.listByPage_mpCount - ==> Parameters: 
+2025-03-17 15:38:00.008 [http-nio-8080-exec-5] DEBUG com.wms.wmsend.mapper.SysUserMapper.listByPage_mpCount - ==> Parameters: 
+2025-03-17 15:38:00.206 [http-nio-8080-exec-5] DEBUG com.wms.wmsend.mapper.SysUserMapper.listByPage_mpCount - <==      Total: 1
+2025-03-17 15:38:00.207 [http-nio-8080-exec-5] DEBUG com.wms.wmsend.mapper.SysUserMapper.listByPage - ==>  Preparing: select su.id, username, nickname, phone, email, role, su.dept_id, su.created_by, su.created_time, su.updated_by, su.updated_time, dept_name, unit_name from sys_user su left join sys_dept sd on su.dept_id = sd.id left join sys_unit su2 on sd.unit_id = su2.id LIMIT ?
+2025-03-17 15:38:00.208 [http-nio-8080-exec-5] DEBUG com.wms.wmsend.mapper.SysUserMapper.listByPage - ==> Parameters: 10000(Long)
+2025-03-17 15:38:00.218 [http-nio-8080-exec-5] DEBUG com.wms.wmsend.mapper.SysUserMapper.listByPage - <==      Total: 16
+2025-03-17 15:38:00.228 [http-nio-8080-exec-4] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage_mpCount - <==      Total: 1
+2025-03-17 15:38:00.228 [http-nio-8080-exec-9] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage_mpCount - <==      Total: 1
+2025-03-17 15:38:00.229 [http-nio-8080-exec-7] DEBUG com.wms.wmsend.mapper.StockDocMapper.listByPage_mpCount - <==      Total: 1
+2025-03-17 15:38:00.230 [http-nio-8080-exec-7] DEBUG com.wms.wmsend.mapper.StockDocMapper.listByPage - ==>  Preparing: select sd.id, sd.document_no, sd.document_type, sd.warehouse_id, sd.status, sd.operator_user, sd.remark, sd.created_by, sd.created_time, sd.updated_by, sd.updated_time, w.warehouse_name, su.username as operator_username from stock_doc sd left join warehouse w on sd.warehouse_id = w.id left join sys_user su on sd.operator_user = su.id LIMIT ?
+2025-03-17 15:38:00.230 [http-nio-8080-exec-4] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage - ==>  Preparing: select p.id, p.product_name, p.category_id, p.warehouse_id, p.created_by, p.created_time, p.updated_by, p.updated_time, pc.category_name, w.warehouse_name from product p left join product_category pc on p.category_id = pc.id left join warehouse w on p.warehouse_id = w.id LIMIT ?
+2025-03-17 15:38:00.230 [http-nio-8080-exec-9] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage - ==>  Preparing: select wh.id, wh.warehouse_name, wh.unit_id, wh.address, wh.created_by, wh.created_time, wh.updated_by, wh.updated_time, su.unit_name from warehouse wh left join sys_unit su on wh.unit_id = su.id LIMIT ?
+2025-03-17 15:38:00.230 [http-nio-8080-exec-7] DEBUG com.wms.wmsend.mapper.StockDocMapper.listByPage - ==> Parameters: 10(Long)
+2025-03-17 15:38:00.230 [http-nio-8080-exec-9] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage - ==> Parameters: 10000(Long)
+2025-03-17 15:38:00.230 [http-nio-8080-exec-4] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage - ==> Parameters: 10000(Long)
+2025-03-17 15:38:00.231 [http-nio-8080-exec-9] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage - <==      Total: 1
+2025-03-17 15:38:00.232 [http-nio-8080-exec-4] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage - <==      Total: 3
+2025-03-17 15:38:00.232 [http-nio-8080-exec-7] DEBUG com.wms.wmsend.mapper.StockDocMapper.listByPage - <==      Total: 7
+2025-03-17 15:43:25.414 [http-nio-8080-exec-5] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM warehouse wh
+2025-03-17 15:43:25.414 [http-nio-8080-exec-5] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage_mpCount - ==> Parameters: 
+2025-03-17 15:43:25.416 [http-nio-8080-exec-9] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM product p
+2025-03-17 15:43:25.416 [http-nio-8080-exec-9] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage_mpCount - ==> Parameters: 
+2025-03-17 15:43:25.426 [http-nio-8080-exec-2] DEBUG com.wms.wmsend.mapper.SysUserMapper.listByPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM sys_user su
+2025-03-17 15:43:25.426 [http-nio-8080-exec-6] DEBUG com.wms.wmsend.mapper.StockDocMapper.listByPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM stock_doc sd
+2025-03-17 15:43:25.426 [http-nio-8080-exec-2] DEBUG com.wms.wmsend.mapper.SysUserMapper.listByPage_mpCount - ==> Parameters: 
+2025-03-17 15:43:25.426 [http-nio-8080-exec-6] DEBUG com.wms.wmsend.mapper.StockDocMapper.listByPage_mpCount - ==> Parameters: 
+2025-03-17 15:43:25.632 [http-nio-8080-exec-2] DEBUG com.wms.wmsend.mapper.SysUserMapper.listByPage_mpCount - <==      Total: 1
+2025-03-17 15:43:25.632 [http-nio-8080-exec-5] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage_mpCount - <==      Total: 1
+2025-03-17 15:43:25.632 [http-nio-8080-exec-6] DEBUG com.wms.wmsend.mapper.StockDocMapper.listByPage_mpCount - <==      Total: 1
+2025-03-17 15:43:25.632 [http-nio-8080-exec-9] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage_mpCount - <==      Total: 1
+2025-03-17 15:43:25.634 [http-nio-8080-exec-2] DEBUG com.wms.wmsend.mapper.SysUserMapper.listByPage - ==>  Preparing: select su.id, username, nickname, phone, email, role, su.dept_id, su.created_by, su.created_time, su.updated_by, su.updated_time, dept_name, unit_name from sys_user su left join sys_dept sd on su.dept_id = sd.id left join sys_unit su2 on sd.unit_id = su2.id LIMIT ?
+2025-03-17 15:43:25.634 [http-nio-8080-exec-5] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage - ==>  Preparing: select wh.id, wh.warehouse_name, wh.unit_id, wh.address, wh.created_by, wh.created_time, wh.updated_by, wh.updated_time, su.unit_name from warehouse wh left join sys_unit su on wh.unit_id = su.id LIMIT ?
+2025-03-17 15:43:25.634 [http-nio-8080-exec-9] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage - ==>  Preparing: select p.id, p.product_name, p.category_id, p.warehouse_id, p.created_by, p.created_time, p.updated_by, p.updated_time, pc.category_name, w.warehouse_name from product p left join product_category pc on p.category_id = pc.id left join warehouse w on p.warehouse_id = w.id LIMIT ?
+2025-03-17 15:43:25.634 [http-nio-8080-exec-6] DEBUG com.wms.wmsend.mapper.StockDocMapper.listByPage - ==>  Preparing: select sd.id, sd.document_no, sd.document_type, sd.warehouse_id, sd.status, sd.operator_user, sd.remark, sd.created_by, sd.created_time, sd.updated_by, sd.updated_time, w.warehouse_name, su.username as operator_username from stock_doc sd left join warehouse w on sd.warehouse_id = w.id left join sys_user su on sd.operator_user = su.id LIMIT ?
+2025-03-17 15:43:25.634 [http-nio-8080-exec-9] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage - ==> Parameters: 10000(Long)
+2025-03-17 15:43:25.634 [http-nio-8080-exec-6] DEBUG com.wms.wmsend.mapper.StockDocMapper.listByPage - ==> Parameters: 10(Long)
+2025-03-17 15:43:25.634 [http-nio-8080-exec-5] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage - ==> Parameters: 10000(Long)
+2025-03-17 15:43:25.634 [http-nio-8080-exec-2] DEBUG com.wms.wmsend.mapper.SysUserMapper.listByPage - ==> Parameters: 10000(Long)
+2025-03-17 15:43:25.635 [http-nio-8080-exec-5] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage - <==      Total: 1
+2025-03-17 15:43:25.636 [http-nio-8080-exec-6] DEBUG com.wms.wmsend.mapper.StockDocMapper.listByPage - <==      Total: 7
+2025-03-17 15:43:25.636 [http-nio-8080-exec-9] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage - <==      Total: 3
+2025-03-17 15:43:25.636 [http-nio-8080-exec-2] DEBUG com.wms.wmsend.mapper.SysUserMapper.listByPage - <==      Total: 16
+2025-03-17 15:43:39.157 [http-nio-8080-exec-1] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM warehouse wh
+2025-03-17 15:43:39.157 [http-nio-8080-exec-1] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage_mpCount - ==> Parameters: 
+2025-03-17 15:43:39.168 [http-nio-8080-exec-4] DEBUG com.wms.wmsend.mapper.StockDocMapper.listByPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM stock_doc sd
+2025-03-17 15:43:39.168 [http-nio-8080-exec-7] DEBUG com.wms.wmsend.mapper.SysUserMapper.listByPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM sys_user su
+2025-03-17 15:43:39.168 [http-nio-8080-exec-8] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM product p
+2025-03-17 15:43:39.168 [http-nio-8080-exec-4] DEBUG com.wms.wmsend.mapper.StockDocMapper.listByPage_mpCount - ==> Parameters: 
+2025-03-17 15:43:39.168 [http-nio-8080-exec-8] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage_mpCount - ==> Parameters: 
+2025-03-17 15:43:39.168 [http-nio-8080-exec-7] DEBUG com.wms.wmsend.mapper.SysUserMapper.listByPage_mpCount - ==> Parameters: 
+2025-03-17 15:43:39.368 [http-nio-8080-exec-7] DEBUG com.wms.wmsend.mapper.SysUserMapper.listByPage_mpCount - <==      Total: 1
+2025-03-17 15:43:39.368 [http-nio-8080-exec-1] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage_mpCount - <==      Total: 1
+2025-03-17 15:43:39.368 [http-nio-8080-exec-8] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage_mpCount - <==      Total: 1
+2025-03-17 15:43:39.370 [http-nio-8080-exec-1] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage - ==>  Preparing: select wh.id, wh.warehouse_name, wh.unit_id, wh.address, wh.created_by, wh.created_time, wh.updated_by, wh.updated_time, su.unit_name from warehouse wh left join sys_unit su on wh.unit_id = su.id LIMIT ?
+2025-03-17 15:43:39.370 [http-nio-8080-exec-8] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage - ==>  Preparing: select p.id, p.product_name, p.category_id, p.warehouse_id, p.created_by, p.created_time, p.updated_by, p.updated_time, pc.category_name, w.warehouse_name from product p left join product_category pc on p.category_id = pc.id left join warehouse w on p.warehouse_id = w.id LIMIT ?
+2025-03-17 15:43:39.370 [http-nio-8080-exec-7] DEBUG com.wms.wmsend.mapper.SysUserMapper.listByPage - ==>  Preparing: select su.id, username, nickname, phone, email, role, su.dept_id, su.created_by, su.created_time, su.updated_by, su.updated_time, dept_name, unit_name from sys_user su left join sys_dept sd on su.dept_id = sd.id left join sys_unit su2 on sd.unit_id = su2.id LIMIT ?
+2025-03-17 15:43:39.370 [http-nio-8080-exec-1] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage - ==> Parameters: 10000(Long)
+2025-03-17 15:43:39.370 [http-nio-8080-exec-8] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage - ==> Parameters: 10000(Long)
+2025-03-17 15:43:39.370 [http-nio-8080-exec-7] DEBUG com.wms.wmsend.mapper.SysUserMapper.listByPage - ==> Parameters: 10000(Long)
+2025-03-17 15:43:39.381 [http-nio-8080-exec-8] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage - <==      Total: 3
+2025-03-17 15:43:39.381 [http-nio-8080-exec-1] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage - <==      Total: 1
+2025-03-17 15:43:39.381 [http-nio-8080-exec-7] DEBUG com.wms.wmsend.mapper.SysUserMapper.listByPage - <==      Total: 16
+2025-03-17 15:43:39.381 [http-nio-8080-exec-4] DEBUG com.wms.wmsend.mapper.StockDocMapper.listByPage_mpCount - <==      Total: 1
+2025-03-17 15:43:39.382 [http-nio-8080-exec-4] DEBUG com.wms.wmsend.mapper.StockDocMapper.listByPage - ==>  Preparing: select sd.id, sd.document_no, sd.document_type, sd.warehouse_id, sd.status, sd.operator_user, sd.remark, sd.created_by, sd.created_time, sd.updated_by, sd.updated_time, w.warehouse_name, su.username as operator_username from stock_doc sd left join warehouse w on sd.warehouse_id = w.id left join sys_user su on sd.operator_user = su.id LIMIT ?
+2025-03-17 15:43:39.382 [http-nio-8080-exec-4] DEBUG com.wms.wmsend.mapper.StockDocMapper.listByPage - ==> Parameters: 10(Long)
+2025-03-17 15:43:39.384 [http-nio-8080-exec-4] DEBUG com.wms.wmsend.mapper.StockDocMapper.listByPage - <==      Total: 7
+2025-03-17 15:45:56.436 [http-nio-8080-exec-9] DEBUG com.wms.wmsend.mapper.InventoryMapper.listByPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM inventory i
+2025-03-17 15:45:56.436 [http-nio-8080-exec-1] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM product p
+2025-03-17 15:45:56.436 [http-nio-8080-exec-2] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM warehouse wh
+2025-03-17 15:45:56.436 [http-nio-8080-exec-2] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage_mpCount - ==> Parameters: 
+2025-03-17 15:45:56.436 [http-nio-8080-exec-9] DEBUG com.wms.wmsend.mapper.InventoryMapper.listByPage_mpCount - ==> Parameters: 
+2025-03-17 15:45:56.436 [http-nio-8080-exec-1] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage_mpCount - ==> Parameters: 
+2025-03-17 15:45:56.606 [http-nio-8080-exec-1] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage_mpCount - <==      Total: 1
+2025-03-17 15:45:56.606 [http-nio-8080-exec-9] DEBUG com.wms.wmsend.mapper.InventoryMapper.listByPage_mpCount - <==      Total: 1
+2025-03-17 15:45:56.606 [http-nio-8080-exec-2] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage_mpCount - <==      Total: 1
+2025-03-17 15:45:56.607 [http-nio-8080-exec-1] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage - ==>  Preparing: select p.id, p.product_name, p.category_id, p.warehouse_id, p.created_by, p.created_time, p.updated_by, p.updated_time, pc.category_name, w.warehouse_name from product p left join product_category pc on p.category_id = pc.id left join warehouse w on p.warehouse_id = w.id LIMIT ?
+2025-03-17 15:45:56.607 [http-nio-8080-exec-2] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage - ==>  Preparing: select wh.id, wh.warehouse_name, wh.unit_id, wh.address, wh.created_by, wh.created_time, wh.updated_by, wh.updated_time, su.unit_name from warehouse wh left join sys_unit su on wh.unit_id = su.id LIMIT ?
+2025-03-17 15:45:56.607 [http-nio-8080-exec-9] DEBUG com.wms.wmsend.mapper.InventoryMapper.listByPage - ==>  Preparing: select i.id, i.inventory_no, i.warehouse_id, i.status, i.remark, i.created_by, i.created_time, i.updated_by, i.updated_time, w.warehouse_name from inventory i left join warehouse w on i.warehouse_id = w.id LIMIT ?
+2025-03-17 15:45:56.607 [http-nio-8080-exec-2] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage - ==> Parameters: 10000(Long)
+2025-03-17 15:45:56.607 [http-nio-8080-exec-1] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage - ==> Parameters: 10000(Long)
+2025-03-17 15:45:56.607 [http-nio-8080-exec-9] DEBUG com.wms.wmsend.mapper.InventoryMapper.listByPage - ==> Parameters: 10(Long)
+2025-03-17 15:45:56.608 [http-nio-8080-exec-1] DEBUG com.wms.wmsend.mapper.ProductMapper.listByPage - <==      Total: 3
+2025-03-17 15:45:56.608 [http-nio-8080-exec-9] DEBUG com.wms.wmsend.mapper.InventoryMapper.listByPage - <==      Total: 2
+2025-03-17 15:45:56.609 [http-nio-8080-exec-2] DEBUG com.wms.wmsend.mapper.WarehouseMapper.listByPage - <==      Total: 1
+2025-03-17 15:48:15.200 [scheduling-1] DEBUG com.wms.wmsend.mapper.StockAlertMapper.listByPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM stock_alert sa
+2025-03-17 15:48:15.200 [scheduling-1] DEBUG com.wms.wmsend.mapper.StockAlertMapper.listByPage_mpCount - ==> Parameters: 
+2025-03-17 15:48:15.253 [scheduling-1] DEBUG com.wms.wmsend.mapper.StockAlertMapper.listByPage_mpCount - <==      Total: 1
+2025-03-17 15:48:15.255 [scheduling-1] DEBUG com.wms.wmsend.mapper.StockAlertMapper.listByPage - ==>  Preparing: select sa.id, sa.category_id, sa.product_id, sa.warehouse_id, sa.min_stock, sa.max_stock, sa.send_type, sa.send_to, sa.created_by, sa.created_time, sa.updated_by, sa.updated_time, p.product_name, w.warehouse_name, u.nickname as send_to_name, pc.category_name from stock_alert sa left join product p on sa.product_id = p.id left join warehouse w on sa.warehouse_id = w.id left join sys_user u on sa.send_to = u.id left join product_category pc on sa.category_id = pc.id LIMIT ?
+2025-03-17 15:48:15.255 [scheduling-1] DEBUG com.wms.wmsend.mapper.StockAlertMapper.listByPage - ==> Parameters: 10000(Long)
+2025-03-17 15:48:15.257 [scheduling-1] DEBUG com.wms.wmsend.mapper.StockAlertMapper.listByPage - <==      Total: 1
+2025-03-17 15:48:15.258 [scheduling-1] DEBUG com.wms.wmsend.mapper.StockAlertDetailMapper.selectList - ==>  Preparing: SELECT id,msg,send_to,status,created_by,created_time FROM stock_alert_detail
+2025-03-17 15:48:15.258 [scheduling-1] DEBUG com.wms.wmsend.mapper.StockAlertDetailMapper.selectList - ==> Parameters: 
+2025-03-17 15:48:15.260 [scheduling-1] DEBUG com.wms.wmsend.mapper.StockAlertDetailMapper.selectList - <==      Total: 7
+2025-03-17 15:48:15.262 [scheduling-1] DEBUG com.wms.wmsend.mapper.RealtimeStockMapper.selectList - ==>  Preparing: SELECT id,product_id,warehouse_id,quantity,created_by,updated_by,created_time,updated_time FROM realtime_stock WHERE (product_id = ? AND warehouse_id = ?)
+2025-03-17 15:48:15.262 [scheduling-1] DEBUG com.wms.wmsend.mapper.RealtimeStockMapper.selectList - ==> Parameters: 1(Long), 1(Long)
+2025-03-17 15:48:15.263 [scheduling-1] DEBUG com.wms.wmsend.mapper.RealtimeStockMapper.selectList - <==      Total: 1

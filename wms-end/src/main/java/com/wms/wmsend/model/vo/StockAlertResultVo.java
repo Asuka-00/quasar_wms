@@ -5,6 +5,10 @@ import lombok.Data;
 @Data
 public class StockAlertResultVo extends BaseResultVo{
 
+    private Long categoryId;
+
+    private String categoryName;
+
     private String productName;
 
     private Long productId;

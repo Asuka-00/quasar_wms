@@ -14,6 +14,11 @@ import lombok.Data;
 @Data
 public class StockAlert extends BaseEntity {
     /**
+     * 商品类别ID
+     */
+    private Long categoryId;
+
+    /**
      * 商品ID
      */
     private Long productId;

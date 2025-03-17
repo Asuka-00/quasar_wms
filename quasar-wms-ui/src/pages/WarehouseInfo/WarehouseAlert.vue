@@ -41,8 +41,10 @@
                     <div class="text-h6">{{ addWarehouseAlertDialog ? '新增预警' : '编辑预警' }}</div>
                     <q-form ref="formRef">
                         <q-select v-model="formData.warehouseId" label="仓库名称" dense outlined :options="warehouseOptions" option-label="warehouseName" option-value="id"
-                        emit-value map-options clearable :rules="[(val) => val !== null || '仓库名称不能为空']"/>
-                        <q-select v-model="formData.productId" label="产品名称" dense outlined :options="productOptions" option-label="productName" option-value="id"
+                        emit-value map-options clearable :rules="[(val) => val !== null || '仓库名称不能为空']" @update:model-value="() => { formData.productId = null; freshDialogProductOptions(); }"/>
+                        <q-select v-model="formData.categoryId" label="商品分类" dense outlined :options="categoryOptions" option-label="categoryName" option-value="id"
+                        emit-value map-options clearable :rules="[(val) => val !== null || '商品分类不能为空']" @update:model-value="() => { formData.productId = null; freshDialogProductOptions(); }"/>
+                        <q-select v-model="formData.productId" label="产品名称" dense outlined :options="dialogProductOptions" option-label="productName" option-value="id"
                         emit-value map-options clearable :rules="[(val) => val !== null || '产品名称不能为空']"/>
                         <q-input v-model="formData.minStock" label="最小库存" dense outlined type="number"
                             :rules="[
@@ -83,6 +85,7 @@ const rows = ref([]);
 const columns = ref<QTableColumn[]>([
     { name: 'index', label: '#', field: 'index', align: "left" },
     { name: 'warehouseName', label: '仓库名称', field: 'warehouseName', align: "left" },
+    { name: 'categoryName', label: '商品分类', field: 'categoryName', align: "left" },
     { name: 'productName', label: '产品名称', field: 'productName', align: "left" },
     { name: 'minStock', label: '最小库存', field: 'minStock', align: "left" },
     { name: 'maxStock', label: '最大库存', field: 'maxStock', align: "left" },
@@ -132,10 +135,8 @@ const freshData = async () => {
 
 const warehouseOptions = ref([]);
 const productOptions = ref([]);
-// const sendTypeOptions = ref([
-//     { id: 'phone', sendTypeName: '短信' },
-//     { id: 'email', sendTypeName: '邮件' }
-// ]);
+const dialogProductOptions = ref([])
+const categoryOptions = ref([]);
 const sendToOptions = ref([]);
 
 const freshWarehouseOptions = async () => {
@@ -150,6 +151,18 @@ const freshWarehouseOptions = async () => {
     }
 }
 
+const freshCategoryOptions = async () => {
+    const res = await axios.get('/web/product_category/list',{
+        params: {
+            current: 1,
+            size: 10000
+        }
+    });
+    if(res.data.code === 200){
+        categoryOptions.value = res.data.data.records;
+    }
+}
+
 const freshProductOptions = async () => {
     const res = await axios.get('/web/product/list',{
         params: {
@@ -159,6 +172,20 @@ const freshProductOptions = async () => {
     });
     if(res.data.code === 200){
         productOptions.value = res.data.data.records;
+    }
+}
+
+const freshDialogProductOptions = async () => {
+    const res = await axios.get('/web/product/list',{
+        params: {
+            current: 1,
+            size: 10000,
+            categoryId: formData.value.categoryId,
+            warehouseId: formData.value.warehouseId
+        }
+    });
+    if(res.data.code === 200){
+        dialogProductOptions.value = res.data.data.records;
     }
 }
 
@@ -179,6 +206,7 @@ const addWarehouseAlertDialog = ref(false);
 
 interface FormData {
     warehouseId: number | null;
+    categoryId: number | null; 
     productId: number | null;
     minStock: number | null;
     maxStock: number | null;
@@ -189,6 +217,7 @@ interface FormData {
 
 const formData = ref<FormData>({
     warehouseId: null,
+    categoryId: null,
     productId: null,
     minStock: null,
     maxStock: null,
@@ -203,6 +232,7 @@ const addWarehouseAlert = () => {
     addWarehouseAlertDialog.value = true;
     formData.value = {
         warehouseId: null,
+        categoryId: null,
         productId: null,
         minStock: null,
         maxStock: null,
@@ -215,8 +245,9 @@ const editWarehouseAlert = (row: any) => {
     dialogVisible.value = true;
     addWarehouseAlertDialog.value = false;
     formData.value = {
-        warehouseId: row.warehouseId,
-        productId: row.productId,
+        warehouseId: +row.warehouseId,
+        categoryId: +row.categoryId,
+        productId: +row.productId,
         minStock: row.minStock,
         maxStock: row.maxStock,
         sendType: row.sendType,
@@ -285,6 +316,7 @@ onMounted(() => {
     freshData();
     freshWarehouseOptions();
     freshProductOptions();
+    freshCategoryOptions();
     freshSendToOptions();
 });
 

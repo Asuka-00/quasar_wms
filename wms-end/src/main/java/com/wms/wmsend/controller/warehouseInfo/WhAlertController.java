@@ -32,7 +32,7 @@ public class WhAlertController {
 
     @GetMapping("/list")
     @ApiOperation(value = "库存预警列表")
-    private Result<IPage<StockAlertResultVo>> list(
+    public Result<IPage<StockAlertResultVo>> list(
             @ApiParam(value = "当前页码", required = true) Long current,
             @ApiParam(value = "每页显示数量", required = true) Long size,
             @ApiParam(value = "商品ID") String productId,
@@ -45,21 +45,21 @@ public class WhAlertController {
 
     @PostMapping("/saveOrUpdate")
     @ApiOperation(value = "新增或修改库存预警")
-    private Result<String> saveOrUpdate(@ApiParam(value = "库存预警对象", required = true) @RequestBody StockAlert stockAlert){
+    public Result<String> saveOrUpdate(@ApiParam(value = "库存预警对象", required = true) @RequestBody StockAlert stockAlert){
         stockAlertService.saveOrUpdate(stockAlert);
         return Result.ok();
     }
 
     @GetMapping("/delete")
     @ApiOperation(value = "删除库存预警")
-    private Result<String> delete(@ApiParam(value = "库存预警ID", required = true) String id){
+    public Result<String> delete(@ApiParam(value = "库存预警ID", required = true) String id){
         stockAlertService.removeById(id);
         return Result.ok();
     }
 
     @GetMapping("/getAlert")
     @ApiOperation(value = "获取库存预警通知")
-    private Result<List<StockAlertDetail>> getAlert(@ApiParam(value = "用户ID", required = true) Long id){
+    public Result<List<StockAlertDetail>> getAlert(@ApiParam(value = "用户ID", required = true) Long id){
         LambdaQueryWrapper<StockAlertDetail> queryWrapper = new LambdaQueryWrapper<>();
         queryWrapper.eq(StockAlertDetail::getSendTo, id);
         queryWrapper.eq(StockAlertDetail::getStatus, 0);
@@ -69,7 +69,7 @@ public class WhAlertController {
 
     @GetMapping("/readAlert")
     @ApiOperation(value = "标记库存预警通知为已读")
-    private Result<String> readAlert(@ApiParam(value = "库存预警通知ID", required = true) Long id){
+    public Result<String> readAlert(@ApiParam(value = "库存预警通知ID", required = true) Long id){
         StockAlertDetail stockAlertDetail = stockAlertDetailService.getById(id);
         stockAlertDetail.setStatus(1L);
         stockAlertDetailService.updateById(stockAlertDetail);

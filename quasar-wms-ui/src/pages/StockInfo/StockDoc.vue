@@ -75,7 +75,7 @@
                         :rules="[(val) => val !== null || '审批人不能为空']" />
                     <q-input v-model="formData.remark" label="备注" dense outlined />
                     <!-- 子表格 -->
-                    <q-table :rows="formData.items" :columns="stockDocAddColumns" row-key="id" class="q-mt-md" hide-bottom>
+                    <q-table :rows="formData.items" :columns="stockDocAddColumns" row-key="id" class="q-mt-md">
                         <template v-slot:body-cell-productName="props">
                             <q-td>
                                 <q-select v-model="props.row.productId" label="产品名称" dense outlined
@@ -141,8 +141,7 @@
                     </div>
                 </div>
                 <!-- 明细表格 -->
-                <q-table :rows="viewData.items" :columns="stockDocDetailsColumns" row-key="id" class="q-mt-md"
-                    hide-bottom>
+                <q-table :rows="viewData.items" :columns="stockDocDetailsColumns" row-key="id" class="q-mt-md">
                 </q-table>
             </q-card-section>
             <q-card-actions align="right">
@@ -256,6 +255,7 @@ const operatorUserOptions = ref([]);
 const stockDocAddColumns = ref<QTableColumn[]>([
     { name: 'productName', label: '产品名称', field: 'productName', align: "left" },
     { name: 'quantity', label: '数量', field: 'quantity', align: "left" },
+    { name: 'action', label: '操作', field: 'action', align: "left" }
 ]);
 
 const stockDocDetailsColumns = ref<QTableColumn[]>([
@@ -533,6 +533,7 @@ const addStockDocDetail = () => {
         productId: null,
         quantity: null
     });
+    console.log(formData.value.items);
 }
 
 const removeStockDocDetail = (index: number) => {

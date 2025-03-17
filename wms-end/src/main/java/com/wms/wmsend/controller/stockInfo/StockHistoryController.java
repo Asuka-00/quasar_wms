@@ -22,7 +22,7 @@ public class StockHistoryController {
     private StockHistoryService stockHistoryService;
 
     @GetMapping("/list")
-    private Result<IPage<StockHistoryResultVo>> list (
+    public Result<IPage<StockHistoryResultVo>> list (
             @ApiParam(value = "当前页", required = true) Long current,
             @ApiParam(value = "每页显示条数", required = true) Long size,
             @ApiParam(value = "仓库ID") String warehouseId,

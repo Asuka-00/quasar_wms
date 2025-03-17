@@ -1,0 +1,785 @@
+2025-03-17 15:10:17.206 [main] INFO  com.wms.wmsend.WmsEndApplication - Starting WmsEndApplication using Java 17.0.13 on DESKTOP-K30I25T with PID 23720 (E:\Develop\Code\Java\WMS\wms-end\target\classes started by Ayanami in E:\Develop\Code\Java\WMS\wms-end)
+2025-03-17 15:10:17.213 [main] INFO  com.wms.wmsend.WmsEndApplication - No active profile set, falling back to 1 default profile: "default"
+2025-03-17 15:10:17.708 [main] WARN  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'sqlLogInterceptor' defined in class path resource [com/wms/wmsend/customer/config/MyBatisConfig.class]: Cannot register bean definition [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=myBatisConfig; factoryMethodName=sqlLogInterceptor; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/wms/wmsend/customer/config/MyBatisConfig.class]] for bean 'sqlLogInterceptor': There is already [Generic bean: class [com.wms.wmsend.common.log.SqlLogInterceptor]; scope=singleton; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [E:\Develop\Code\Java\WMS\wms-end\target\classes\com\wms\wmsend\common\log\SqlLogInterceptor.class]] bound.
+2025-03-17 15:10:17.722 [main] INFO  org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2025-03-17 15:10:17.733 [main] ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'sqlLogInterceptor', defined in class path resource [com/wms/wmsend/customer/config/MyBatisConfig.class], could not be registered. A bean with that name has already been defined in file [E:\Develop\Code\Java\WMS\wms-end\target\classes\com\wms\wmsend\common\log\SqlLogInterceptor.class] and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
+2025-03-17 15:11:56.228 [main] INFO  com.wms.wmsend.WmsEndApplication - Starting WmsEndApplication using Java 17.0.13 on DESKTOP-K30I25T with PID 18840 (E:\Develop\Code\Java\WMS\wms-end\target\classes started by Ayanami in E:\Develop\Code\Java\WMS\wms-end)
+2025-03-17 15:11:56.234 [main] INFO  com.wms.wmsend.WmsEndApplication - No active profile set, falling back to 1 default profile: "default"
+2025-03-17 15:11:56.816 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-03-17 15:11:56.817 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-03-17 15:11:56.835 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+2025-03-17 15:11:56.925 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'inventoryDetailMapper' and 'com.wms.wmsend.mapper.InventoryDetailMapper' mapperInterface. Bean already defined with the same name!
+2025-03-17 15:11:56.926 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'inventoryMapper' and 'com.wms.wmsend.mapper.InventoryMapper' mapperInterface. Bean already defined with the same name!
+2025-03-17 15:11:56.926 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'productCategoryMapper' and 'com.wms.wmsend.mapper.ProductCategoryMapper' mapperInterface. Bean already defined with the same name!
+2025-03-17 15:11:56.926 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'productMapper' and 'com.wms.wmsend.mapper.ProductMapper' mapperInterface. Bean already defined with the same name!
+2025-03-17 15:11:56.926 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'realtimeStockMapper' and 'com.wms.wmsend.mapper.RealtimeStockMapper' mapperInterface. Bean already defined with the same name!
+2025-03-17 15:11:56.926 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'stockAlertDetailMapper' and 'com.wms.wmsend.mapper.StockAlertDetailMapper' mapperInterface. Bean already defined with the same name!
+2025-03-17 15:11:56.926 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'stockAlertMapper' and 'com.wms.wmsend.mapper.StockAlertMapper' mapperInterface. Bean already defined with the same name!
+2025-03-17 15:11:56.926 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'stockDocItemMapper' and 'com.wms.wmsend.mapper.StockDocItemMapper' mapperInterface. Bean already defined with the same name!
+2025-03-17 15:11:56.926 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'stockDocMapper' and 'com.wms.wmsend.mapper.StockDocMapper' mapperInterface. Bean already defined with the same name!
+2025-03-17 15:11:56.926 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'stockHistoryMapper' and 'com.wms.wmsend.mapper.StockHistoryMapper' mapperInterface. Bean already defined with the same name!
+2025-03-17 15:11:56.926 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'sysDeptMapper' and 'com.wms.wmsend.mapper.SysDeptMapper' mapperInterface. Bean already defined with the same name!
+2025-03-17 15:11:56.926 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'sysUnitMapper' and 'com.wms.wmsend.mapper.SysUnitMapper' mapperInterface. Bean already defined with the same name!
+2025-03-17 15:11:56.926 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'sysUserMapper' and 'com.wms.wmsend.mapper.SysUserMapper' mapperInterface. Bean already defined with the same name!
+2025-03-17 15:11:56.926 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'warehouseMapper' and 'com.wms.wmsend.mapper.WarehouseMapper' mapperInterface. Bean already defined with the same name!
+2025-03-17 15:11:56.927 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.wms.wmsend.mapper]' package. Please check your configuration.
+2025-03-17 15:11:57.410 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-03-17 15:11:57.417 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-03-17 15:11:57.417 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-17 15:11:57.418 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68]
+2025-03-17 15:11:57.518 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-17 15:11:57.518 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1256 ms
+2025-03-17 15:11:59.276 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2025-03-17 15:11:59.605 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-03-17 15:11:59.619 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-03-17 15:11:59.963 [main] INFO  com.wms.wmsend.WmsEndApplication - Started WmsEndApplication in 3.968 seconds (JVM running for 4.729)
+2025-03-17 15:11:59.966 [main] INFO  com.wms.wmsend.common.log.LogCleanupService - 开始清理超过7天的日志文件...
+2025-03-17 15:11:59.966 [main] INFO  com.wms.wmsend.common.log.LogCleanupService - 日志目录不存在，已创建: E:\Develop\Code\Java\WMS\wms-end\logs\backup
+2025-03-17 15:12:01.032 [scheduling-1] INFO  com.zaxxer.hikari.HikariDataSource - SPHHikariPool - Starting...
+2025-03-17 15:12:01.147 [scheduling-1] INFO  com.zaxxer.hikari.HikariDataSource - SPHHikariPool - Start completed.
+2025-03-17 15:12:01.266 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.StockAlertMapper.listByPage_mpCount
+2025-03-17 15:12:01.266 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:12:01.266 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select sa.id, sa.category_id, sa.product_id, sa.warehouse_id, sa.min_stock, sa.max_stock, sa.send_type, sa.send_to, sa.created_by, sa.created_time, sa.updated_by, sa.updated_time, p.product_name, w.warehouse_name, u.nickname as send_to_name, pc.category_name from stock_alert sa left join product p on sa.product_id = p.id left join warehouse w on sa.warehouse_id = w.id left join sys_user u on sa.send_to = u.id left join product_category pc on sa.category_id = pc.id
+2025-03-17 15:12:01.266 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 239 ms
+2025-03-17 15:12:01.266 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:12:01.281 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.StockAlertMapper.listByPage
+2025-03-17 15:12:01.281 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:12:01.281 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select sa.id, sa.category_id, sa.product_id, sa.warehouse_id, sa.min_stock, sa.max_stock, sa.send_type, sa.send_to, sa.created_by, sa.created_time, sa.updated_by, sa.updated_time, p.product_name, w.warehouse_name, u.nickname as send_to_name, pc.category_name from stock_alert sa left join product p on sa.product_id = p.id left join warehouse w on sa.warehouse_id = w.id left join sys_user u on sa.send_to = u.id left join product_category pc on sa.category_id = pc.id
+2025-03-17 15:12:01.281 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 12 ms
+2025-03-17 15:12:01.281 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:12:01.299 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.StockAlertDetailMapper.selectList
+2025-03-17 15:12:01.299 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:12:01.299 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: SELECT id,msg,send_to,status,created_by,created_time FROM stock_alert_detail
+2025-03-17 15:12:01.299 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 4 ms
+2025-03-17 15:12:01.299 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 7
+2025-03-17 15:12:01.306 [scheduling-1] WARN  com.baomidou.mybatisplus.core.toolkit.support.ReflectLambdaMeta - Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @2aa5fe93
+2025-03-17 15:12:01.313 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.RealtimeStockMapper.selectList
+2025-03-17 15:12:01.313 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:12:01.313 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: SELECT id,product_id,warehouse_id,quantity,created_by,updated_by,created_time,updated_time FROM realtime_stock WHERE (product_id = 1 AND warehouse_id = 1)
+2025-03-17 15:12:01.313 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 3 ms
+2025-03-17 15:12:01.313 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:12:32.765 [http-nio-8080-exec-2] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-17 15:12:32.765 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-03-17 15:12:32.766 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-03-17 15:15:40.076 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - SPHHikariPool - Shutdown initiated...
+2025-03-17 15:15:40.081 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - SPHHikariPool - Shutdown completed.
+2025-03-17 15:15:44.433 [main] INFO  com.wms.wmsend.WmsEndApplication - Starting WmsEndApplication using Java 17.0.13 on DESKTOP-K30I25T with PID 12648 (E:\Develop\Code\Java\WMS\wms-end\target\classes started by Ayanami in E:\Develop\Code\Java\WMS\wms-end)
+2025-03-17 15:15:44.439 [main] INFO  com.wms.wmsend.WmsEndApplication - No active profile set, falling back to 1 default profile: "default"
+2025-03-17 15:15:45.031 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-03-17 15:15:45.032 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-03-17 15:15:45.050 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+2025-03-17 15:15:45.142 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'inventoryDetailMapper' and 'com.wms.wmsend.mapper.InventoryDetailMapper' mapperInterface. Bean already defined with the same name!
+2025-03-17 15:15:45.142 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'inventoryMapper' and 'com.wms.wmsend.mapper.InventoryMapper' mapperInterface. Bean already defined with the same name!
+2025-03-17 15:15:45.142 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'productCategoryMapper' and 'com.wms.wmsend.mapper.ProductCategoryMapper' mapperInterface. Bean already defined with the same name!
+2025-03-17 15:15:45.142 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'productMapper' and 'com.wms.wmsend.mapper.ProductMapper' mapperInterface. Bean already defined with the same name!
+2025-03-17 15:15:45.142 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'realtimeStockMapper' and 'com.wms.wmsend.mapper.RealtimeStockMapper' mapperInterface. Bean already defined with the same name!
+2025-03-17 15:15:45.142 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'stockAlertDetailMapper' and 'com.wms.wmsend.mapper.StockAlertDetailMapper' mapperInterface. Bean already defined with the same name!
+2025-03-17 15:15:45.143 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'stockAlertMapper' and 'com.wms.wmsend.mapper.StockAlertMapper' mapperInterface. Bean already defined with the same name!
+2025-03-17 15:15:45.143 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'stockDocItemMapper' and 'com.wms.wmsend.mapper.StockDocItemMapper' mapperInterface. Bean already defined with the same name!
+2025-03-17 15:15:45.143 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'stockDocMapper' and 'com.wms.wmsend.mapper.StockDocMapper' mapperInterface. Bean already defined with the same name!
+2025-03-17 15:15:45.143 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'stockHistoryMapper' and 'com.wms.wmsend.mapper.StockHistoryMapper' mapperInterface. Bean already defined with the same name!
+2025-03-17 15:15:45.143 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'sysDeptMapper' and 'com.wms.wmsend.mapper.SysDeptMapper' mapperInterface. Bean already defined with the same name!
+2025-03-17 15:15:45.143 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'sysUnitMapper' and 'com.wms.wmsend.mapper.SysUnitMapper' mapperInterface. Bean already defined with the same name!
+2025-03-17 15:15:45.143 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'sysUserMapper' and 'com.wms.wmsend.mapper.SysUserMapper' mapperInterface. Bean already defined with the same name!
+2025-03-17 15:15:45.143 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'warehouseMapper' and 'com.wms.wmsend.mapper.WarehouseMapper' mapperInterface. Bean already defined with the same name!
+2025-03-17 15:15:45.143 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.wms.wmsend.mapper]' package. Please check your configuration.
+2025-03-17 15:15:45.630 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-03-17 15:15:45.637 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-03-17 15:15:45.637 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-17 15:15:45.637 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68]
+2025-03-17 15:15:45.719 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-17 15:15:45.720 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1254 ms
+2025-03-17 15:15:47.370 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2025-03-17 15:15:47.696 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-03-17 15:15:47.710 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-03-17 15:15:48.057 [main] INFO  com.wms.wmsend.WmsEndApplication - Started WmsEndApplication in 3.864 seconds (JVM running for 4.56)
+2025-03-17 15:15:48.060 [main] INFO  com.wms.wmsend.common.log.LogCleanupService - 开始清理超过7天的日志文件...
+2025-03-17 15:15:48.069 [main] INFO  com.wms.wmsend.common.log.LogCleanupService - 将清理2025-03-10之前的日志文件
+2025-03-17 15:15:48.069 [main] INFO  com.wms.wmsend.common.log.LogCleanupService - 没有找到需要清理的日志文件
+2025-03-17 15:15:49.125 [scheduling-1] INFO  com.zaxxer.hikari.HikariDataSource - SPHHikariPool - Starting...
+2025-03-17 15:15:49.242 [scheduling-1] INFO  com.zaxxer.hikari.HikariDataSource - SPHHikariPool - Start completed.
+2025-03-17 15:15:49.362 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.StockAlertMapper.listByPage_mpCount
+2025-03-17 15:15:49.362 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:15:49.362 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select sa.id, sa.category_id, sa.product_id, sa.warehouse_id, sa.min_stock, sa.max_stock, sa.send_type, sa.send_to, sa.created_by, sa.created_time, sa.updated_by, sa.updated_time, p.product_name, w.warehouse_name, u.nickname as send_to_name, pc.category_name from stock_alert sa left join product p on sa.product_id = p.id left join warehouse w on sa.warehouse_id = w.id left join sys_user u on sa.send_to = u.id left join product_category pc on sa.category_id = pc.id
+2025-03-17 15:15:49.362 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 242 ms
+2025-03-17 15:15:49.362 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:15:49.369 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.StockAlertMapper.listByPage
+2025-03-17 15:15:49.369 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:15:49.369 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select sa.id, sa.category_id, sa.product_id, sa.warehouse_id, sa.min_stock, sa.max_stock, sa.send_type, sa.send_to, sa.created_by, sa.created_time, sa.updated_by, sa.updated_time, p.product_name, w.warehouse_name, u.nickname as send_to_name, pc.category_name from stock_alert sa left join product p on sa.product_id = p.id left join warehouse w on sa.warehouse_id = w.id left join sys_user u on sa.send_to = u.id left join product_category pc on sa.category_id = pc.id
+2025-03-17 15:15:49.369 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 5 ms
+2025-03-17 15:15:49.369 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:15:49.387 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.StockAlertDetailMapper.selectList
+2025-03-17 15:15:49.387 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:15:49.387 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: SELECT id,msg,send_to,status,created_by,created_time FROM stock_alert_detail
+2025-03-17 15:15:49.387 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 3 ms
+2025-03-17 15:15:49.387 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 7
+2025-03-17 15:15:49.394 [scheduling-1] WARN  com.baomidou.mybatisplus.core.toolkit.support.ReflectLambdaMeta - Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @2aa5fe93
+2025-03-17 15:15:49.400 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.RealtimeStockMapper.selectList
+2025-03-17 15:15:49.400 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:15:49.400 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: SELECT id,product_id,warehouse_id,quantity,created_by,updated_by,created_time,updated_time FROM realtime_stock WHERE (product_id = 1 AND warehouse_id = 1)
+2025-03-17 15:15:49.400 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 2 ms
+2025-03-17 15:15:49.400 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:15:55.996 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-17 15:15:55.996 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-03-17 15:15:55.997 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-03-17 15:15:56.177 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.SysUnitMapper.listByPage_mpCount
+2025-03-17 15:15:56.177 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:15:56.177 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select sys_unit.id, sys_unit.unit_name, sys_unit.unit_code, sys_unit.created_by, sys_unit.created_time, sys_unit.updated_by, sys_unit.updated_time from sys_unit
+2025-03-17 15:15:56.177 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 59 ms
+2025-03-17 15:15:56.177 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:15:56.180 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.SysUnitMapper.listByPage
+2025-03-17 15:15:56.180 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:15:56.180 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select sys_unit.id, sys_unit.unit_name, sys_unit.unit_code, sys_unit.created_by, sys_unit.created_time, sys_unit.updated_by, sys_unit.updated_time from sys_unit
+2025-03-17 15:15:56.180 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 3 ms
+2025-03-17 15:15:56.180 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 3
+2025-03-17 15:18:06.958 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - SPHHikariPool - Shutdown initiated...
+2025-03-17 15:18:06.964 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - SPHHikariPool - Shutdown completed.
+2025-03-17 15:18:10.561 [main] INFO  com.wms.wmsend.WmsEndApplication - Starting WmsEndApplication using Java 17.0.13 on DESKTOP-K30I25T with PID 12680 (E:\Develop\Code\Java\WMS\wms-end\target\classes started by Ayanami in E:\Develop\Code\Java\WMS\wms-end)
+2025-03-17 15:18:10.567 [main] INFO  com.wms.wmsend.WmsEndApplication - No active profile set, falling back to 1 default profile: "default"
+2025-03-17 15:18:11.136 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-03-17 15:18:11.138 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-03-17 15:18:11.156 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+2025-03-17 15:18:11.251 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'inventoryDetailMapper' and 'com.wms.wmsend.mapper.InventoryDetailMapper' mapperInterface. Bean already defined with the same name!
+2025-03-17 15:18:11.251 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'inventoryMapper' and 'com.wms.wmsend.mapper.InventoryMapper' mapperInterface. Bean already defined with the same name!
+2025-03-17 15:18:11.251 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'productCategoryMapper' and 'com.wms.wmsend.mapper.ProductCategoryMapper' mapperInterface. Bean already defined with the same name!
+2025-03-17 15:18:11.251 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'productMapper' and 'com.wms.wmsend.mapper.ProductMapper' mapperInterface. Bean already defined with the same name!
+2025-03-17 15:18:11.251 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'realtimeStockMapper' and 'com.wms.wmsend.mapper.RealtimeStockMapper' mapperInterface. Bean already defined with the same name!
+2025-03-17 15:18:11.251 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'stockAlertDetailMapper' and 'com.wms.wmsend.mapper.StockAlertDetailMapper' mapperInterface. Bean already defined with the same name!
+2025-03-17 15:18:11.251 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'stockAlertMapper' and 'com.wms.wmsend.mapper.StockAlertMapper' mapperInterface. Bean already defined with the same name!
+2025-03-17 15:18:11.251 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'stockDocItemMapper' and 'com.wms.wmsend.mapper.StockDocItemMapper' mapperInterface. Bean already defined with the same name!
+2025-03-17 15:18:11.251 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'stockDocMapper' and 'com.wms.wmsend.mapper.StockDocMapper' mapperInterface. Bean already defined with the same name!
+2025-03-17 15:18:11.251 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'stockHistoryMapper' and 'com.wms.wmsend.mapper.StockHistoryMapper' mapperInterface. Bean already defined with the same name!
+2025-03-17 15:18:11.252 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'sysDeptMapper' and 'com.wms.wmsend.mapper.SysDeptMapper' mapperInterface. Bean already defined with the same name!
+2025-03-17 15:18:11.252 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'sysUnitMapper' and 'com.wms.wmsend.mapper.SysUnitMapper' mapperInterface. Bean already defined with the same name!
+2025-03-17 15:18:11.252 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'sysUserMapper' and 'com.wms.wmsend.mapper.SysUserMapper' mapperInterface. Bean already defined with the same name!
+2025-03-17 15:18:11.252 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'warehouseMapper' and 'com.wms.wmsend.mapper.WarehouseMapper' mapperInterface. Bean already defined with the same name!
+2025-03-17 15:18:11.252 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.wms.wmsend.mapper]' package. Please check your configuration.
+2025-03-17 15:18:11.737 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-03-17 15:18:11.745 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-03-17 15:18:11.745 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-17 15:18:11.745 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68]
+2025-03-17 15:18:11.830 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-17 15:18:11.830 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1236 ms
+2025-03-17 15:18:13.524 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2025-03-17 15:18:13.837 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-03-17 15:18:13.852 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-03-17 15:18:14.182 [main] INFO  com.wms.wmsend.WmsEndApplication - Started WmsEndApplication in 3.861 seconds (JVM running for 4.552)
+2025-03-17 15:18:14.184 [main] INFO  com.wms.wmsend.common.log.LogCleanupService - 开始清理超过7天的日志文件...
+2025-03-17 15:18:14.184 [main] INFO  com.wms.wmsend.common.log.LogCleanupService - 将清理2025-03-10之前的日志文件
+2025-03-17 15:18:14.184 [main] INFO  com.wms.wmsend.common.log.LogCleanupService - 没有找到需要清理的日志文件
+2025-03-17 15:18:15.249 [scheduling-1] INFO  com.zaxxer.hikari.HikariDataSource - SPHHikariPool - Starting...
+2025-03-17 15:18:15.363 [scheduling-1] INFO  com.zaxxer.hikari.HikariDataSource - SPHHikariPool - Start completed.
+2025-03-17 15:18:15.479 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.StockAlertMapper.listByPage_mpCount
+2025-03-17 15:18:15.479 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:18:15.479 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select sa.id, sa.category_id, sa.product_id, sa.warehouse_id, sa.min_stock, sa.max_stock, sa.send_type, sa.send_to, sa.created_by, sa.created_time, sa.updated_by, sa.updated_time, p.product_name, w.warehouse_name, u.nickname as send_to_name, pc.category_name from stock_alert sa left join product p on sa.product_id = p.id left join warehouse w on sa.warehouse_id = w.id left join sys_user u on sa.send_to = u.id left join product_category pc on sa.category_id = pc.id
+2025-03-17 15:18:15.479 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 235 ms
+2025-03-17 15:18:15.479 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:18:15.495 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.StockAlertMapper.listByPage
+2025-03-17 15:18:15.495 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:18:15.495 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select sa.id, sa.category_id, sa.product_id, sa.warehouse_id, sa.min_stock, sa.max_stock, sa.send_type, sa.send_to, sa.created_by, sa.created_time, sa.updated_by, sa.updated_time, p.product_name, w.warehouse_name, u.nickname as send_to_name, pc.category_name from stock_alert sa left join product p on sa.product_id = p.id left join warehouse w on sa.warehouse_id = w.id left join sys_user u on sa.send_to = u.id left join product_category pc on sa.category_id = pc.id
+2025-03-17 15:18:15.495 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 14 ms
+2025-03-17 15:18:15.495 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:18:15.512 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.StockAlertDetailMapper.selectList
+2025-03-17 15:18:15.512 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:18:15.512 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: SELECT id,msg,send_to,status,created_by,created_time FROM stock_alert_detail
+2025-03-17 15:18:15.512 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 3 ms
+2025-03-17 15:18:15.512 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 7
+2025-03-17 15:18:15.520 [scheduling-1] WARN  com.baomidou.mybatisplus.core.toolkit.support.ReflectLambdaMeta - Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @2aa5fe93
+2025-03-17 15:18:15.526 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.RealtimeStockMapper.selectList
+2025-03-17 15:18:15.527 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:18:15.527 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: SELECT id,product_id,warehouse_id,quantity,created_by,updated_by,created_time,updated_time FROM realtime_stock WHERE (product_id = 1 AND warehouse_id = 1)
+2025-03-17 15:18:15.527 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 3 ms
+2025-03-17 15:18:15.527 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:18:19.905 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-17 15:18:19.905 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-03-17 15:18:19.907 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-03-17 15:18:20.011 [http-nio-8080-exec-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.StockAlertDetailMapper.selectList
+2025-03-17 15:18:20.011 [http-nio-8080-exec-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:18:20.012 [http-nio-8080-exec-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: SELECT id,msg,send_to,status,created_by,created_time FROM stock_alert_detail WHERE (send_to = 32 AND status = 0)
+2025-03-17 15:18:20.012 [http-nio-8080-exec-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 4 ms
+2025-03-17 15:18:20.012 [http-nio-8080-exec-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:18:20.137 [http-nio-8080-exec-3] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.SysUnitMapper.listByPage_mpCount
+2025-03-17 15:18:20.137 [http-nio-8080-exec-2] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.WarehouseMapper.listByPage_mpCount
+2025-03-17 15:18:20.137 [http-nio-8080-exec-2] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:18:20.137 [http-nio-8080-exec-3] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:18:20.137 [http-nio-8080-exec-2] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select wh.id, wh.warehouse_name, wh.unit_id, wh.address, wh.created_by, wh.created_time, wh.updated_by, wh.updated_time, su.unit_name from warehouse wh left join sys_unit su on wh.unit_id = su.id
+2025-03-17 15:18:20.137 [http-nio-8080-exec-3] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select sys_unit.id, sys_unit.unit_name, sys_unit.unit_code, sys_unit.created_by, sys_unit.created_time, sys_unit.updated_by, sys_unit.updated_time from sys_unit
+2025-03-17 15:18:20.137 [http-nio-8080-exec-2] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 120 ms
+2025-03-17 15:18:20.137 [http-nio-8080-exec-3] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 121 ms
+2025-03-17 15:18:20.137 [http-nio-8080-exec-2] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:18:20.137 [http-nio-8080-exec-3] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:18:20.140 [http-nio-8080-exec-2] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.WarehouseMapper.listByPage
+2025-03-17 15:18:20.140 [http-nio-8080-exec-2] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:18:20.140 [http-nio-8080-exec-2] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select wh.id, wh.warehouse_name, wh.unit_id, wh.address, wh.created_by, wh.created_time, wh.updated_by, wh.updated_time, su.unit_name from warehouse wh left join sys_unit su on wh.unit_id = su.id
+2025-03-17 15:18:20.140 [http-nio-8080-exec-2] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 3 ms
+2025-03-17 15:18:20.140 [http-nio-8080-exec-2] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:18:20.140 [http-nio-8080-exec-3] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.SysUnitMapper.listByPage
+2025-03-17 15:18:20.140 [http-nio-8080-exec-3] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:18:20.140 [http-nio-8080-exec-3] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select sys_unit.id, sys_unit.unit_name, sys_unit.unit_code, sys_unit.created_by, sys_unit.created_time, sys_unit.updated_by, sys_unit.updated_time from sys_unit
+2025-03-17 15:18:20.140 [http-nio-8080-exec-3] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 3 ms
+2025-03-17 15:18:20.140 [http-nio-8080-exec-3] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 3
+2025-03-17 15:18:20.201 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.WarehouseMapper.listByPage_mpCount
+2025-03-17 15:18:20.201 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:18:20.201 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select wh.id, wh.warehouse_name, wh.unit_id, wh.address, wh.created_by, wh.created_time, wh.updated_by, wh.updated_time, su.unit_name from warehouse wh left join sys_unit su on wh.unit_id = su.id
+2025-03-17 15:18:20.201 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 46 ms
+2025-03-17 15:18:20.201 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:18:20.204 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.WarehouseMapper.listByPage
+2025-03-17 15:18:20.204 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:18:20.204 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select wh.id, wh.warehouse_name, wh.unit_id, wh.address, wh.created_by, wh.created_time, wh.updated_by, wh.updated_time, su.unit_name from warehouse wh left join sys_unit su on wh.unit_id = su.id
+2025-03-17 15:18:20.204 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 2 ms
+2025-03-17 15:18:20.204 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:20:48.893 [http-nio-8080-exec-2] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.WarehouseMapper.listByPage_mpCount
+2025-03-17 15:20:48.893 [http-nio-8080-exec-2] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:20:48.893 [http-nio-8080-exec-2] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select wh.id, wh.warehouse_name, wh.unit_id, wh.address, wh.created_by, wh.created_time, wh.updated_by, wh.updated_time, su.unit_name from warehouse wh left join sys_unit su on wh.unit_id = su.id
+2025-03-17 15:20:48.893 [http-nio-8080-exec-2] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 196 ms
+2025-03-17 15:20:48.893 [http-nio-8080-exec-2] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:20:48.903 [http-nio-8080-exec-2] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.WarehouseMapper.listByPage
+2025-03-17 15:20:48.903 [http-nio-8080-exec-2] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:20:48.903 [http-nio-8080-exec-2] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select wh.id, wh.warehouse_name, wh.unit_id, wh.address, wh.created_by, wh.created_time, wh.updated_by, wh.updated_time, su.unit_name from warehouse wh left join sys_unit su on wh.unit_id = su.id
+2025-03-17 15:20:48.903 [http-nio-8080-exec-2] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 9 ms
+2025-03-17 15:20:48.903 [http-nio-8080-exec-2] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:20:48.953 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.ProductMapper.listByPage_mpCount
+2025-03-17 15:20:48.954 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:20:48.954 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select p.id, p.product_name, p.category_id, p.warehouse_id, p.created_by, p.created_time, p.updated_by, p.updated_time, pc.category_name, w.warehouse_name from product p left join product_category pc on p.category_id = pc.id left join warehouse w on p.warehouse_id = w.id
+2025-03-17 15:20:48.954 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 247 ms
+2025-03-17 15:20:48.954 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:20:48.965 [http-nio-8080-exec-3] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.SysUserMapper.listByPage_mpCount
+2025-03-17 15:20:48.965 [http-nio-8080-exec-3] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:20:48.965 [http-nio-8080-exec-3] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select su.id, username, nickname, phone, email, role, su.dept_id, su.created_by, su.created_time, su.updated_by, su.updated_time, dept_name, unit_name from sys_user su left join sys_dept sd on su.dept_id = sd.id left join sys_unit su2 on sd.unit_id = su2.id
+2025-03-17 15:20:48.965 [http-nio-8080-exec-3] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 240 ms
+2025-03-17 15:20:48.965 [http-nio-8080-exec-3] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:20:48.966 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.ProductMapper.listByPage
+2025-03-17 15:20:48.966 [http-nio-8080-exec-8] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.StockDocMapper.listByPage_mpCount
+2025-03-17 15:20:48.966 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:20:48.966 [http-nio-8080-exec-8] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:20:48.966 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select p.id, p.product_name, p.category_id, p.warehouse_id, p.created_by, p.created_time, p.updated_by, p.updated_time, pc.category_name, w.warehouse_name from product p left join product_category pc on p.category_id = pc.id left join warehouse w on p.warehouse_id = w.id
+2025-03-17 15:20:48.966 [http-nio-8080-exec-8] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select sd.id, sd.document_no, sd.document_type, sd.warehouse_id, sd.status, sd.operator_user, sd.remark, sd.created_by, sd.created_time, sd.updated_by, sd.updated_time, w.warehouse_name, su.username as operator_username from stock_doc sd left join warehouse w on sd.warehouse_id = w.id left join sys_user su on sd.operator_user = su.id
+2025-03-17 15:20:48.966 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 12 ms
+2025-03-17 15:20:48.966 [http-nio-8080-exec-8] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 241 ms
+2025-03-17 15:20:48.966 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 3
+2025-03-17 15:20:48.966 [http-nio-8080-exec-8] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:20:48.969 [http-nio-8080-exec-8] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.StockDocMapper.listByPage
+2025-03-17 15:20:48.969 [http-nio-8080-exec-8] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:20:48.969 [http-nio-8080-exec-8] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select sd.id, sd.document_no, sd.document_type, sd.warehouse_id, sd.status, sd.operator_user, sd.remark, sd.created_by, sd.created_time, sd.updated_by, sd.updated_time, w.warehouse_name, su.username as operator_username from stock_doc sd left join warehouse w on sd.warehouse_id = w.id left join sys_user su on sd.operator_user = su.id
+2025-03-17 15:20:48.969 [http-nio-8080-exec-8] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 3 ms
+2025-03-17 15:20:48.969 [http-nio-8080-exec-8] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 7
+2025-03-17 15:20:48.973 [http-nio-8080-exec-3] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.SysUserMapper.listByPage
+2025-03-17 15:20:48.973 [http-nio-8080-exec-3] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:20:48.973 [http-nio-8080-exec-3] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select su.id, username, nickname, phone, email, role, su.dept_id, su.created_by, su.created_time, su.updated_by, su.updated_time, dept_name, unit_name from sys_user su left join sys_dept sd on su.dept_id = sd.id left join sys_unit su2 on sd.unit_id = su2.id
+2025-03-17 15:20:48.973 [http-nio-8080-exec-3] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 7 ms
+2025-03-17 15:20:48.973 [http-nio-8080-exec-3] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 16
+2025-03-17 15:20:52.977 [http-nio-8080-exec-5] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.ProductMapper.listByPage_mpCount
+2025-03-17 15:20:52.977 [http-nio-8080-exec-5] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:20:52.977 [http-nio-8080-exec-5] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select p.id, p.product_name, p.category_id, p.warehouse_id, p.created_by, p.created_time, p.updated_by, p.updated_time, pc.category_name, w.warehouse_name from product p left join product_category pc on p.category_id = pc.id left join warehouse w on p.warehouse_id = w.id WHERE p.warehouse_id = '1'
+2025-03-17 15:20:52.977 [http-nio-8080-exec-5] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 3 ms
+2025-03-17 15:20:52.977 [http-nio-8080-exec-5] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:20:52.978 [http-nio-8080-exec-5] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.ProductMapper.listByPage
+2025-03-17 15:20:52.978 [http-nio-8080-exec-5] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:20:52.978 [http-nio-8080-exec-5] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select p.id, p.product_name, p.category_id, p.warehouse_id, p.created_by, p.created_time, p.updated_by, p.updated_time, pc.category_name, w.warehouse_name from product p left join product_category pc on p.category_id = pc.id left join warehouse w on p.warehouse_id = w.id WHERE p.warehouse_id = '1'
+2025-03-17 15:20:52.978 [http-nio-8080-exec-5] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 1 ms
+2025-03-17 15:20:52.978 [http-nio-8080-exec-5] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 3
+2025-03-17 15:25:36.589 [http-nio-8080-exec-2] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.ProductMapper.listByPage_mpCount
+2025-03-17 15:25:36.589 [http-nio-8080-exec-2] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:25:36.589 [http-nio-8080-exec-2] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select p.id, p.product_name, p.category_id, p.warehouse_id, p.created_by, p.created_time, p.updated_by, p.updated_time, pc.category_name, w.warehouse_name from product p left join product_category pc on p.category_id = pc.id left join warehouse w on p.warehouse_id = w.id WHERE p.warehouse_id = '1'
+2025-03-17 15:25:36.589 [http-nio-8080-exec-2] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 3 ms
+2025-03-17 15:25:36.589 [http-nio-8080-exec-2] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:25:36.592 [http-nio-8080-exec-2] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.ProductMapper.listByPage
+2025-03-17 15:25:36.592 [http-nio-8080-exec-2] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:25:36.592 [http-nio-8080-exec-2] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select p.id, p.product_name, p.category_id, p.warehouse_id, p.created_by, p.created_time, p.updated_by, p.updated_time, pc.category_name, w.warehouse_name from product p left join product_category pc on p.category_id = pc.id left join warehouse w on p.warehouse_id = w.id WHERE p.warehouse_id = '1'
+2025-03-17 15:25:36.592 [http-nio-8080-exec-2] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 2 ms
+2025-03-17 15:25:36.592 [http-nio-8080-exec-2] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 3
+2025-03-17 15:29:42.936 [http-nio-8080-exec-3] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.SysUserMapper.listByPage_mpCount
+2025-03-17 15:29:42.936 [http-nio-8080-exec-7] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.WarehouseMapper.listByPage_mpCount
+2025-03-17 15:29:42.936 [http-nio-8080-exec-8] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.StockDocMapper.listByPage_mpCount
+2025-03-17 15:29:42.936 [http-nio-8080-exec-3] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:29:42.936 [http-nio-8080-exec-7] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:29:42.936 [http-nio-8080-exec-3] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select su.id, username, nickname, phone, email, role, su.dept_id, su.created_by, su.created_time, su.updated_by, su.updated_time, dept_name, unit_name from sys_user su left join sys_dept sd on su.dept_id = sd.id left join sys_unit su2 on sd.unit_id = su2.id
+2025-03-17 15:29:42.936 [http-nio-8080-exec-5] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.ProductMapper.listByPage_mpCount
+2025-03-17 15:29:42.936 [http-nio-8080-exec-7] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select wh.id, wh.warehouse_name, wh.unit_id, wh.address, wh.created_by, wh.created_time, wh.updated_by, wh.updated_time, su.unit_name from warehouse wh left join sys_unit su on wh.unit_id = su.id
+2025-03-17 15:29:42.936 [http-nio-8080-exec-8] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:29:42.936 [http-nio-8080-exec-3] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 216 ms
+2025-03-17 15:29:42.936 [http-nio-8080-exec-7] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 219 ms
+2025-03-17 15:29:42.936 [http-nio-8080-exec-5] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:29:42.936 [http-nio-8080-exec-3] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:29:42.936 [http-nio-8080-exec-8] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select sd.id, sd.document_no, sd.document_type, sd.warehouse_id, sd.status, sd.operator_user, sd.remark, sd.created_by, sd.created_time, sd.updated_by, sd.updated_time, w.warehouse_name, su.username as operator_username from stock_doc sd left join warehouse w on sd.warehouse_id = w.id left join sys_user su on sd.operator_user = su.id
+2025-03-17 15:29:42.936 [http-nio-8080-exec-5] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select p.id, p.product_name, p.category_id, p.warehouse_id, p.created_by, p.created_time, p.updated_by, p.updated_time, pc.category_name, w.warehouse_name from product p left join product_category pc on p.category_id = pc.id left join warehouse w on p.warehouse_id = w.id
+2025-03-17 15:29:42.936 [http-nio-8080-exec-7] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:29:42.936 [http-nio-8080-exec-8] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 215 ms
+2025-03-17 15:29:42.936 [http-nio-8080-exec-5] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 217 ms
+2025-03-17 15:29:42.936 [http-nio-8080-exec-8] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:29:42.936 [http-nio-8080-exec-5] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:29:42.939 [http-nio-8080-exec-7] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.WarehouseMapper.listByPage
+2025-03-17 15:29:42.939 [http-nio-8080-exec-7] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:29:42.939 [http-nio-8080-exec-7] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select wh.id, wh.warehouse_name, wh.unit_id, wh.address, wh.created_by, wh.created_time, wh.updated_by, wh.updated_time, su.unit_name from warehouse wh left join sys_unit su on wh.unit_id = su.id
+2025-03-17 15:29:42.939 [http-nio-8080-exec-7] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 2 ms
+2025-03-17 15:29:42.939 [http-nio-8080-exec-7] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:29:42.940 [http-nio-8080-exec-8] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.StockDocMapper.listByPage
+2025-03-17 15:29:42.940 [http-nio-8080-exec-8] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:29:42.940 [http-nio-8080-exec-8] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select sd.id, sd.document_no, sd.document_type, sd.warehouse_id, sd.status, sd.operator_user, sd.remark, sd.created_by, sd.created_time, sd.updated_by, sd.updated_time, w.warehouse_name, su.username as operator_username from stock_doc sd left join warehouse w on sd.warehouse_id = w.id left join sys_user su on sd.operator_user = su.id
+2025-03-17 15:29:42.940 [http-nio-8080-exec-8] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 3 ms
+2025-03-17 15:29:42.940 [http-nio-8080-exec-8] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 7
+2025-03-17 15:29:42.940 [http-nio-8080-exec-5] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.ProductMapper.listByPage
+2025-03-17 15:29:42.940 [http-nio-8080-exec-5] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:29:42.940 [http-nio-8080-exec-5] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select p.id, p.product_name, p.category_id, p.warehouse_id, p.created_by, p.created_time, p.updated_by, p.updated_time, pc.category_name, w.warehouse_name from product p left join product_category pc on p.category_id = pc.id left join warehouse w on p.warehouse_id = w.id
+2025-03-17 15:29:42.940 [http-nio-8080-exec-5] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 3 ms
+2025-03-17 15:29:42.940 [http-nio-8080-exec-5] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 3
+2025-03-17 15:29:42.942 [http-nio-8080-exec-3] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.SysUserMapper.listByPage
+2025-03-17 15:29:42.942 [http-nio-8080-exec-3] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:29:42.942 [http-nio-8080-exec-3] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select su.id, username, nickname, phone, email, role, su.dept_id, su.created_by, su.created_time, su.updated_by, su.updated_time, dept_name, unit_name from sys_user su left join sys_dept sd on su.dept_id = sd.id left join sys_unit su2 on sd.unit_id = su2.id
+2025-03-17 15:29:42.942 [http-nio-8080-exec-3] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 5 ms
+2025-03-17 15:29:42.942 [http-nio-8080-exec-3] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 16
+2025-03-17 15:30:51.667 [http-nio-8080-exec-8] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.StockDocMapper.listByPage_mpCount
+2025-03-17 15:30:51.667 [http-nio-8080-exec-8] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:30:51.667 [http-nio-8080-exec-8] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select sd.id, sd.document_no, sd.document_type, sd.warehouse_id, sd.status, sd.operator_user, sd.remark, sd.created_by, sd.created_time, sd.updated_by, sd.updated_time, w.warehouse_name, su.username as operator_username from stock_doc sd left join warehouse w on sd.warehouse_id = w.id left join sys_user su on sd.operator_user = su.id
+2025-03-17 15:30:51.667 [http-nio-8080-exec-8] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 209 ms
+2025-03-17 15:30:51.667 [http-nio-8080-exec-8] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:30:51.667 [http-nio-8080-exec-7] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.WarehouseMapper.listByPage_mpCount
+2025-03-17 15:30:51.667 [http-nio-8080-exec-7] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:30:51.667 [http-nio-8080-exec-7] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select wh.id, wh.warehouse_name, wh.unit_id, wh.address, wh.created_by, wh.created_time, wh.updated_by, wh.updated_time, su.unit_name from warehouse wh left join sys_unit su on wh.unit_id = su.id
+2025-03-17 15:30:51.667 [http-nio-8080-exec-7] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 216 ms
+2025-03-17 15:30:51.667 [http-nio-8080-exec-7] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:30:51.679 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.SysUserMapper.listByPage_mpCount
+2025-03-17 15:30:51.679 [http-nio-8080-exec-7] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.WarehouseMapper.listByPage
+2025-03-17 15:30:51.679 [http-nio-8080-exec-7] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:30:51.679 [http-nio-8080-exec-7] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select wh.id, wh.warehouse_name, wh.unit_id, wh.address, wh.created_by, wh.created_time, wh.updated_by, wh.updated_time, su.unit_name from warehouse wh left join sys_unit su on wh.unit_id = su.id
+2025-03-17 15:30:51.679 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:30:51.679 [http-nio-8080-exec-7] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 11 ms
+2025-03-17 15:30:51.679 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select su.id, username, nickname, phone, email, role, su.dept_id, su.created_by, su.created_time, su.updated_by, su.updated_time, dept_name, unit_name from sys_user su left join sys_dept sd on su.dept_id = sd.id left join sys_unit su2 on sd.unit_id = su2.id
+2025-03-17 15:30:51.679 [http-nio-8080-exec-7] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:30:51.679 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 224 ms
+2025-03-17 15:30:51.679 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:30:51.679 [http-nio-8080-exec-5] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.ProductMapper.listByPage_mpCount
+2025-03-17 15:30:51.679 [http-nio-8080-exec-5] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:30:51.679 [http-nio-8080-exec-5] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select p.id, p.product_name, p.category_id, p.warehouse_id, p.created_by, p.created_time, p.updated_by, p.updated_time, pc.category_name, w.warehouse_name from product p left join product_category pc on p.category_id = pc.id left join warehouse w on p.warehouse_id = w.id
+2025-03-17 15:30:51.679 [http-nio-8080-exec-5] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 226 ms
+2025-03-17 15:30:51.679 [http-nio-8080-exec-5] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:30:51.680 [http-nio-8080-exec-8] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.StockDocMapper.listByPage
+2025-03-17 15:30:51.681 [http-nio-8080-exec-8] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:30:51.681 [http-nio-8080-exec-8] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select sd.id, sd.document_no, sd.document_type, sd.warehouse_id, sd.status, sd.operator_user, sd.remark, sd.created_by, sd.created_time, sd.updated_by, sd.updated_time, w.warehouse_name, su.username as operator_username from stock_doc sd left join warehouse w on sd.warehouse_id = w.id left join sys_user su on sd.operator_user = su.id
+2025-03-17 15:30:51.681 [http-nio-8080-exec-8] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 13 ms
+2025-03-17 15:30:51.681 [http-nio-8080-exec-8] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 7
+2025-03-17 15:30:51.683 [http-nio-8080-exec-5] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.ProductMapper.listByPage
+2025-03-17 15:30:51.683 [http-nio-8080-exec-5] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:30:51.683 [http-nio-8080-exec-5] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select p.id, p.product_name, p.category_id, p.warehouse_id, p.created_by, p.created_time, p.updated_by, p.updated_time, pc.category_name, w.warehouse_name from product p left join product_category pc on p.category_id = pc.id left join warehouse w on p.warehouse_id = w.id
+2025-03-17 15:30:51.683 [http-nio-8080-exec-5] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 3 ms
+2025-03-17 15:30:51.683 [http-nio-8080-exec-5] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 3
+2025-03-17 15:30:51.684 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.SysUserMapper.listByPage
+2025-03-17 15:30:51.684 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:30:51.684 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select su.id, username, nickname, phone, email, role, su.dept_id, su.created_by, su.created_time, su.updated_by, su.updated_time, dept_name, unit_name from sys_user su left join sys_dept sd on su.dept_id = sd.id left join sys_unit su2 on sd.unit_id = su2.id
+2025-03-17 15:30:51.684 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 5 ms
+2025-03-17 15:30:51.684 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 16
+2025-03-17 15:31:35.004 [http-nio-8080-exec-3] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.StockAlertDetailMapper.selectList
+2025-03-17 15:31:35.004 [http-nio-8080-exec-3] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:31:35.004 [http-nio-8080-exec-3] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: SELECT id,msg,send_to,status,created_by,created_time FROM stock_alert_detail WHERE (send_to = 32 AND status = 0)
+2025-03-17 15:31:35.004 [http-nio-8080-exec-3] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 3 ms
+2025-03-17 15:31:35.004 [http-nio-8080-exec-3] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:31:35.288 [http-nio-8080-exec-10] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.SysUserMapper.listByPage_mpCount
+2025-03-17 15:31:35.288 [http-nio-8080-exec-6] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.ProductMapper.listByPage_mpCount
+2025-03-17 15:31:35.288 [http-nio-8080-exec-9] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.StockDocMapper.listByPage_mpCount
+2025-03-17 15:31:35.288 [http-nio-8080-exec-6] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:31:35.288 [http-nio-8080-exec-10] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:31:35.289 [http-nio-8080-exec-9] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:31:35.289 [http-nio-8080-exec-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.WarehouseMapper.listByPage_mpCount
+2025-03-17 15:31:35.289 [http-nio-8080-exec-6] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select p.id, p.product_name, p.category_id, p.warehouse_id, p.created_by, p.created_time, p.updated_by, p.updated_time, pc.category_name, w.warehouse_name from product p left join product_category pc on p.category_id = pc.id left join warehouse w on p.warehouse_id = w.id
+2025-03-17 15:31:35.289 [http-nio-8080-exec-10] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select su.id, username, nickname, phone, email, role, su.dept_id, su.created_by, su.created_time, su.updated_by, su.updated_time, dept_name, unit_name from sys_user su left join sys_dept sd on su.dept_id = sd.id left join sys_unit su2 on sd.unit_id = su2.id
+2025-03-17 15:31:35.289 [http-nio-8080-exec-9] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select sd.id, sd.document_no, sd.document_type, sd.warehouse_id, sd.status, sd.operator_user, sd.remark, sd.created_by, sd.created_time, sd.updated_by, sd.updated_time, w.warehouse_name, su.username as operator_username from stock_doc sd left join warehouse w on sd.warehouse_id = w.id left join sys_user su on sd.operator_user = su.id
+2025-03-17 15:31:35.289 [http-nio-8080-exec-10] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 217 ms
+2025-03-17 15:31:35.289 [http-nio-8080-exec-6] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 218 ms
+2025-03-17 15:31:35.289 [http-nio-8080-exec-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:31:35.289 [http-nio-8080-exec-10] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:31:35.289 [http-nio-8080-exec-9] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 216 ms
+2025-03-17 15:31:35.289 [http-nio-8080-exec-6] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:31:35.289 [http-nio-8080-exec-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select wh.id, wh.warehouse_name, wh.unit_id, wh.address, wh.created_by, wh.created_time, wh.updated_by, wh.updated_time, su.unit_name from warehouse wh left join sys_unit su on wh.unit_id = su.id
+2025-03-17 15:31:35.289 [http-nio-8080-exec-9] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:31:35.289 [http-nio-8080-exec-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 220 ms
+2025-03-17 15:31:35.289 [http-nio-8080-exec-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:31:35.292 [http-nio-8080-exec-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.WarehouseMapper.listByPage
+2025-03-17 15:31:35.292 [http-nio-8080-exec-9] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.StockDocMapper.listByPage
+2025-03-17 15:31:35.292 [http-nio-8080-exec-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:31:35.292 [http-nio-8080-exec-9] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:31:35.292 [http-nio-8080-exec-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select wh.id, wh.warehouse_name, wh.unit_id, wh.address, wh.created_by, wh.created_time, wh.updated_by, wh.updated_time, su.unit_name from warehouse wh left join sys_unit su on wh.unit_id = su.id
+2025-03-17 15:31:35.292 [http-nio-8080-exec-9] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select sd.id, sd.document_no, sd.document_type, sd.warehouse_id, sd.status, sd.operator_user, sd.remark, sd.created_by, sd.created_time, sd.updated_by, sd.updated_time, w.warehouse_name, su.username as operator_username from stock_doc sd left join warehouse w on sd.warehouse_id = w.id left join sys_user su on sd.operator_user = su.id
+2025-03-17 15:31:35.292 [http-nio-8080-exec-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 3 ms
+2025-03-17 15:31:35.292 [http-nio-8080-exec-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:31:35.292 [http-nio-8080-exec-9] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 3 ms
+2025-03-17 15:31:35.292 [http-nio-8080-exec-9] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 7
+2025-03-17 15:31:35.292 [http-nio-8080-exec-6] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.ProductMapper.listByPage
+2025-03-17 15:31:35.293 [http-nio-8080-exec-6] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:31:35.293 [http-nio-8080-exec-6] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select p.id, p.product_name, p.category_id, p.warehouse_id, p.created_by, p.created_time, p.updated_by, p.updated_time, pc.category_name, w.warehouse_name from product p left join product_category pc on p.category_id = pc.id left join warehouse w on p.warehouse_id = w.id
+2025-03-17 15:31:35.293 [http-nio-8080-exec-6] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 3 ms
+2025-03-17 15:31:35.293 [http-nio-8080-exec-6] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 3
+2025-03-17 15:31:35.293 [http-nio-8080-exec-10] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.SysUserMapper.listByPage
+2025-03-17 15:31:35.293 [http-nio-8080-exec-10] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:31:35.293 [http-nio-8080-exec-10] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select su.id, username, nickname, phone, email, role, su.dept_id, su.created_by, su.created_time, su.updated_by, su.updated_time, dept_name, unit_name from sys_user su left join sys_dept sd on su.dept_id = sd.id left join sys_unit su2 on sd.unit_id = su2.id
+2025-03-17 15:31:35.293 [http-nio-8080-exec-10] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 4 ms
+2025-03-17 15:31:35.293 [http-nio-8080-exec-10] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 16
+2025-03-17 15:34:33.218 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.StockAlertDetailMapper.selectList
+2025-03-17 15:34:33.218 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:34:33.218 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: SELECT id,msg,send_to,status,created_by,created_time FROM stock_alert_detail WHERE (send_to = 32 AND status = 0)
+2025-03-17 15:34:33.218 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 5 ms
+2025-03-17 15:34:33.219 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:34:33.521 [http-nio-8080-exec-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.ProductMapper.listByPage_mpCount
+2025-03-17 15:34:33.521 [http-nio-8080-exec-9] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.WarehouseMapper.listByPage_mpCount
+2025-03-17 15:34:33.521 [http-nio-8080-exec-3] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.StockDocMapper.listByPage_mpCount
+2025-03-17 15:34:33.521 [http-nio-8080-exec-9] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:34:33.521 [http-nio-8080-exec-9] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select wh.id, wh.warehouse_name, wh.unit_id, wh.address, wh.created_by, wh.created_time, wh.updated_by, wh.updated_time, su.unit_name from warehouse wh left join sys_unit su on wh.unit_id = su.id
+2025-03-17 15:34:33.521 [http-nio-8080-exec-3] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:34:33.521 [http-nio-8080-exec-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:34:33.521 [http-nio-8080-exec-3] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select sd.id, sd.document_no, sd.document_type, sd.warehouse_id, sd.status, sd.operator_user, sd.remark, sd.created_by, sd.created_time, sd.updated_by, sd.updated_time, w.warehouse_name, su.username as operator_username from stock_doc sd left join warehouse w on sd.warehouse_id = w.id left join sys_user su on sd.operator_user = su.id
+2025-03-17 15:34:33.521 [http-nio-8080-exec-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select p.id, p.product_name, p.category_id, p.warehouse_id, p.created_by, p.created_time, p.updated_by, p.updated_time, pc.category_name, w.warehouse_name from product p left join product_category pc on p.category_id = pc.id left join warehouse w on p.warehouse_id = w.id
+2025-03-17 15:34:33.521 [http-nio-8080-exec-3] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 214 ms
+2025-03-17 15:34:33.521 [http-nio-8080-exec-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 216 ms
+2025-03-17 15:34:33.521 [http-nio-8080-exec-9] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 217 ms
+2025-03-17 15:34:33.521 [http-nio-8080-exec-3] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:34:33.521 [http-nio-8080-exec-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:34:33.521 [http-nio-8080-exec-9] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:34:33.532 [http-nio-8080-exec-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.ProductMapper.listByPage
+2025-03-17 15:34:33.532 [http-nio-8080-exec-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:34:33.532 [http-nio-8080-exec-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select p.id, p.product_name, p.category_id, p.warehouse_id, p.created_by, p.created_time, p.updated_by, p.updated_time, pc.category_name, w.warehouse_name from product p left join product_category pc on p.category_id = pc.id left join warehouse w on p.warehouse_id = w.id
+2025-03-17 15:34:33.532 [http-nio-8080-exec-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 11 ms
+2025-03-17 15:34:33.532 [http-nio-8080-exec-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 3
+2025-03-17 15:34:33.532 [http-nio-8080-exec-9] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.WarehouseMapper.listByPage
+2025-03-17 15:34:33.532 [http-nio-8080-exec-9] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:34:33.532 [http-nio-8080-exec-9] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select wh.id, wh.warehouse_name, wh.unit_id, wh.address, wh.created_by, wh.created_time, wh.updated_by, wh.updated_time, su.unit_name from warehouse wh left join sys_unit su on wh.unit_id = su.id
+2025-03-17 15:34:33.532 [http-nio-8080-exec-9] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 11 ms
+2025-03-17 15:34:33.532 [http-nio-8080-exec-9] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:34:33.532 [http-nio-8080-exec-6] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.SysUserMapper.listByPage_mpCount
+2025-03-17 15:34:33.532 [http-nio-8080-exec-6] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:34:33.532 [http-nio-8080-exec-3] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.StockDocMapper.listByPage
+2025-03-17 15:34:33.532 [http-nio-8080-exec-6] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select su.id, username, nickname, phone, email, role, su.dept_id, su.created_by, su.created_time, su.updated_by, su.updated_time, dept_name, unit_name from sys_user su left join sys_dept sd on su.dept_id = sd.id left join sys_unit su2 on sd.unit_id = su2.id
+2025-03-17 15:34:33.532 [http-nio-8080-exec-3] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:34:33.532 [http-nio-8080-exec-6] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 226 ms
+2025-03-17 15:34:33.532 [http-nio-8080-exec-3] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select sd.id, sd.document_no, sd.document_type, sd.warehouse_id, sd.status, sd.operator_user, sd.remark, sd.created_by, sd.created_time, sd.updated_by, sd.updated_time, w.warehouse_name, su.username as operator_username from stock_doc sd left join warehouse w on sd.warehouse_id = w.id left join sys_user su on sd.operator_user = su.id
+2025-03-17 15:34:33.532 [http-nio-8080-exec-6] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:34:33.532 [http-nio-8080-exec-3] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 11 ms
+2025-03-17 15:34:33.532 [http-nio-8080-exec-3] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 7
+2025-03-17 15:34:33.536 [http-nio-8080-exec-6] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.SysUserMapper.listByPage
+2025-03-17 15:34:33.536 [http-nio-8080-exec-6] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:34:33.536 [http-nio-8080-exec-6] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select su.id, username, nickname, phone, email, role, su.dept_id, su.created_by, su.created_time, su.updated_by, su.updated_time, dept_name, unit_name from sys_user su left join sys_dept sd on su.dept_id = sd.id left join sys_unit su2 on sd.unit_id = su2.id
+2025-03-17 15:34:33.536 [http-nio-8080-exec-6] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 3 ms
+2025-03-17 15:34:33.536 [http-nio-8080-exec-6] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 16
+2025-03-17 15:34:43.110 [http-nio-8080-exec-2] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.WarehouseMapper.listByPage_mpCount
+2025-03-17 15:34:43.110 [http-nio-8080-exec-2] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:34:43.110 [http-nio-8080-exec-2] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select wh.id, wh.warehouse_name, wh.unit_id, wh.address, wh.created_by, wh.created_time, wh.updated_by, wh.updated_time, su.unit_name from warehouse wh left join sys_unit su on wh.unit_id = su.id
+2025-03-17 15:34:43.110 [http-nio-8080-exec-2] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 143 ms
+2025-03-17 15:34:43.110 [http-nio-8080-exec-2] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:34:43.120 [http-nio-8080-exec-5] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.ProductMapper.listByPage_mpCount
+2025-03-17 15:34:43.120 [http-nio-8080-exec-5] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:34:43.120 [http-nio-8080-exec-5] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select p.id, p.product_name, p.category_id, p.warehouse_id, p.created_by, p.created_time, p.updated_by, p.updated_time, pc.category_name, w.warehouse_name from product p left join product_category pc on p.category_id = pc.id left join warehouse w on p.warehouse_id = w.id
+2025-03-17 15:34:43.120 [http-nio-8080-exec-5] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 151 ms
+2025-03-17 15:34:43.120 [http-nio-8080-exec-5] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:34:43.120 [http-nio-8080-exec-2] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.WarehouseMapper.listByPage
+2025-03-17 15:34:43.121 [http-nio-8080-exec-2] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:34:43.121 [http-nio-8080-exec-2] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select wh.id, wh.warehouse_name, wh.unit_id, wh.address, wh.created_by, wh.created_time, wh.updated_by, wh.updated_time, su.unit_name from warehouse wh left join sys_unit su on wh.unit_id = su.id
+2025-03-17 15:34:43.121 [http-nio-8080-exec-2] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 9 ms
+2025-03-17 15:34:43.121 [http-nio-8080-exec-2] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:34:43.138 [http-nio-8080-exec-5] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.ProductMapper.listByPage
+2025-03-17 15:34:43.138 [http-nio-8080-exec-5] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:34:43.138 [http-nio-8080-exec-5] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select p.id, p.product_name, p.category_id, p.warehouse_id, p.created_by, p.created_time, p.updated_by, p.updated_time, pc.category_name, w.warehouse_name from product p left join product_category pc on p.category_id = pc.id left join warehouse w on p.warehouse_id = w.id
+2025-03-17 15:34:43.138 [http-nio-8080-exec-5] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 17 ms
+2025-03-17 15:34:43.138 [http-nio-8080-exec-5] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 3
+2025-03-17 15:34:43.150 [http-nio-8080-exec-8] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.InventoryMapper.listByPage_mpCount
+2025-03-17 15:34:43.150 [http-nio-8080-exec-8] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:34:43.150 [http-nio-8080-exec-8] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select i.id, i.inventory_no, i.warehouse_id, i.status, i.remark, i.created_by, i.created_time, i.updated_by, i.updated_time, w.warehouse_name from inventory i left join warehouse w on i.warehouse_id = w.id
+2025-03-17 15:34:43.150 [http-nio-8080-exec-8] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 172 ms
+2025-03-17 15:34:43.150 [http-nio-8080-exec-8] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:34:43.153 [http-nio-8080-exec-8] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.InventoryMapper.listByPage
+2025-03-17 15:34:43.153 [http-nio-8080-exec-8] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:34:43.153 [http-nio-8080-exec-8] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select i.id, i.inventory_no, i.warehouse_id, i.status, i.remark, i.created_by, i.created_time, i.updated_by, i.updated_time, w.warehouse_name from inventory i left join warehouse w on i.warehouse_id = w.id
+2025-03-17 15:34:43.153 [http-nio-8080-exec-8] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 2 ms
+2025-03-17 15:34:43.153 [http-nio-8080-exec-8] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 2
+2025-03-17 15:36:27.718 [http-nio-8080-exec-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.StockDocMapper.listByPage_mpCount
+2025-03-17 15:36:27.718 [http-nio-8080-exec-10] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.WarehouseMapper.listByPage_mpCount
+2025-03-17 15:36:27.718 [http-nio-8080-exec-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:36:27.718 [http-nio-8080-exec-6] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.SysUserMapper.listByPage_mpCount
+2025-03-17 15:36:27.718 [http-nio-8080-exec-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select sd.id, sd.document_no, sd.document_type, sd.warehouse_id, sd.status, sd.operator_user, sd.remark, sd.created_by, sd.created_time, sd.updated_by, sd.updated_time, w.warehouse_name, su.username as operator_username from stock_doc sd left join warehouse w on sd.warehouse_id = w.id left join sys_user su on sd.operator_user = su.id
+2025-03-17 15:36:27.718 [http-nio-8080-exec-10] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:36:27.718 [http-nio-8080-exec-6] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:36:27.718 [http-nio-8080-exec-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 225 ms
+2025-03-17 15:36:27.718 [http-nio-8080-exec-6] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select su.id, username, nickname, phone, email, role, su.dept_id, su.created_by, su.created_time, su.updated_by, su.updated_time, dept_name, unit_name from sys_user su left join sys_dept sd on su.dept_id = sd.id left join sys_unit su2 on sd.unit_id = su2.id
+2025-03-17 15:36:27.718 [http-nio-8080-exec-10] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select wh.id, wh.warehouse_name, wh.unit_id, wh.address, wh.created_by, wh.created_time, wh.updated_by, wh.updated_time, su.unit_name from warehouse wh left join sys_unit su on wh.unit_id = su.id
+2025-03-17 15:36:27.718 [http-nio-8080-exec-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:36:27.718 [http-nio-8080-exec-6] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 225 ms
+2025-03-17 15:36:27.718 [http-nio-8080-exec-6] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:36:27.718 [http-nio-8080-exec-2] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.ProductMapper.listByPage_mpCount
+2025-03-17 15:36:27.718 [http-nio-8080-exec-2] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:36:27.718 [http-nio-8080-exec-10] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 228 ms
+2025-03-17 15:36:27.718 [http-nio-8080-exec-2] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select p.id, p.product_name, p.category_id, p.warehouse_id, p.created_by, p.created_time, p.updated_by, p.updated_time, pc.category_name, w.warehouse_name from product p left join product_category pc on p.category_id = pc.id left join warehouse w on p.warehouse_id = w.id
+2025-03-17 15:36:27.718 [http-nio-8080-exec-10] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:36:27.718 [http-nio-8080-exec-2] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 226 ms
+2025-03-17 15:36:27.718 [http-nio-8080-exec-2] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:36:27.721 [http-nio-8080-exec-10] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.WarehouseMapper.listByPage
+2025-03-17 15:36:27.721 [http-nio-8080-exec-10] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:36:27.721 [http-nio-8080-exec-10] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select wh.id, wh.warehouse_name, wh.unit_id, wh.address, wh.created_by, wh.created_time, wh.updated_by, wh.updated_time, su.unit_name from warehouse wh left join sys_unit su on wh.unit_id = su.id
+2025-03-17 15:36:27.721 [http-nio-8080-exec-10] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 2 ms
+2025-03-17 15:36:27.721 [http-nio-8080-exec-10] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:36:27.721 [http-nio-8080-exec-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.StockDocMapper.listByPage
+2025-03-17 15:36:27.722 [http-nio-8080-exec-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:36:27.722 [http-nio-8080-exec-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select sd.id, sd.document_no, sd.document_type, sd.warehouse_id, sd.status, sd.operator_user, sd.remark, sd.created_by, sd.created_time, sd.updated_by, sd.updated_time, w.warehouse_name, su.username as operator_username from stock_doc sd left join warehouse w on sd.warehouse_id = w.id left join sys_user su on sd.operator_user = su.id
+2025-03-17 15:36:27.722 [http-nio-8080-exec-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 2 ms
+2025-03-17 15:36:27.722 [http-nio-8080-exec-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 7
+2025-03-17 15:36:27.722 [http-nio-8080-exec-2] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.ProductMapper.listByPage
+2025-03-17 15:36:27.722 [http-nio-8080-exec-2] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:36:27.722 [http-nio-8080-exec-2] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select p.id, p.product_name, p.category_id, p.warehouse_id, p.created_by, p.created_time, p.updated_by, p.updated_time, pc.category_name, w.warehouse_name from product p left join product_category pc on p.category_id = pc.id left join warehouse w on p.warehouse_id = w.id
+2025-03-17 15:36:27.722 [http-nio-8080-exec-6] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.SysUserMapper.listByPage
+2025-03-17 15:36:27.722 [http-nio-8080-exec-2] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 3 ms
+2025-03-17 15:36:27.722 [http-nio-8080-exec-6] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:36:27.722 [http-nio-8080-exec-2] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 3
+2025-03-17 15:36:27.722 [http-nio-8080-exec-6] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select su.id, username, nickname, phone, email, role, su.dept_id, su.created_by, su.created_time, su.updated_by, su.updated_time, dept_name, unit_name from sys_user su left join sys_dept sd on su.dept_id = sd.id left join sys_unit su2 on sd.unit_id = su2.id
+2025-03-17 15:36:27.722 [http-nio-8080-exec-6] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 3 ms
+2025-03-17 15:36:27.722 [http-nio-8080-exec-6] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 16
+2025-03-17 15:36:34.529 [http-nio-8080-exec-5] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.InventoryMapper.listByPage_mpCount
+2025-03-17 15:36:34.529 [http-nio-8080-exec-8] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.WarehouseMapper.listByPage_mpCount
+2025-03-17 15:36:34.529 [http-nio-8080-exec-7] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.ProductMapper.listByPage_mpCount
+2025-03-17 15:36:34.529 [http-nio-8080-exec-7] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:36:34.529 [http-nio-8080-exec-7] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select p.id, p.product_name, p.category_id, p.warehouse_id, p.created_by, p.created_time, p.updated_by, p.updated_time, pc.category_name, w.warehouse_name from product p left join product_category pc on p.category_id = pc.id left join warehouse w on p.warehouse_id = w.id
+2025-03-17 15:36:34.529 [http-nio-8080-exec-7] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 173 ms
+2025-03-17 15:36:34.529 [http-nio-8080-exec-5] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:36:34.529 [http-nio-8080-exec-7] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:36:34.529 [http-nio-8080-exec-5] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select i.id, i.inventory_no, i.warehouse_id, i.status, i.remark, i.created_by, i.created_time, i.updated_by, i.updated_time, w.warehouse_name from inventory i left join warehouse w on i.warehouse_id = w.id
+2025-03-17 15:36:34.529 [http-nio-8080-exec-8] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:36:34.529 [http-nio-8080-exec-8] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select wh.id, wh.warehouse_name, wh.unit_id, wh.address, wh.created_by, wh.created_time, wh.updated_by, wh.updated_time, su.unit_name from warehouse wh left join sys_unit su on wh.unit_id = su.id
+2025-03-17 15:36:34.529 [http-nio-8080-exec-5] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 176 ms
+2025-03-17 15:36:34.529 [http-nio-8080-exec-8] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 174 ms
+2025-03-17 15:36:34.529 [http-nio-8080-exec-5] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:36:34.529 [http-nio-8080-exec-8] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:36:34.531 [http-nio-8080-exec-8] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.WarehouseMapper.listByPage
+2025-03-17 15:36:34.531 [http-nio-8080-exec-8] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:36:34.531 [http-nio-8080-exec-8] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select wh.id, wh.warehouse_name, wh.unit_id, wh.address, wh.created_by, wh.created_time, wh.updated_by, wh.updated_time, su.unit_name from warehouse wh left join sys_unit su on wh.unit_id = su.id
+2025-03-17 15:36:34.531 [http-nio-8080-exec-8] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 2 ms
+2025-03-17 15:36:34.531 [http-nio-8080-exec-8] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:36:34.531 [http-nio-8080-exec-7] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.ProductMapper.listByPage
+2025-03-17 15:36:34.531 [http-nio-8080-exec-5] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.InventoryMapper.listByPage
+2025-03-17 15:36:34.531 [http-nio-8080-exec-7] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:36:34.531 [http-nio-8080-exec-5] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:36:34.531 [http-nio-8080-exec-7] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select p.id, p.product_name, p.category_id, p.warehouse_id, p.created_by, p.created_time, p.updated_by, p.updated_time, pc.category_name, w.warehouse_name from product p left join product_category pc on p.category_id = pc.id left join warehouse w on p.warehouse_id = w.id
+2025-03-17 15:36:34.531 [http-nio-8080-exec-5] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select i.id, i.inventory_no, i.warehouse_id, i.status, i.remark, i.created_by, i.created_time, i.updated_by, i.updated_time, w.warehouse_name from inventory i left join warehouse w on i.warehouse_id = w.id
+2025-03-17 15:36:34.531 [http-nio-8080-exec-7] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 2 ms
+2025-03-17 15:36:34.531 [http-nio-8080-exec-5] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 2 ms
+2025-03-17 15:36:34.531 [http-nio-8080-exec-5] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 2
+2025-03-17 15:36:34.531 [http-nio-8080-exec-7] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 3
+2025-03-17 15:36:39.610 [http-nio-8080-exec-9] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.WarehouseMapper.listByPage_mpCount
+2025-03-17 15:36:39.610 [http-nio-8080-exec-3] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.SysUserMapper.listByPage_mpCount
+2025-03-17 15:36:39.610 [http-nio-8080-exec-9] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:36:39.610 [http-nio-8080-exec-3] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:36:39.610 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.StockDocMapper.listByPage_mpCount
+2025-03-17 15:36:39.610 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:36:39.610 [http-nio-8080-exec-3] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select su.id, username, nickname, phone, email, role, su.dept_id, su.created_by, su.created_time, su.updated_by, su.updated_time, dept_name, unit_name from sys_user su left join sys_dept sd on su.dept_id = sd.id left join sys_unit su2 on sd.unit_id = su2.id
+2025-03-17 15:36:39.610 [http-nio-8080-exec-9] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select wh.id, wh.warehouse_name, wh.unit_id, wh.address, wh.created_by, wh.created_time, wh.updated_by, wh.updated_time, su.unit_name from warehouse wh left join sys_unit su on wh.unit_id = su.id
+2025-03-17 15:36:39.610 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select sd.id, sd.document_no, sd.document_type, sd.warehouse_id, sd.status, sd.operator_user, sd.remark, sd.created_by, sd.created_time, sd.updated_by, sd.updated_time, w.warehouse_name, su.username as operator_username from stock_doc sd left join warehouse w on sd.warehouse_id = w.id left join sys_user su on sd.operator_user = su.id
+2025-03-17 15:36:39.610 [http-nio-8080-exec-3] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 209 ms
+2025-03-17 15:36:39.610 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 209 ms
+2025-03-17 15:36:39.610 [http-nio-8080-exec-9] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 211 ms
+2025-03-17 15:36:39.610 [http-nio-8080-exec-10] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.ProductMapper.listByPage_mpCount
+2025-03-17 15:36:39.610 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:36:39.610 [http-nio-8080-exec-10] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:36:39.610 [http-nio-8080-exec-3] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:36:39.610 [http-nio-8080-exec-9] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:36:39.610 [http-nio-8080-exec-10] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select p.id, p.product_name, p.category_id, p.warehouse_id, p.created_by, p.created_time, p.updated_by, p.updated_time, pc.category_name, w.warehouse_name from product p left join product_category pc on p.category_id = pc.id left join warehouse w on p.warehouse_id = w.id
+2025-03-17 15:36:39.610 [http-nio-8080-exec-10] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 209 ms
+2025-03-17 15:36:39.610 [http-nio-8080-exec-10] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:36:39.612 [http-nio-8080-exec-9] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.WarehouseMapper.listByPage
+2025-03-17 15:36:39.612 [http-nio-8080-exec-9] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:36:39.612 [http-nio-8080-exec-9] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select wh.id, wh.warehouse_name, wh.unit_id, wh.address, wh.created_by, wh.created_time, wh.updated_by, wh.updated_time, su.unit_name from warehouse wh left join sys_unit su on wh.unit_id = su.id
+2025-03-17 15:36:39.612 [http-nio-8080-exec-9] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 2 ms
+2025-03-17 15:36:39.612 [http-nio-8080-exec-9] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:36:39.613 [http-nio-8080-exec-10] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.ProductMapper.listByPage
+2025-03-17 15:36:39.613 [http-nio-8080-exec-3] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.SysUserMapper.listByPage
+2025-03-17 15:36:39.613 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.StockDocMapper.listByPage
+2025-03-17 15:36:39.613 [http-nio-8080-exec-10] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:36:39.613 [http-nio-8080-exec-3] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:36:39.613 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:36:39.613 [http-nio-8080-exec-3] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select su.id, username, nickname, phone, email, role, su.dept_id, su.created_by, su.created_time, su.updated_by, su.updated_time, dept_name, unit_name from sys_user su left join sys_dept sd on su.dept_id = sd.id left join sys_unit su2 on sd.unit_id = su2.id
+2025-03-17 15:36:39.613 [http-nio-8080-exec-10] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select p.id, p.product_name, p.category_id, p.warehouse_id, p.created_by, p.created_time, p.updated_by, p.updated_time, pc.category_name, w.warehouse_name from product p left join product_category pc on p.category_id = pc.id left join warehouse w on p.warehouse_id = w.id
+2025-03-17 15:36:39.613 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select sd.id, sd.document_no, sd.document_type, sd.warehouse_id, sd.status, sd.operator_user, sd.remark, sd.created_by, sd.created_time, sd.updated_by, sd.updated_time, w.warehouse_name, su.username as operator_username from stock_doc sd left join warehouse w on sd.warehouse_id = w.id left join sys_user su on sd.operator_user = su.id
+2025-03-17 15:36:39.613 [http-nio-8080-exec-3] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 3 ms
+2025-03-17 15:36:39.613 [http-nio-8080-exec-10] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 3 ms
+2025-03-17 15:36:39.613 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 3 ms
+2025-03-17 15:36:39.613 [http-nio-8080-exec-3] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 16
+2025-03-17 15:36:39.613 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 7
+2025-03-17 15:36:39.613 [http-nio-8080-exec-10] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 3
+2025-03-17 15:38:00.206 [http-nio-8080-exec-5] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.SysUserMapper.listByPage_mpCount
+2025-03-17 15:38:00.207 [http-nio-8080-exec-5] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:38:00.207 [http-nio-8080-exec-5] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select su.id, username, nickname, phone, email, role, su.dept_id, su.created_by, su.created_time, su.updated_by, su.updated_time, dept_name, unit_name from sys_user su left join sys_dept sd on su.dept_id = sd.id left join sys_unit su2 on sd.unit_id = su2.id
+2025-03-17 15:38:00.207 [http-nio-8080-exec-5] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 215 ms
+2025-03-17 15:38:00.207 [http-nio-8080-exec-5] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:38:00.219 [http-nio-8080-exec-5] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.SysUserMapper.listByPage
+2025-03-17 15:38:00.219 [http-nio-8080-exec-5] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:38:00.219 [http-nio-8080-exec-5] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select su.id, username, nickname, phone, email, role, su.dept_id, su.created_by, su.created_time, su.updated_by, su.updated_time, dept_name, unit_name from sys_user su left join sys_dept sd on su.dept_id = sd.id left join sys_unit su2 on sd.unit_id = su2.id
+2025-03-17 15:38:00.219 [http-nio-8080-exec-5] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 12 ms
+2025-03-17 15:38:00.219 [http-nio-8080-exec-5] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 16
+2025-03-17 15:38:00.229 [http-nio-8080-exec-9] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.WarehouseMapper.listByPage_mpCount
+2025-03-17 15:38:00.229 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.ProductMapper.listByPage_mpCount
+2025-03-17 15:38:00.229 [http-nio-8080-exec-9] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:38:00.229 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:38:00.229 [http-nio-8080-exec-9] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select wh.id, wh.warehouse_name, wh.unit_id, wh.address, wh.created_by, wh.created_time, wh.updated_by, wh.updated_time, su.unit_name from warehouse wh left join sys_unit su on wh.unit_id = su.id
+2025-03-17 15:38:00.229 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select p.id, p.product_name, p.category_id, p.warehouse_id, p.created_by, p.created_time, p.updated_by, p.updated_time, pc.category_name, w.warehouse_name from product p left join product_category pc on p.category_id = pc.id left join warehouse w on p.warehouse_id = w.id
+2025-03-17 15:38:00.229 [http-nio-8080-exec-7] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.StockDocMapper.listByPage_mpCount
+2025-03-17 15:38:00.229 [http-nio-8080-exec-9] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 241 ms
+2025-03-17 15:38:00.229 [http-nio-8080-exec-7] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:38:00.229 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 240 ms
+2025-03-17 15:38:00.229 [http-nio-8080-exec-7] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select sd.id, sd.document_no, sd.document_type, sd.warehouse_id, sd.status, sd.operator_user, sd.remark, sd.created_by, sd.created_time, sd.updated_by, sd.updated_time, w.warehouse_name, su.username as operator_username from stock_doc sd left join warehouse w on sd.warehouse_id = w.id left join sys_user su on sd.operator_user = su.id
+2025-03-17 15:38:00.229 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:38:00.229 [http-nio-8080-exec-9] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:38:00.229 [http-nio-8080-exec-7] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 238 ms
+2025-03-17 15:38:00.229 [http-nio-8080-exec-7] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:38:00.231 [http-nio-8080-exec-9] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.WarehouseMapper.listByPage
+2025-03-17 15:38:00.231 [http-nio-8080-exec-9] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:38:00.231 [http-nio-8080-exec-9] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select wh.id, wh.warehouse_name, wh.unit_id, wh.address, wh.created_by, wh.created_time, wh.updated_by, wh.updated_time, su.unit_name from warehouse wh left join sys_unit su on wh.unit_id = su.id
+2025-03-17 15:38:00.231 [http-nio-8080-exec-9] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 2 ms
+2025-03-17 15:38:00.231 [http-nio-8080-exec-9] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:38:00.232 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.ProductMapper.listByPage
+2025-03-17 15:38:00.232 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:38:00.232 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select p.id, p.product_name, p.category_id, p.warehouse_id, p.created_by, p.created_time, p.updated_by, p.updated_time, pc.category_name, w.warehouse_name from product p left join product_category pc on p.category_id = pc.id left join warehouse w on p.warehouse_id = w.id
+2025-03-17 15:38:00.232 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 3 ms
+2025-03-17 15:38:00.232 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 3
+2025-03-17 15:38:00.232 [http-nio-8080-exec-7] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.StockDocMapper.listByPage
+2025-03-17 15:38:00.232 [http-nio-8080-exec-7] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:38:00.232 [http-nio-8080-exec-7] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select sd.id, sd.document_no, sd.document_type, sd.warehouse_id, sd.status, sd.operator_user, sd.remark, sd.created_by, sd.created_time, sd.updated_by, sd.updated_time, w.warehouse_name, su.username as operator_username from stock_doc sd left join warehouse w on sd.warehouse_id = w.id left join sys_user su on sd.operator_user = su.id
+2025-03-17 15:38:00.232 [http-nio-8080-exec-7] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 3 ms
+2025-03-17 15:38:00.232 [http-nio-8080-exec-7] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 7
+2025-03-17 15:43:25.633 [http-nio-8080-exec-2] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.SysUserMapper.listByPage_mpCount
+2025-03-17 15:43:25.633 [http-nio-8080-exec-6] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.StockDocMapper.listByPage_mpCount
+2025-03-17 15:43:25.633 [http-nio-8080-exec-5] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.WarehouseMapper.listByPage_mpCount
+2025-03-17 15:43:25.633 [http-nio-8080-exec-5] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:43:25.633 [http-nio-8080-exec-6] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:43:25.633 [http-nio-8080-exec-9] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.ProductMapper.listByPage_mpCount
+2025-03-17 15:43:25.633 [http-nio-8080-exec-5] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select wh.id, wh.warehouse_name, wh.unit_id, wh.address, wh.created_by, wh.created_time, wh.updated_by, wh.updated_time, su.unit_name from warehouse wh left join sys_unit su on wh.unit_id = su.id
+2025-03-17 15:43:25.633 [http-nio-8080-exec-6] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select sd.id, sd.document_no, sd.document_type, sd.warehouse_id, sd.status, sd.operator_user, sd.remark, sd.created_by, sd.created_time, sd.updated_by, sd.updated_time, w.warehouse_name, su.username as operator_username from stock_doc sd left join warehouse w on sd.warehouse_id = w.id left join sys_user su on sd.operator_user = su.id
+2025-03-17 15:43:25.633 [http-nio-8080-exec-2] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:43:25.633 [http-nio-8080-exec-9] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:43:25.633 [http-nio-8080-exec-5] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 220 ms
+2025-03-17 15:43:25.633 [http-nio-8080-exec-6] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 217 ms
+2025-03-17 15:43:25.633 [http-nio-8080-exec-2] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select su.id, username, nickname, phone, email, role, su.dept_id, su.created_by, su.created_time, su.updated_by, su.updated_time, dept_name, unit_name from sys_user su left join sys_dept sd on su.dept_id = sd.id left join sys_unit su2 on sd.unit_id = su2.id
+2025-03-17 15:43:25.633 [http-nio-8080-exec-9] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select p.id, p.product_name, p.category_id, p.warehouse_id, p.created_by, p.created_time, p.updated_by, p.updated_time, pc.category_name, w.warehouse_name from product p left join product_category pc on p.category_id = pc.id left join warehouse w on p.warehouse_id = w.id
+2025-03-17 15:43:25.633 [http-nio-8080-exec-5] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:43:25.633 [http-nio-8080-exec-2] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 218 ms
+2025-03-17 15:43:25.633 [http-nio-8080-exec-9] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 219 ms
+2025-03-17 15:43:25.633 [http-nio-8080-exec-9] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:43:25.633 [http-nio-8080-exec-6] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:43:25.633 [http-nio-8080-exec-2] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:43:25.635 [http-nio-8080-exec-5] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.WarehouseMapper.listByPage
+2025-03-17 15:43:25.635 [http-nio-8080-exec-5] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:43:25.635 [http-nio-8080-exec-5] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select wh.id, wh.warehouse_name, wh.unit_id, wh.address, wh.created_by, wh.created_time, wh.updated_by, wh.updated_time, su.unit_name from warehouse wh left join sys_unit su on wh.unit_id = su.id
+2025-03-17 15:43:25.635 [http-nio-8080-exec-5] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 2 ms
+2025-03-17 15:43:25.635 [http-nio-8080-exec-5] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:43:25.636 [http-nio-8080-exec-6] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.StockDocMapper.listByPage
+2025-03-17 15:43:25.636 [http-nio-8080-exec-6] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:43:25.636 [http-nio-8080-exec-6] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select sd.id, sd.document_no, sd.document_type, sd.warehouse_id, sd.status, sd.operator_user, sd.remark, sd.created_by, sd.created_time, sd.updated_by, sd.updated_time, w.warehouse_name, su.username as operator_username from stock_doc sd left join warehouse w on sd.warehouse_id = w.id left join sys_user su on sd.operator_user = su.id
+2025-03-17 15:43:25.636 [http-nio-8080-exec-6] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 3 ms
+2025-03-17 15:43:25.636 [http-nio-8080-exec-6] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 7
+2025-03-17 15:43:25.636 [http-nio-8080-exec-9] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.ProductMapper.listByPage
+2025-03-17 15:43:25.636 [http-nio-8080-exec-9] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:43:25.636 [http-nio-8080-exec-9] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select p.id, p.product_name, p.category_id, p.warehouse_id, p.created_by, p.created_time, p.updated_by, p.updated_time, pc.category_name, w.warehouse_name from product p left join product_category pc on p.category_id = pc.id left join warehouse w on p.warehouse_id = w.id
+2025-03-17 15:43:25.636 [http-nio-8080-exec-9] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 3 ms
+2025-03-17 15:43:25.637 [http-nio-8080-exec-9] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 3
+2025-03-17 15:43:25.637 [http-nio-8080-exec-2] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.SysUserMapper.listByPage
+2025-03-17 15:43:25.637 [http-nio-8080-exec-2] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:43:25.637 [http-nio-8080-exec-2] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select su.id, username, nickname, phone, email, role, su.dept_id, su.created_by, su.created_time, su.updated_by, su.updated_time, dept_name, unit_name from sys_user su left join sys_dept sd on su.dept_id = sd.id left join sys_unit su2 on sd.unit_id = su2.id
+2025-03-17 15:43:25.637 [http-nio-8080-exec-2] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 4 ms
+2025-03-17 15:43:25.637 [http-nio-8080-exec-2] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 16
+2025-03-17 15:43:39.369 [http-nio-8080-exec-8] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.ProductMapper.listByPage_mpCount
+2025-03-17 15:43:39.369 [http-nio-8080-exec-7] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.SysUserMapper.listByPage_mpCount
+2025-03-17 15:43:39.369 [http-nio-8080-exec-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.WarehouseMapper.listByPage_mpCount
+2025-03-17 15:43:39.369 [http-nio-8080-exec-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:43:39.369 [http-nio-8080-exec-8] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:43:39.369 [http-nio-8080-exec-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select wh.id, wh.warehouse_name, wh.unit_id, wh.address, wh.created_by, wh.created_time, wh.updated_by, wh.updated_time, su.unit_name from warehouse wh left join sys_unit su on wh.unit_id = su.id
+2025-03-17 15:43:39.369 [http-nio-8080-exec-8] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select p.id, p.product_name, p.category_id, p.warehouse_id, p.created_by, p.created_time, p.updated_by, p.updated_time, pc.category_name, w.warehouse_name from product p left join product_category pc on p.category_id = pc.id left join warehouse w on p.warehouse_id = w.id
+2025-03-17 15:43:39.369 [http-nio-8080-exec-7] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:43:39.369 [http-nio-8080-exec-8] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 211 ms
+2025-03-17 15:43:39.369 [http-nio-8080-exec-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 213 ms
+2025-03-17 15:43:39.369 [http-nio-8080-exec-7] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select su.id, username, nickname, phone, email, role, su.dept_id, su.created_by, su.created_time, su.updated_by, su.updated_time, dept_name, unit_name from sys_user su left join sys_dept sd on su.dept_id = sd.id left join sys_unit su2 on sd.unit_id = su2.id
+2025-03-17 15:43:39.369 [http-nio-8080-exec-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:43:39.369 [http-nio-8080-exec-8] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:43:39.369 [http-nio-8080-exec-7] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 210 ms
+2025-03-17 15:43:39.369 [http-nio-8080-exec-7] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:43:39.381 [http-nio-8080-exec-8] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.ProductMapper.listByPage
+2025-03-17 15:43:39.381 [http-nio-8080-exec-8] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:43:39.381 [http-nio-8080-exec-8] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select p.id, p.product_name, p.category_id, p.warehouse_id, p.created_by, p.created_time, p.updated_by, p.updated_time, pc.category_name, w.warehouse_name from product p left join product_category pc on p.category_id = pc.id left join warehouse w on p.warehouse_id = w.id
+2025-03-17 15:43:39.381 [http-nio-8080-exec-8] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 11 ms
+2025-03-17 15:43:39.381 [http-nio-8080-exec-8] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 3
+2025-03-17 15:43:39.381 [http-nio-8080-exec-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.WarehouseMapper.listByPage
+2025-03-17 15:43:39.381 [http-nio-8080-exec-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:43:39.381 [http-nio-8080-exec-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select wh.id, wh.warehouse_name, wh.unit_id, wh.address, wh.created_by, wh.created_time, wh.updated_by, wh.updated_time, su.unit_name from warehouse wh left join sys_unit su on wh.unit_id = su.id
+2025-03-17 15:43:39.381 [http-nio-8080-exec-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 11 ms
+2025-03-17 15:43:39.381 [http-nio-8080-exec-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:43:39.381 [http-nio-8080-exec-7] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.SysUserMapper.listByPage
+2025-03-17 15:43:39.381 [http-nio-8080-exec-7] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:43:39.381 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.StockDocMapper.listByPage_mpCount
+2025-03-17 15:43:39.381 [http-nio-8080-exec-7] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select su.id, username, nickname, phone, email, role, su.dept_id, su.created_by, su.created_time, su.updated_by, su.updated_time, dept_name, unit_name from sys_user su left join sys_dept sd on su.dept_id = sd.id left join sys_unit su2 on sd.unit_id = su2.id
+2025-03-17 15:43:39.381 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:43:39.381 [http-nio-8080-exec-7] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 11 ms
+2025-03-17 15:43:39.381 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select sd.id, sd.document_no, sd.document_type, sd.warehouse_id, sd.status, sd.operator_user, sd.remark, sd.created_by, sd.created_time, sd.updated_by, sd.updated_time, w.warehouse_name, su.username as operator_username from stock_doc sd left join warehouse w on sd.warehouse_id = w.id left join sys_user su on sd.operator_user = su.id
+2025-03-17 15:43:39.381 [http-nio-8080-exec-7] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 16
+2025-03-17 15:43:39.381 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 222 ms
+2025-03-17 15:43:39.381 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:43:39.384 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.StockDocMapper.listByPage
+2025-03-17 15:43:39.384 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:43:39.384 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select sd.id, sd.document_no, sd.document_type, sd.warehouse_id, sd.status, sd.operator_user, sd.remark, sd.created_by, sd.created_time, sd.updated_by, sd.updated_time, w.warehouse_name, su.username as operator_username from stock_doc sd left join warehouse w on sd.warehouse_id = w.id left join sys_user su on sd.operator_user = su.id
+2025-03-17 15:43:39.384 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 3 ms
+2025-03-17 15:43:39.384 [http-nio-8080-exec-4] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 7
+2025-03-17 15:45:56.606 [http-nio-8080-exec-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.ProductMapper.listByPage_mpCount
+2025-03-17 15:45:56.606 [http-nio-8080-exec-2] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.WarehouseMapper.listByPage_mpCount
+2025-03-17 15:45:56.606 [http-nio-8080-exec-9] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.InventoryMapper.listByPage_mpCount
+2025-03-17 15:45:56.606 [http-nio-8080-exec-2] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:45:56.606 [http-nio-8080-exec-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:45:56.606 [http-nio-8080-exec-9] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:45:56.606 [http-nio-8080-exec-2] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select wh.id, wh.warehouse_name, wh.unit_id, wh.address, wh.created_by, wh.created_time, wh.updated_by, wh.updated_time, su.unit_name from warehouse wh left join sys_unit su on wh.unit_id = su.id
+2025-03-17 15:45:56.606 [http-nio-8080-exec-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select p.id, p.product_name, p.category_id, p.warehouse_id, p.created_by, p.created_time, p.updated_by, p.updated_time, pc.category_name, w.warehouse_name from product p left join product_category pc on p.category_id = pc.id left join warehouse w on p.warehouse_id = w.id
+2025-03-17 15:45:56.606 [http-nio-8080-exec-9] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select i.id, i.inventory_no, i.warehouse_id, i.status, i.remark, i.created_by, i.created_time, i.updated_by, i.updated_time, w.warehouse_name from inventory i left join warehouse w on i.warehouse_id = w.id
+2025-03-17 15:45:56.606 [http-nio-8080-exec-2] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 176 ms
+2025-03-17 15:45:56.606 [http-nio-8080-exec-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 175 ms
+2025-03-17 15:45:56.606 [http-nio-8080-exec-2] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:45:56.606 [http-nio-8080-exec-9] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 176 ms
+2025-03-17 15:45:56.606 [http-nio-8080-exec-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:45:56.606 [http-nio-8080-exec-9] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:45:56.608 [http-nio-8080-exec-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.ProductMapper.listByPage
+2025-03-17 15:45:56.608 [http-nio-8080-exec-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:45:56.608 [http-nio-8080-exec-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select p.id, p.product_name, p.category_id, p.warehouse_id, p.created_by, p.created_time, p.updated_by, p.updated_time, pc.category_name, w.warehouse_name from product p left join product_category pc on p.category_id = pc.id left join warehouse w on p.warehouse_id = w.id
+2025-03-17 15:45:56.608 [http-nio-8080-exec-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 1 ms
+2025-03-17 15:45:56.608 [http-nio-8080-exec-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 3
+2025-03-17 15:45:56.608 [http-nio-8080-exec-9] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.InventoryMapper.listByPage
+2025-03-17 15:45:56.608 [http-nio-8080-exec-9] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:45:56.608 [http-nio-8080-exec-9] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select i.id, i.inventory_no, i.warehouse_id, i.status, i.remark, i.created_by, i.created_time, i.updated_by, i.updated_time, w.warehouse_name from inventory i left join warehouse w on i.warehouse_id = w.id
+2025-03-17 15:45:56.608 [http-nio-8080-exec-9] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 1 ms
+2025-03-17 15:45:56.608 [http-nio-8080-exec-9] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 2
+2025-03-17 15:45:56.609 [http-nio-8080-exec-2] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.WarehouseMapper.listByPage
+2025-03-17 15:45:56.609 [http-nio-8080-exec-2] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:45:56.609 [http-nio-8080-exec-2] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select wh.id, wh.warehouse_name, wh.unit_id, wh.address, wh.created_by, wh.created_time, wh.updated_by, wh.updated_time, su.unit_name from warehouse wh left join sys_unit su on wh.unit_id = su.id
+2025-03-17 15:45:56.609 [http-nio-8080-exec-2] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 2 ms
+2025-03-17 15:45:56.609 [http-nio-8080-exec-2] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:48:15.253 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.StockAlertMapper.listByPage_mpCount
+2025-03-17 15:48:15.253 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:48:15.253 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select sa.id, sa.category_id, sa.product_id, sa.warehouse_id, sa.min_stock, sa.max_stock, sa.send_type, sa.send_to, sa.created_by, sa.created_time, sa.updated_by, sa.updated_time, p.product_name, w.warehouse_name, u.nickname as send_to_name, pc.category_name from stock_alert sa left join product p on sa.product_id = p.id left join warehouse w on sa.warehouse_id = w.id left join sys_user u on sa.send_to = u.id left join product_category pc on sa.category_id = pc.id
+2025-03-17 15:48:15.253 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 54 ms
+2025-03-17 15:48:15.253 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:48:15.257 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.StockAlertMapper.listByPage
+2025-03-17 15:48:15.257 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:48:15.257 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: select sa.id, sa.category_id, sa.product_id, sa.warehouse_id, sa.min_stock, sa.max_stock, sa.send_type, sa.send_to, sa.created_by, sa.created_time, sa.updated_by, sa.updated_time, p.product_name, w.warehouse_name, u.nickname as send_to_name, pc.category_name from stock_alert sa left join product p on sa.product_id = p.id left join warehouse w on sa.warehouse_id = w.id left join sys_user u on sa.send_to = u.id left join product_category pc on sa.category_id = pc.id
+2025-03-17 15:48:15.257 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 3 ms
+2025-03-17 15:48:15.257 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1
+2025-03-17 15:48:15.260 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.StockAlertDetailMapper.selectList
+2025-03-17 15:48:15.260 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:48:15.260 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: SELECT id,msg,send_to,status,created_by,created_time FROM stock_alert_detail
+2025-03-17 15:48:15.260 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 2 ms
+2025-03-17 15:48:15.260 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 7
+2025-03-17 15:48:15.263 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL执行详情 - 方法: com.wms.wmsend.mapper.RealtimeStockMapper.selectList
+2025-03-17 15:48:15.263 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL类型: SELECT
+2025-03-17 15:48:15.263 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - SQL语句: SELECT id,product_id,warehouse_id,quantity,created_by,updated_by,created_time,updated_time FROM realtime_stock WHERE (product_id = 1 AND warehouse_id = 1)
+2025-03-17 15:48:15.263 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 执行时间: 2 ms
+2025-03-17 15:48:15.263 [scheduling-1] INFO  com.wms.wmsend.common.log.SqlLogInterceptor - 影响行数/返回结果数: 1

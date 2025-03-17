@@ -31,7 +31,7 @@ public class DeptController {
 
     @GetMapping("/list")
     @ApiOperation(value = "部门列表")
-    private Result<IPage<DeptResultVo>> list(
+    public Result<IPage<DeptResultVo>> list(
             @ApiParam(value = "当前页", required = true) @RequestParam(value = "current") Long current,
             @ApiParam(value = "每页数量", required = true) @RequestParam(value = "size") Long size,
             @ApiParam(value = "部门名称") String deptName, @ApiParam(value = "单位ID") String unitId) {
@@ -42,7 +42,7 @@ public class DeptController {
 
     @PostMapping("/saveOrUpdate")
     @ApiOperation(value = "新增/修改部门")
-    private Result<String> saveOrUpdate(@ApiParam(value = "部门信息", required = true) @RequestBody SysDept dept) {
+    public Result<String> saveOrUpdate(@ApiParam(value = "部门信息", required = true) @RequestBody SysDept dept) {
         //新增部门时查看部门是否已存在
         if (dept.getId() == null) {
             LambdaQueryWrapper<SysDept> queryWrapper = new LambdaQueryWrapper<>();
@@ -56,7 +56,7 @@ public class DeptController {
 
     @PostMapping("/delete")
     @ApiOperation(value = "删除部门")
-    private Result<String> delete(@ApiParam(value = "部门ID", required = true) @RequestParam("id") Long id) {
+    public Result<String> delete(@ApiParam(value = "部门ID", required = true) @RequestParam("id") Long id) {
         //region查询部门是否被引用
         LambdaQueryWrapper<SysUser> wrapper = new LambdaQueryWrapper<>();
         wrapper.eq(SysUser::getDeptId, id);

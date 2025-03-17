@@ -61,8 +61,7 @@
                             @update:model-value="changeWarehouse" :rules="[(val) => val !== null || '仓库名称不能为空']" />
                         <q-input v-model="formData.remark" label="备注" dense outlined />
                         <!-- 子表格 -->
-                        <q-table :rows="formData.items" :columns="inventoryDetailsColumns" row-key="id" class="q-mt-md"
-                            hide-bottom>
+                        <q-table :rows="formData.items" :columns="inventoryDetailsColumns" row-key="id" class="q-mt-md">
                             <template v-slot:body-cell-productName="props">
                                 <q-td>
                                     <q-select v-model="props.row.productId" label="产品名称" dense outlined
@@ -109,8 +108,7 @@
                         </div>
                     </div>
                     <!-- 明细表格 -->
-                    <q-table :rows="viewData.items" :columns="viewDetailsColumns" row-key="id" class="q-mt-md"
-                        hide-bottom>
+                    <q-table :rows="viewData.items" :columns="viewDetailsColumns" row-key="id" class="q-mt-md">
                     </q-table>
                 </q-card-section>
                 <q-card-actions align="right">
@@ -138,8 +136,7 @@
                         </div>
                     </div>
                     <!-- 明细表格 -->
-                    <q-table :rows="inventoryData.items" :columns="inventoryDetailsColumns" row-key="id" class="q-mt-md"
-                        hide-bottom>
+                    <q-table :rows="inventoryData.items" :columns="inventoryDetailsColumns" row-key="id" class="q-mt-md">
                         <template v-slot:body-cell-actualQuantity="props">
                             <q-td>
                                 <q-input v-model.number="props.row.actualQuantity" label="实际数量" dense outlined

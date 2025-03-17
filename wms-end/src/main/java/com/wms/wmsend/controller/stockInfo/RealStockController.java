@@ -24,7 +24,7 @@ public class RealStockController {
 
     @PostMapping("/list")
     @ApiOperation(value = "实时库存列表")
-    private Result<IPage<RealStockResultVo>> list(
+    public Result<IPage<RealStockResultVo>> list(
             @ApiParam(value = "当前页", required = true) Long current,
             @ApiParam(value = "每页显示条数", required = true) Long size,
             @ApiParam(value = "查询条件") @RequestBody RealStockQueryVo realStockQueryVo

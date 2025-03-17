@@ -30,7 +30,7 @@ public class ProCategoryController {
 
     @GetMapping("/list")
     @ApiOperation("分页查询商品分类")
-    private Result<IPage<ProductCategoryResultVo>> list(
+    public Result<IPage<ProductCategoryResultVo>> list(
             @ApiParam(value = "当前页", required = true) Long current,
             @ApiParam(value = "每页显示条数", required = true) Long size,
             @ApiParam(value = "分类名称") String categoryName
@@ -42,7 +42,7 @@ public class ProCategoryController {
 
     @PostMapping("/saveOrUpdate")
     @ApiOperation("新增或修改商品分类")
-    private Result<String> saveOrUpdate(@ApiParam(value = "商品分类信息", required = true) @RequestBody ProductCategory productCategory){
+    public Result<String> saveOrUpdate(@ApiParam(value = "商品分类信息", required = true) @RequestBody ProductCategory productCategory){
         //新增商品分类不能重复
         if (productCategory.getId() == null){
             LambdaQueryWrapper<ProductCategory> queryWrapper = new LambdaQueryWrapper<>();
@@ -63,7 +63,7 @@ public class ProCategoryController {
 
     @GetMapping("/delete")
     @ApiOperation("删除商品分类")
-    private Result<String> delete(@ApiParam(value = "商品分类ID", required = true) Long id){
+    public Result<String> delete(@ApiParam(value = "商品分类ID", required = true) Long id){
         //region 查询商品分类是否被商品引用
         if (productService.count(new LambdaQueryWrapper<Product>().eq(Product::getCategoryId, id)) > 0)
             throw new WmsException(ResultCodeEnum.PRODUCT_TYPE_ERROR);

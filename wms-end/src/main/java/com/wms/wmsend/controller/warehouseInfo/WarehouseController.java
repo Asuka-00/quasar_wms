@@ -35,7 +35,7 @@ public class WarehouseController {
 
     @GetMapping("/list")
     @ApiOperation(value = "仓库列表")
-    private Result<IPage<WarehouseResultVo>> list(
+    public Result<IPage<WarehouseResultVo>> list(
             @ApiParam(value = "当前页", required = true) Integer current,
             @ApiParam(value = "每页显示条数", required = true) Integer size,
             @ApiParam(value = "仓库名称", required = false) String warehouseName,
@@ -48,7 +48,7 @@ public class WarehouseController {
 
     @PostMapping("saveOrUpdate")
     @ApiOperation(value = "新增或修改仓库")
-    private Result<String> saveOrUpdate(@ApiParam(value = "仓库信息") @RequestBody Warehouse warehouse){
+    public Result<String> saveOrUpdate(@ApiParam(value = "仓库信息") @RequestBody Warehouse warehouse){
         //新增仓库不能重复
         if (warehouse.getId() == null){
             LambdaQueryWrapper<Warehouse> queryWrapper = new LambdaQueryWrapper<>();
@@ -69,7 +69,7 @@ public class WarehouseController {
 
     @PostMapping("delete")
     @ApiOperation(value = "删除仓库")
-    private Result<String> delete(@ApiParam(value = "仓库ID", required = true) @RequestParam("id") Long id){
+    public Result<String> delete(@ApiParam(value = "仓库ID", required = true) @RequestParam("id") Long id){
         //region 查询仓库是否被引用
         if (realtimeStockService.count(new LambdaQueryWrapper<RealtimeStock>().eq(RealtimeStock::getWarehouseId,id)) > 0)
             throw new WmsException(ResultCodeEnum.WAREHOUSE_USED_STOCK);

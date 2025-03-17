@@ -26,6 +26,7 @@
     </sql>
     <select id="listByPage" resultType="com.wms.wmsend.model.vo.StockAlertResultVo">
         select sa.id,
+               sa.category_id,
                sa.product_id,
                sa.warehouse_id,
                sa.min_stock,
@@ -38,11 +39,13 @@
                sa.updated_time,
                p.product_name,
                w.warehouse_name,
-               u.nickname as send_to_name
+               u.nickname as send_to_name,
+               pc.category_name
         from stock_alert sa
                  left join product p on sa.product_id = p.id
                  left join warehouse w on sa.warehouse_id = w.id
                  left join sys_user u on sa.send_to = u.id
+                 left join product_category pc on sa.category_id = pc.id
         <where>
             <if test="productId != null and productId != ''">
                 and sa.product_id = #{productId}

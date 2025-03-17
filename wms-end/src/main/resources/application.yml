@@ -38,7 +38,7 @@ spring:
 #mybatis
 mybatis-plus:
   configuration:
-    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    log-impl: org.apache.ibatis.logging.log4j2.Log4j2Impl
 
 #接口文档
 knife4j:

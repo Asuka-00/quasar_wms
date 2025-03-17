@@ -35,7 +35,7 @@ public class ProductController {
 
     @GetMapping("/list")
     @ApiOperation(value = "商品列表")
-    private Result<IPage<ProductResultVo>> list(
+    public Result<IPage<ProductResultVo>> list(
             @ApiParam(value = "当前页", required = true) Long current,
             @ApiParam(value = "每页显示条数", required = true) Long size,
             @ApiParam(value = "商品名称") String productName,
