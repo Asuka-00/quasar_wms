@@ -29,7 +29,7 @@
                sd.updated_time,
                su.unit_name
         from sys_dept sd
-                 left join sys_wms.sys_unit su on sd.unit_id = su.id
+                 left join sys_unit su on sd.unit_id = su.id
         <where>
             <if test="deptName != null and deptName != ''">
                 and sd.dept_name like concat('%', #{deptName}, '%')
