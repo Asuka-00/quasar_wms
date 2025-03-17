@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wms.wmsend.mapper.StockDocMapper">
+
+    <resultMap id="BaseResultMap" type="com.wms.wmsend.model.entity.StockDoc">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="documentNo" column="document_no" jdbcType="VARCHAR"/>
+            <result property="documentType" column="document_type" jdbcType="VARCHAR"/>
+            <result property="warehouseId" column="warehouse_id" jdbcType="BIGINT"/>
+            <result property="status" column="status" jdbcType="VARCHAR"/>
+            <result property="operatorUser" column="operator_user" jdbcType="BIGINT"/>
+            <result property="remark" column="remark" jdbcType="VARCHAR"/>
+            <result property="createdBy" column="created_by" jdbcType="VARCHAR"/>
+            <result property="createdTime" column="created_time" jdbcType="TIMESTAMP"/>
+            <result property="updatedBy" column="updated_by" jdbcType="VARCHAR"/>
+            <result property="updatedTime" column="updated_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,document_no,document_type,
+        warehouse_id,status,operator_user,
+        remark,created_by,created_time,
+        updated_by,updated_time
+    </sql>
+    <select id="listByPage" resultType="com.wms.wmsend.model.vo.StockResultVo">
+        select sd.id,
+               sd.document_no,
+               sd.document_type,
+               sd.warehouse_id,
+               sd.status,
+               sd.operator_user,
+               sd.remark,
+               sd.created_by,
+               sd.created_time,
+               sd.updated_by,
+               sd.updated_time,
+               w.warehouse_name,
+               su.username as operator_username
+        from stock_doc sd
+                 left join warehouse w on sd.warehouse_id = w.id
+                 left join sys_user su on sd.operator_user = su.id
+        <where>
+            <if test="stockDocQueryVo.documentNo != null and stockDocQueryVo.documentNo != ''">
+                and sd.document_no like concat('%',#{stockDocQueryVo.documentNo},'%')
+            </if>
+            <if test="stockDocQueryVo.documentType != null and stockDocQueryVo.documentType != ''">
+                and sd.document_type = #{stockDocQueryVo.documentType}
+            </if>
+            <if test="stockDocQueryVo.warehouseId != null and stockDocQueryVo.warehouseId != ''">
+                and sd.warehouse_id = #{stockDocQueryVo.warehouseId}
+            </if>
+            <if test="stockDocQueryVo.status != null and stockDocQueryVo.status != ''">
+                and sd.status = #{stockDocQueryVo.status}
+            </if>
+        </where>
+    </select>
+</mapper>

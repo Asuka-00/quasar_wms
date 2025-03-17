@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wms.wmsend.mapper.RealtimeStockMapper">
+
+    <resultMap id="BaseResultMap" type="com.wms.wmsend.model.entity.RealtimeStock">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="productId" column="product_id" jdbcType="BIGINT"/>
+            <result property="warehouseId" column="warehouse_id" jdbcType="BIGINT"/>
+            <result property="quantity" column="quantity" jdbcType="INTEGER"/>
+            <result property="createdBy" column="created_by" jdbcType="VARCHAR"/>
+            <result property="createdTime" column="created_time" jdbcType="TIMESTAMP"/>
+            <result property="updatedBy" column="updated_by" jdbcType="VARCHAR"/>
+            <result property="updatedTime" column="updated_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,product_id,warehouse_id,
+        quantity,created_by,created_time,
+        updated_by,updated_time
+    </sql>
+    <select id="listByPage" resultType="com.wms.wmsend.model.vo.RealStockResultVo">
+        select rs.id,
+               rs.product_id,
+               rs.warehouse_id,
+               rs.quantity,
+               rs.created_by,
+               rs.created_time,
+               rs.updated_by,
+               rs.updated_time,
+               p.product_name,
+               w.warehouse_name,
+               sa.min_stock,
+               sa.max_stock
+        from realtime_stock rs
+                 left join product p on rs.product_id = p.id
+                 left join warehouse w on rs.warehouse_id = w.id
+                 left join stock_alert sa on rs.product_id = sa.product_id and rs.warehouse_id = sa.warehouse_id
+        <where>
+            <if test="realStockQueryVo.productId != null and realStockQueryVo.productId != ''">
+                and rs.product_id = #{realStockQueryVo.productId}
+            </if>
+            <if test="realStockQueryVo.warehouseId != null and realStockQueryVo.warehouseId != ''">
+                and rs.warehouse_id = #{realStockQueryVo.warehouseId}
+            </if>
+        </where>
+    </select>
+</mapper>

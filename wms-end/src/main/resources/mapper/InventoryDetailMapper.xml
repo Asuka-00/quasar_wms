@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wms.wmsend.mapper.InventoryDetailMapper">
+
+    <resultMap id="BaseResultMap" type="com.wms.wmsend.model.entity.InventoryDetail">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="inventoryId" column="inventory_id" jdbcType="BIGINT"/>
+            <result property="productId" column="product_id" jdbcType="BIGINT"/>
+            <result property="actualQuantity" column="actual_quantity" jdbcType="INTEGER"/>
+            <result property="systemQuantity" column="system_quantity" jdbcType="INTEGER"/>
+            <result property="createdBy" column="created_by" jdbcType="VARCHAR"/>
+            <result property="createdTime" column="created_time" jdbcType="TIMESTAMP"/>
+            <result property="updatedBy" column="updated_by" jdbcType="VARCHAR"/>
+            <result property="updatedTime" column="updated_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,inventory_id,product_id,
+        actual_quantity,system_quantity,created_by,
+        created_time,updated_by,updated_time
+    </sql>
+    <select id="selectPrintList" resultType="com.wms.wmsend.model.vo.InventoryDetailResultVo">
+        select id.id,
+               id.inventory_id,
+               id.product_id,
+               id.actual_quantity,
+               id.system_quantity,
+               id.created_by,
+               id.created_time,
+               id.updated_by,
+               id.updated_time,
+               p.product_name,
+               id.actual_quantity-id.system_quantity as diff
+        from inventory_detail id
+                 left join product p on id.product_id = p.id
+        where id.inventory_id = #{id}
+    </select>
+
+
+</mapper>

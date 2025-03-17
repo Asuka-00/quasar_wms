@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wms.wmsend.mapper.StockDocItemMapper">
+
+    <resultMap id="BaseResultMap" type="com.wms.wmsend.model.entity.StockDocItem">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="documentId" column="document_id" jdbcType="BIGINT"/>
+            <result property="productId" column="product_id" jdbcType="BIGINT"/>
+            <result property="quantity" column="quantity" jdbcType="INTEGER"/>
+            <result property="createdBy" column="created_by" jdbcType="VARCHAR"/>
+            <result property="createdTime" column="created_time" jdbcType="TIMESTAMP"/>
+            <result property="updatedBy" column="updated_by" jdbcType="VARCHAR"/>
+            <result property="updatedTime" column="updated_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,document_id,product_id,
+        quantity,created_by,created_time,
+        updated_by,updated_time
+    </sql>
+    <select id="detail" resultType="com.wms.wmsend.model.vo.StockDocDetailResultVo">
+        select sdi.id,
+               sdi.document_id,
+               sdi.product_id,
+               sdi.quantity,
+               sdi.created_by,
+               sdi.created_time,
+               sdi.updated_by,
+               sdi.updated_time,
+               sd.document_no,
+               p.product_name
+        from stock_doc_item sdi
+                 left join stock_doc sd on sdi.document_id = sd.id
+                 left join product p on sdi.product_id = p.id
+        <where>
+            <if test="id != null and id != ''">
+                and sdi.document_id = #{id}
+            </if>
+        </where>
+    </select>
+</mapper>

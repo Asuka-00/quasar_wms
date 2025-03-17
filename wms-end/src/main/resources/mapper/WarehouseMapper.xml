@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wms.wmsend.mapper.WarehouseMapper">
+
+    <resultMap id="BaseResultMap" type="com.wms.wmsend.model.entity.Warehouse">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="warehouseName" column="warehouse_name" jdbcType="VARCHAR"/>
+            <result property="unitId" column="unit_id" jdbcType="BIGINT"/>
+            <result property="address" column="address" jdbcType="VARCHAR"/>
+            <result property="createdBy" column="created_by" jdbcType="VARCHAR"/>
+            <result property="createdTime" column="created_time" jdbcType="TIMESTAMP"/>
+            <result property="updatedBy" column="updated_by" jdbcType="VARCHAR"/>
+            <result property="updatedTime" column="updated_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,warehouse_name,unit_id,
+        address,created_by,created_time,
+        updated_by,updated_time
+    </sql>
+    <select id="listByPage" resultType="com.wms.wmsend.model.vo.WarehouseResultVo">
+        select wh.id,
+               wh.warehouse_name,
+               wh.unit_id,
+               wh.address,
+               wh.created_by,
+               wh.created_time,
+               wh.updated_by,
+               wh.updated_time,
+               su.unit_name
+        from warehouse wh
+                 left join sys_unit su on wh.unit_id = su.id
+        <where>
+            <if test="warehouseName != null and warehouseName != ''">
+                and wh.warehouse_name like concat('%',#{warehouseName},'%')
+            </if>
+            <if test="unitId != null and unitId != ''">
+                and wh.unit_id = #{unitId}
+            </if>
+        </where>
+    </select>
+</mapper>

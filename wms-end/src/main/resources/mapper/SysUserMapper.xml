@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wms.wmsend.mapper.SysUserMapper">
+
+    <resultMap id="BaseResultMap" type="com.wms.wmsend.model.entity.SysUser">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="username" column="username" jdbcType="VARCHAR"/>
+            <result property="nickname" column="nickname" jdbcType="VARCHAR"/>
+            <result property="password" column="password" jdbcType="VARCHAR"/>
+            <result property="phone" column="phone" jdbcType="VARCHAR"/>
+            <result property="email" column="email" jdbcType="VARCHAR"/>
+            <result property="deptId" column="dept_id" jdbcType="BIGINT"/>
+            <result property="role" column="role" jdbcType="VARCHAR"/>
+            <result property="createdBy" column="created_by" jdbcType="VARCHAR"/>
+            <result property="createdTime" column="created_time" jdbcType="TIMESTAMP"/>
+            <result property="updatedBy" column="updated_by" jdbcType="VARCHAR"/>
+            <result property="updatedTime" column="updated_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,username,nickname,
+        password,phone,email,
+        dept_id,role,created_by,
+        created_time,updated_by,updated_time
+    </sql>
+    <select id="listByPage" resultType="com.wms.wmsend.model.vo.UserResultVo">
+        select su.id,
+               username,
+               nickname,
+               phone,
+               email,
+               role,
+               su.dept_id,
+               su.created_by,
+               su.created_time,
+               su.updated_by,
+               su.updated_time,
+               dept_name,
+               unit_name
+        from sys_user su
+                 left join sys_dept sd on su.dept_id = sd.id
+                 left join sys_unit su2 on sd.unit_id = su2.id
+        <where>
+            <if test="queryVo.nickName != null and queryVo.nickName != ''">
+                and nickname like concat('%', #{queryVo.nickName}, '%')
+            </if>
+            <if test="queryVo.deptId != null and queryVo.deptId != ''">
+                and su.dept_id = #{queryVo.deptId}
+            </if>
+            <if test="queryVo.unitId != null and queryVo.unitId != ''">
+                and sd.unit_id = #{queryVo.unitId}
+            </if>
+        </where>
+
+    </select>
+</mapper>

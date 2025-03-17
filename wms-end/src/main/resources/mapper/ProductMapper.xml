@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wms.wmsend.mapper.ProductMapper">
+
+    <resultMap id="BaseResultMap" type="com.wms.wmsend.model.entity.Product">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="productName" column="product_name" jdbcType="VARCHAR"/>
+            <result property="categoryId" column="category_id" jdbcType="BIGINT"/>
+            <result property="createdBy" column="created_by" jdbcType="VARCHAR"/>
+            <result property="createdTime" column="created_time" jdbcType="TIMESTAMP"/>
+            <result property="updatedBy" column="updated_by" jdbcType="VARCHAR"/>
+            <result property="updatedTime" column="updated_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,product_name,category_id,
+        created_by,created_time,updated_by,
+        updated_time
+    </sql>
+    <select id="listByPage" resultType="com.wms.wmsend.model.vo.ProductResultVo">
+        select p.id,
+               p.product_name,
+               p.category_id,
+               p.warehouse_id,
+               p.created_by,
+               p.created_time,
+               p.updated_by,
+               p.updated_time,
+               pc.category_name,
+               w.warehouse_name
+        from product p
+                 left join product_category pc on p.category_id = pc.id
+                 left join warehouse w on p.warehouse_id = w.id
+        <where>
+            <if test="productName != null and productName != ''">
+                and p.product_name like concat('%', #{productName}, '%')
+            </if>
+            <if test="categoryId != null and categoryId != ''">
+                and p.category_id = #{categoryId}
+            </if>
+            <if test="warehouseId != null and warehouseId != ''">
+                and p.warehouse_id = #{warehouseId}
+            </if>
+        </where>
+    </select>
+</mapper>

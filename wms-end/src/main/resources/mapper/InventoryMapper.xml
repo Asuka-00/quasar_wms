@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wms.wmsend.mapper.InventoryMapper">
+
+    <resultMap id="BaseResultMap" type="com.wms.wmsend.model.entity.Inventory">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="inventoryNo" column="inventory_no" jdbcType="VARCHAR"/>
+            <result property="warehouseId" column="warehouse_id" jdbcType="BIGINT"/>
+            <result property="status" column="status" jdbcType="VARCHAR"/>
+            <result property="remark" column="remark" jdbcType="VARCHAR"/>
+            <result property="createdBy" column="created_by" jdbcType="VARCHAR"/>
+            <result property="createdTime" column="created_time" jdbcType="TIMESTAMP"/>
+            <result property="updatedBy" column="updated_by" jdbcType="VARCHAR"/>
+            <result property="updatedTime" column="updated_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,inventory_no,warehouse_id,
+        status,remark,created_by,
+        created_time,updated_by,updated_time
+    </sql>
+    <select id="listByPage" resultType="com.wms.wmsend.model.vo.InventoryResultVo">
+        select i.id,
+               i.inventory_no,
+               i.warehouse_id,
+               i.status,
+               i.remark,
+               i.created_by,
+               i.created_time,
+               i.updated_by,
+               i.updated_time,
+               w.warehouse_name
+        from inventory i
+                 left join warehouse w on i.warehouse_id = w.id
+        <where>
+            <if test="inventoryNo != null and inventoryNo != ''">
+                and i.inventory_no like concat('%',#{inventoryNo},'%')
+            </if>
+            <if test="warehouseId != null and warehouseId != ''">
+                and i.warehouse_id = #{warehouseId}
+            </if>
+        </where>
+    </select>
+    <select id="selectPrintData" resultType="com.wms.wmsend.model.vo.InventoryPrintVo">
+        select i.id,
+               i.inventory_no,
+               i.warehouse_id,
+               i.status,
+               i.remark,
+               i.created_by,
+               i.created_time,
+               i.updated_by,
+               i.updated_time,
+               w.warehouse_name,
+               u.nickname as createdName
+        from inventory i
+                 left join warehouse w on i.warehouse_id = w.id
+                 left join sys_user u on i.created_by = u.id
+        where i.id = #{id}
+    </select>
+</mapper>

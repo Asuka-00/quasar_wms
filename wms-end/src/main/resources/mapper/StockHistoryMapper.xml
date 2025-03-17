@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wms.wmsend.mapper.StockHistoryMapper">
+
+    <resultMap id="BaseResultMap" type="com.wms.wmsend.model.entity.StockHistory">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="warehouseId" column="warehouse_id" jdbcType="BIGINT"/>
+            <result property="productId" column="product_id" jdbcType="BIGINT"/>
+            <result property="diff" column="diff" jdbcType="BIGINT"/>
+            <result property="actionName" column="action_name" jdbcType="VARCHAR"/>
+            <result property="actionUser" column="action_user" jdbcType="BIGINT"/>
+            <result property="actionTime" column="action_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,warehouse_id,product_id,
+        diff,action_name,action_user,
+        action_time
+    </sql>
+    <select id="listByPage" resultType="com.wms.wmsend.model.vo.StockHistoryResultVo">
+        select sh.id,
+               sh.warehouse_id,
+               sh.product_id,
+               sh.diff,
+               sh.remark,
+               sh.action_name,
+               sh.action_user,
+               sh.action_time,
+               product_name,
+               warehouse_name,
+               u.username as action_username
+        from stock_history sh
+                 left join product p on sh.product_id = p.id
+                 left join warehouse w on sh.warehouse_id = w.id
+                 left join sys_user u on sh.action_user = u.id
+        <where>
+            <if test="warehouseId != null and warehouseId != ''">
+                and sh.warehouse_id = #{warehouseId}
+            </if>
+            <if test="productId != null and productId != ''">
+                and sh.product_id = #{productId}
+            </if>
+            <if test="actionName != null and actionName != ''">
+                and sh.action_name = #{actionName}
+            </if>
+            <if test="docNo != null and docNo != ''">
+                and sh.remark = #{docNo}
+            </if>
+        </where>
+    </select>
+</mapper>

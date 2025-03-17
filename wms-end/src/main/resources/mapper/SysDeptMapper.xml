@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wms.wmsend.mapper.SysDeptMapper">
+
+    <resultMap id="BaseResultMap" type="com.wms.wmsend.model.entity.SysDept">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="deptName" column="dept_name" jdbcType="VARCHAR"/>
+            <result property="unitId" column="unit_id" jdbcType="BIGINT"/>
+            <result property="createdBy" column="created_by" jdbcType="VARCHAR"/>
+            <result property="createdTime" column="created_time" jdbcType="TIMESTAMP"/>
+            <result property="updatedBy" column="updated_by" jdbcType="VARCHAR"/>
+            <result property="updatedTime" column="updated_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,dept_name,unit_id,
+        created_by,created_time,updated_by,
+        updated_time
+    </sql>
+    <select id="listByPage" resultType="com.wms.wmsend.model.vo.DeptResultVo">
+        select sd.id,
+               sd.dept_name,
+               sd.unit_id,
+               sd.created_by,
+               sd.created_time,
+               sd.updated_by,
+               sd.updated_time,
+               su.unit_name
+        from sys_dept sd
+                 left join sys_wms.sys_unit su on sd.unit_id = su.id
+        <where>
+            <if test="deptName != null and deptName != ''">
+                and sd.dept_name like concat('%', #{deptName}, '%')
+            </if>
+            <if test="unitId != null and unitId != ''">
+                and sd.unit_id = #{unitId}
+            </if>
+        </where>
+    </select>
+</mapper>

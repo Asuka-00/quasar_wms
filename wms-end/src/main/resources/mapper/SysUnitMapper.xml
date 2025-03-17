@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wms.wmsend.mapper.SysUnitMapper">
+
+    <resultMap id="BaseResultMap" type="com.wms.wmsend.model.entity.SysUnit">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="unitName" column="unit_name" jdbcType="VARCHAR"/>
+            <result property="unitCode" column="unit_code" jdbcType="VARCHAR"/>
+            <result property="createdBy" column="created_by" jdbcType="VARCHAR"/>
+            <result property="createdTime" column="created_time" jdbcType="TIMESTAMP"/>
+            <result property="updatedBy" column="updated_by" jdbcType="VARCHAR"/>
+            <result property="updatedTime" column="updated_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,unit_name,unit_code,
+        created_by,created_time,updated_by,
+        updated_time
+    </sql>
+    <select id="listByPage" resultType="com.wms.wmsend.model.vo.UnitResultVo">
+        select sys_unit.id,
+               sys_unit.unit_name,
+               sys_unit.unit_code,
+               sys_unit.created_by,
+               sys_unit.created_time,
+               sys_unit.updated_by,
+               sys_unit.updated_time
+        from sys_unit
+        <where>
+            <if test="unitName != null and unitName != ''">
+                sys_unit.unit_name like concat('%',#{unitName},'%')
+            </if>
+        </where>
+    </select>
+</mapper>
